@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-03-15T20:45:00">
-                周五 15 三月 2013
+                五 15 三月 2013
         </abbr>
 
         <address class="vcard author">
@@ -68,9 +68,9 @@
 <ul>
 <li>
 <p>抽象产品（<code>product.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Product</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Product</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a base class to define common interfaces&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 </pre></div>
 
@@ -78,34 +78,34 @@
 </li>
 <li>
 <p>具体产品（<code>concrete_product_1.py</code> &amp; <code>concrete_product_2.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
-<span class="n">class</span> <span class="n">ConcreteProduct_1</span><span class="p">(</span><span class="n">Product</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
+<span class="n">class</span> <span class="n">ConcreteProduct_1</span><span class="p">(</span><span class="n">Product</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a concrete product class to implement common interfaces&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_1&quot;</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_1&quot;</span>
 
-<span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
-<span class="n">class</span> <span class="n">ConcreteProduct_2</span><span class="p">(</span><span class="n">Product</span><span class="p">)</span><span class="o">:</span>
+<span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
+<span class="n">class</span> <span class="n">ConcreteProduct_2</span><span class="p">(</span><span class="n">Product</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a concrete product class to implement common interfaces&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_2&quot;</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_2&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>简单工厂（<code>simple_factory.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">concrete_product_1</span> <span class="n">import</span> <span class="o">*</span>
-<span class="n">from</span> <span class="n">concrete_product_2</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">concrete_product_1</span> <span class="nb">import</span> <span class="o">*</span>
+<span class="n">from</span> <span class="n">concrete_product_2</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="n">class</span> <span class="n">SimpleFactory</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">SimpleFactory</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;SimpleFactory to create concrete pruduct&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">option</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&quot;product 1&quot;</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">option</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&quot;product 1&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">ConcreteProduct_1</span><span class="p">()</span>
-        <span class="n">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&quot;product 2&quot;</span><span class="o">:</span>
+        <span class="n">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&quot;product 2&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">ConcreteProduct_2</span><span class="p">()</span>
-        <span class="nl">else:</span> 
+        <span class="k">else</span><span class="p">:</span> 
             <span class="k">return</span> <span class="n">None</span>
 </pre></div>
 
@@ -113,12 +113,12 @@
 </li>
 <li>
 <p>客户端使用示例（<code>use_sim_fac.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">simple_factory</span> <span class="n">import</span> <span class="n">SimpleFactory</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">simple_factory</span> <span class="nb">import</span> <span class="n">SimpleFactory</span>
 
 <span class="n">fac</span> <span class="o">=</span> <span class="n">SimpleFactory</span><span class="p">()</span>
-<span class="n">product</span> <span class="o">=</span> <span class="n">fac</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;product 2&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">product</span> <span class="o">!=</span> <span class="n">None</span><span class="o">:</span>
-    <span class="n">product</span><span class="p">.</span><span class="n">operate</span><span class="p">()</span>
+<span class="n">product</span> <span class="o">=</span> <span class="n">fac</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;product 2&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">product</span> <span class="o">!=</span> <span class="n">None:</span>
+    <span class="n">product</span><span class="o">.</span><span class="n">operate</span><span class="p">()</span>
 </pre></div>
 
 
@@ -146,45 +146,45 @@
 <ul>
 <li>
 <p>产品类 （<code>product.py</code>）</p>
-<div class="highlight"><pre><span class="cp">#  abstract product</span>
-<span class="n">class</span> <span class="n">Product</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="c1">#  abstract product</span>
+<span class="n">class</span> <span class="n">Product</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a base class to define common interfaces&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete product</span>
-<span class="n">class</span> <span class="n">ConcreteProduct_1</span><span class="p">(</span><span class="n">Product</span><span class="p">)</span><span class="o">:</span>
+<span class="c1"># concrete product</span>
+<span class="n">class</span> <span class="n">ConcreteProduct_1</span><span class="p">(</span><span class="n">Product</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a concrete product class to implement common interfaces&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_1&quot;</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_1&quot;</span>
 
-<span class="n">class</span> <span class="n">ConcreteProduct_2</span><span class="p">(</span><span class="n">Product</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">ConcreteProduct_2</span><span class="p">(</span><span class="n">Product</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a concrete product class to implement common interfaces&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_2&quot;</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operation implemented by ConcreteProduct_2&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>创建者类 （<code>creator.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="cp"># abstract creator</span>
-<span class="n">class</span> <span class="n">Creator</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+<span class="c1"># abstract creator</span>
+<span class="n">class</span> <span class="n">Creator</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot;a base creator to define factory method&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete creator</span>
-<span class="n">class</span> <span class="n">ConcreteCreator_1</span><span class="p">(</span><span class="n">Creator</span><span class="p">)</span><span class="o">:</span>
+<span class="c1"># concrete creator</span>
+<span class="n">class</span> <span class="n">ConcreteCreator_1</span><span class="p">(</span><span class="n">Creator</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot; a concrete creator to implement factory method&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ConcreteProduct_1</span><span class="p">()</span>
 
-<span class="n">class</span> <span class="n">ConcreteCreator_2</span><span class="p">(</span><span class="n">Creator</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">ConcreteCreator_2</span><span class="p">(</span><span class="n">Creator</span><span class="p">):</span>
     <span class="s">&quot;&quot;&quot; a concrete creator to implement factory method&quot;&quot;&quot;</span>
-    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ConcreteProduct_2</span><span class="p">()</span>
 </pre></div>
 
@@ -192,25 +192,25 @@
 </li>
 <li>
 <p>客户端 （<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">import</span> <span class="n">random</span>
-<span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
-<span class="n">from</span> <span class="n">creator</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="nb">import</span> <span class="n">random</span>
+<span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
+<span class="n">from</span> <span class="n">creator</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="cp"># choice concrete creator manually</span>
+<span class="c1"># choice concrete creator manually</span>
 <span class="n">mycreator</span> <span class="o">=</span> <span class="n">ConcreteCreator_1</span><span class="p">()</span>
-<span class="n">myproduct</span> <span class="o">=</span> <span class="n">mycreator</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
-<span class="n">myproduct</span><span class="p">.</span><span class="n">operate</span><span class="p">()</span>
+<span class="n">myproduct</span> <span class="o">=</span> <span class="n">mycreator</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+<span class="n">myproduct</span><span class="o">.</span><span class="n">operate</span><span class="p">()</span>
 
-<span class="cp"># choice concrete creator randomly</span>
-<span class="n">def</span> <span class="n">genefac</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">yield</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">Creator</span><span class="p">.</span><span class="n">__subclasses__</span><span class="p">())</span>
+<span class="c1"># choice concrete creator randomly</span>
+<span class="n">def</span> <span class="n">genefac</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">yield</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">Creator</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">())</span>
 
 <span class="n">mycreators</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">genefac</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-<span class="n">myproducts</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">create</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">mycreators</span><span class="p">]</span>
+<span class="n">myproducts</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">create</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">mycreators</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">myproducts</span><span class="o">:</span>
-    <span class="n">i</span><span class="p">.</span><span class="n">operate</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">myproducts:</span>
+    <span class="n">i</span><span class="o">.</span><span class="n">operate</span><span class="p">()</span>
 </pre></div>
 
 
@@ -239,65 +239,65 @@
 <ul>
 <li>
 <p>产品类(<code>product.py</code>)</p>
-<div class="highlight"><pre><span class="cp"># abstract product A</span>
+<div class="highlight"><pre><span class="c1"># abstract product A</span>
 
-<span class="n">class</span> <span class="n">AbstractProductA</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">AbstractProductA</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete product A</span>
+<span class="c1"># concrete product A</span>
 
-<span class="n">class</span> <span class="n">ConcreteProductA1</span><span class="p">(</span><span class="n">AbstractProductA</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operate by ConcreteProductA1&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteProductA1</span><span class="p">(</span><span class="n">AbstractProductA</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operate by ConcreteProductA1&quot;</span>
 
-<span class="n">class</span> <span class="n">ConcreteProductA2</span><span class="p">(</span><span class="n">AbstractProductA</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operate by ConcreteProductA2&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteProductA2</span><span class="p">(</span><span class="n">AbstractProductA</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operate by ConcreteProductA2&quot;</span>
 
-<span class="cp"># abstract product B</span>
+<span class="c1"># abstract product B</span>
 
-<span class="n">class</span> <span class="n">AbstractProductB</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">AbstractProductB</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete product B</span>
+<span class="c1"># concrete product B</span>
 
-<span class="n">class</span> <span class="n">ConcreteProductB1</span><span class="p">(</span><span class="n">AbstractProductB</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operate by ConcreteProductB1&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteProductB1</span><span class="p">(</span><span class="n">AbstractProductB</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operate by ConcreteProductB1&quot;</span>
 
-<span class="n">class</span> <span class="n">ConcreteProductB2</span><span class="p">(</span><span class="n">AbstractProductB</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="s">&quot;operate by ConcreteProductB2&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteProductB2</span><span class="p">(</span><span class="n">AbstractProductB</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;operate by ConcreteProductB2&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>工厂类(<code>factory.py</code>)</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="cp"># abstract factory</span>
+<span class="c1"># abstract factory</span>
 
-<span class="n">class</span> <span class="n">AbstractFactory</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">create_product_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">AbstractFactory</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">create_product_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
-    <span class="n">def</span> <span class="n">create_product_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create_product_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete factory</span>
+<span class="c1"># concrete factory</span>
 
-<span class="n">class</span> <span class="n">ConcreteFactory1</span><span class="p">(</span><span class="n">AbstractFactory</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">create_product_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">ConcreteFactory1</span><span class="p">(</span><span class="n">AbstractFactory</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">create_product_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ConcreteProductA1</span><span class="p">()</span>
-    <span class="n">def</span> <span class="n">create_product_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create_product_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ConcreteProductB1</span><span class="p">()</span>
 
-<span class="n">class</span> <span class="n">ConcreteFactory2</span><span class="p">(</span><span class="n">AbstractFactory</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">create_product_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="n">class</span> <span class="n">ConcreteFactory2</span><span class="p">(</span><span class="n">AbstractFactory</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">create_product_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ConcreteProductA2</span><span class="p">()</span>
-    <span class="n">def</span> <span class="n">create_product_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">create_product_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ConcreteProductB2</span><span class="p">()</span>
 </pre></div>
 
@@ -305,27 +305,27 @@
 </li>
 <li>
 <p>客户端(<code>client.py</code>)</p>
-<div class="highlight"><pre><span class="n">import</span> <span class="n">random</span>
-<span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
-<span class="n">from</span> <span class="n">factory</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="nb">import</span> <span class="n">random</span>
+<span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
+<span class="n">from</span> <span class="n">factory</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="cp"># choice concrete factory manually</span>
+<span class="c1"># choice concrete factory manually</span>
 <span class="n">fac</span> <span class="o">=</span> <span class="n">ConcreteFactory1</span><span class="p">()</span>
-<span class="n">prod</span> <span class="o">=</span> <span class="n">fac</span><span class="p">.</span><span class="n">create_product_a</span><span class="p">()</span>
-<span class="n">prod</span><span class="p">.</span><span class="n">operate</span><span class="p">()</span>
+<span class="n">prod</span> <span class="o">=</span> <span class="n">fac</span><span class="o">.</span><span class="n">create_product_a</span><span class="p">()</span>
+<span class="n">prod</span><span class="o">.</span><span class="n">operate</span><span class="p">()</span>
 
-<span class="cp"># choice concrete factory randomly</span>
-<span class="n">def</span> <span class="n">genfac</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">yield</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">AbstractFactory</span><span class="p">.</span><span class="n">__subclasses__</span><span class="p">())</span>
+<span class="c1"># choice concrete factory randomly</span>
+<span class="n">def</span> <span class="n">genfac</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">yield</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">AbstractFactory</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">())</span>
 
 <span class="n">facs</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">genfac</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 
-<span class="n">prods</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="p">[</span><span class="n">prods</span><span class="p">.</span><span class="n">extend</span><span class="p">([</span><span class="n">i</span><span class="p">.</span><span class="n">create_product_a</span><span class="p">(),</span> <span class="n">i</span><span class="p">.</span><span class="n">create_product_b</span><span class="p">()])</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">facs</span><span class="p">]</span>
+<span class="n">prods</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="p">[</span><span class="n">prods</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">i</span><span class="o">.</span><span class="n">create_product_a</span><span class="p">(),</span> <span class="n">i</span><span class="o">.</span><span class="n">create_product_b</span><span class="p">()])</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">facs</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">prods</span><span class="o">:</span>
-    <span class="n">i</span><span class="p">.</span><span class="n">operate</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">prods:</span>
+    <span class="n">i</span><span class="o">.</span><span class="n">operate</span><span class="p">()</span>
 </pre></div>
 
 
@@ -353,89 +353,89 @@
 <ul>
 <li>
 <p>产品类(<code>product.py</code>)</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Product</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">parts</span> <span class="o">=</span> <span class="s">&quot;I hava these parts: &quot;</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Product</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">parts</span> <span class="o">=</span> <span class="s">&quot;I hava these parts: &quot;</span>
 
-    <span class="n">def</span> <span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">parts</span> <span class="o">+=</span> <span class="n">part</span>
+    <span class="n">def</span> <span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">part</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">parts</span> <span class="o">+=</span> <span class="n">part</span>
 
-    <span class="n">def</span> <span class="n">show</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">print</span> <span class="n">self</span><span class="p">.</span><span class="n">parts</span>
+    <span class="n">def</span> <span class="n">show</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">self</span><span class="o">.</span><span class="n">parts</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>生成器类（<code>builder.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">product</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="cp"># abstract builder</span>
-<span class="n">class</span> <span class="n">Builder</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">build_part_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="c1"># abstract builder</span>
+<span class="n">class</span> <span class="n">Builder</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">build_part_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
-    <span class="n">def</span> <span class="n">build_part_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">build_part_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete builder</span>
-<span class="n">class</span> <span class="n">ConcreteBuilder1</span><span class="p">(</span><span class="n">Builder</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">Product</span><span class="p">()</span>
+<span class="c1"># concrete builder</span>
+<span class="n">class</span> <span class="n">ConcreteBuilder1</span><span class="p">(</span><span class="n">Builder</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">Product</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">build_part_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">product</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;1_part_a, &quot;</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">build_part_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">product</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;1_part_a, &quot;</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">build_part_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">product</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;1_part_b, &quot;</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">build_part_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">product</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;1_part_b, &quot;</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">get_result</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">product</span>
+    <span class="n">def</span> <span class="n">get_result</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">product</span>
 
-<span class="n">class</span> <span class="n">ConcreteBuilder2</span><span class="p">(</span><span class="n">Builder</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">Product</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">ConcreteBuilder2</span><span class="p">(</span><span class="n">Builder</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">Product</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">build_part_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">product</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;2_part_a, &quot;</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">build_part_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">product</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;2_part_a, &quot;</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">build_part_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">product</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;2_part_b, &quot;</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">build_part_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">product</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;2_part_b, &quot;</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">get_result</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">product</span>
+    <span class="n">def</span> <span class="n">get_result</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">product</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>指挥者类(<code>director.py</code>)</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">builder</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">builder</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="n">class</span> <span class="n">Director</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">construct</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">builder</span><span class="p">.</span><span class="n">build_part_a</span><span class="p">()</span>
-        <span class="n">builder</span><span class="p">.</span><span class="n">build_part_b</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">Director</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">construct</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">builder</span><span class="p">):</span>
+        <span class="n">builder</span><span class="o">.</span><span class="n">build_part_a</span><span class="p">()</span>
+        <span class="n">builder</span><span class="o">.</span><span class="n">build_part_b</span><span class="p">()</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>客户端(<code>client.py</code>)</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">builder</span> <span class="n">import</span> <span class="o">*</span>
-<span class="n">from</span> <span class="n">director</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">builder</span> <span class="nb">import</span> <span class="o">*</span>
+<span class="n">from</span> <span class="n">director</span> <span class="nb">import</span> <span class="o">*</span>
 
 <span class="n">mydirector</span> <span class="o">=</span> <span class="n">Director</span><span class="p">()</span>
 <span class="n">mybuilder1</span> <span class="o">=</span> <span class="n">ConcreteBuilder1</span><span class="p">()</span>
 <span class="n">mybuilder2</span> <span class="o">=</span> <span class="n">ConcreteBuilder2</span><span class="p">()</span>
 
-<span class="n">mydirector</span><span class="p">.</span><span class="n">construct</span><span class="p">(</span><span class="n">mybuilder1</span><span class="p">)</span>
-<span class="n">mydirector</span><span class="p">.</span><span class="n">construct</span><span class="p">(</span><span class="n">mybuilder2</span><span class="p">)</span>
+<span class="n">mydirector</span><span class="o">.</span><span class="n">construct</span><span class="p">(</span><span class="n">mybuilder1</span><span class="p">)</span>
+<span class="n">mydirector</span><span class="o">.</span><span class="n">construct</span><span class="p">(</span><span class="n">mybuilder2</span><span class="p">)</span>
 
-<span class="n">prod1</span> <span class="o">=</span> <span class="n">mybuilder1</span><span class="p">.</span><span class="n">get_result</span><span class="p">()</span>
-<span class="n">prod2</span> <span class="o">=</span> <span class="n">mybuilder2</span><span class="p">.</span><span class="n">get_result</span><span class="p">()</span>
+<span class="n">prod1</span> <span class="o">=</span> <span class="n">mybuilder1</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
+<span class="n">prod2</span> <span class="o">=</span> <span class="n">mybuilder2</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
 
-<span class="n">prod1</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">prod2</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">prod1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">prod2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 
@@ -459,31 +459,31 @@
 <ul>
 <li>
 <p>原型类（<code>prototype.py</code>）</p>
-<div class="highlight"><pre><span class="n">import</span> <span class="n">copy</span>
+<div class="highlight"><pre><span class="nb">import</span> <span class="n">copy</span>
 
-<span class="cp"># abstract prototype</span>
-<span class="n">class</span> <span class="n">Prototype</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">clone</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+<span class="c1"># abstract prototype</span>
+<span class="n">class</span> <span class="n">Prototype</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">clone</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-<span class="cp"># concrete prototype</span>
-<span class="n">class</span> <span class="n">ConcretePrototype1</span><span class="p">(</span><span class="n">Prototype</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">clone</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">copy</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
+<span class="c1"># concrete prototype</span>
+<span class="n">class</span> <span class="n">ConcretePrototype1</span><span class="p">(</span><span class="n">Prototype</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">clone</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
 
-<span class="n">class</span> <span class="n">ConcretePrototype2</span><span class="p">(</span><span class="n">Prototype</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">def</span> <span class="n">clone</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">return</span> <span class="n">copy</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
+<span class="n">class</span> <span class="n">ConcretePrototype2</span><span class="p">(</span><span class="n">Prototype</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">clone</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>客户端（<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">prototype</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="nb">prototype</span> <span class="nb">import</span> <span class="o">*</span>
 
 <span class="n">p1</span> <span class="o">=</span> <span class="n">ConcretePrototype1</span><span class="p">()</span>
-<span class="n">c1</span> <span class="o">=</span> <span class="n">p1</span><span class="p">.</span><span class="n">clone</span><span class="p">()</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
 </pre></div>
 
 
@@ -505,31 +505,31 @@
 <ul>
 <li>
 <p>单例类（<code>singleton.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Singleton</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Singleton</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
     <span class="n">instance</span> <span class="o">=</span> <span class="n">None</span>
 
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="n">pass</span>
 
-    <span class="err">@</span><span class="n">staticmethod</span>
-    <span class="n">def</span> <span class="n">get_instance</span><span class="p">()</span><span class="o">:</span>
-        <span class="k">if</span> <span class="n">Singleton</span><span class="p">.</span><span class="n">instance</span> <span class="n">is</span> <span class="n">None</span><span class="o">:</span>
-            <span class="n">Singleton</span><span class="p">.</span><span class="n">instance</span> <span class="o">=</span> <span class="n">Singleton</span><span class="p">()</span>
+    <span class="nv">@staticmethod</span>
+    <span class="n">def</span> <span class="n">get_instance</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">Singleton</span><span class="o">.</span><span class="n">instance</span> <span class="n">is</span> <span class="n">None:</span>
+            <span class="n">Singleton</span><span class="o">.</span><span class="n">instance</span> <span class="o">=</span> <span class="n">Singleton</span><span class="p">()</span>
 
-        <span class="k">return</span> <span class="n">Singleton</span><span class="p">.</span><span class="n">instance</span>
+        <span class="k">return</span> <span class="n">Singleton</span><span class="o">.</span><span class="n">instance</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>客户端（<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">singleton</span> <span class="n">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">singleton</span> <span class="nb">import</span> <span class="o">*</span>
 
-<span class="n">s1</span> <span class="o">=</span> <span class="n">Singleton</span><span class="p">.</span><span class="n">get_instance</span><span class="p">()</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="n">Singleton</span><span class="p">.</span><span class="n">get_instance</span><span class="p">()</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Singleton</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">Singleton</span><span class="o">.</span><span class="n">get_instance</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">s1</span> <span class="n">is</span> <span class="n">s2</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;in singleton pattern&quot;</span>
+<span class="k">if</span> <span class="n">s1</span> <span class="n">is</span> <span class="n">s2:</span>
+    <span class="k">print</span> <span class="s">&quot;in singleton pattern&quot;</span>
 </pre></div>
 
 
