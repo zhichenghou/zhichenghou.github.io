@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <meta charset="utf-8" />
+        <title>JaveEE学习之Hibernate技术</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          "HTML-CSS": {
+          styles: {
+          ".MathJax .mo, .MathJax .mi": {color: "black"}}
+          },
+          tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+          });
+        </script>
+
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Hou's blog </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li class="active"><a href="/category/blog.html">Blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/javeeexue-xi-zhi-hibernateji-zhu.html" rel="bookmark"
+           title="Permalink to JaveEE学习之Hibernate技术">JaveEE学习之Hibernate技术</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-27T16:05:00">
+                周三 27 二月 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="/author/zhicheng-hou.html">Zhicheng Hou</a>
+        </address>
+<p>In <a href="/category/blog.html">Blog</a>. </p>
+<p>tags: 
+<a href="/tag/javeee.html">JaveEE</a> &nbsp;
+<a href="/tag/java.html">Java</a> &nbsp;
+</p>
+</footer><!-- /.post-info -->      <!-- more -->
+
+<h2>Hibernate框架使用流程</h2>
+<h3>0. 为web应用添加Hibernate支持</h3>
+<p>将下载的hibernate-v.jar和lib路径下的required,bytecode,jpa子目录下的所有jar包添加到应用的类加载路径下，即可使用hibernate。</p>
+<h3>1. 开发PO（持久化对象）</h3>
+<p>持久化对象可以实现以面向对象的方式进行数据库操作,hibernate中的持久化对象由普通java类和映射文件两部分构成。一个简单的POJO类如下</p>
+<div class="highlight"><pre><span class="n">public</span> <span class="n">class</span> <span class="n">News</span> <span class="p">{</span>
+    <span class="n">private</span> <span class="n">Integer</span> <span class="n">id</span><span class="p">;</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">content</span><span class="p">;</span>
+
+    <span class="n">public</span> <span class="n">Integer</span> <span class="nf">getId</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">title</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setTitle</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getContent</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">content</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setContent</span><span class="p">(</span><span class="n">String</span> <span class="n">content</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>为了使这个简单的java类具有持久化操作的能力，Hinernate采用映射文件理解持久化类与数据表之间的对应关系，映射文件为xml格式，内容如下：</p>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="cp">&lt;!DOCTYPE hibernate-mapping PUBLIC </span>
+<span class="cp">    &quot;-//Hibernate/Hibernate Mapping DTD 3.0//EN&quot;</span>
+<span class="cp">    &quot;http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd&quot;&gt;</span>
+
+<span class="nt">&lt;hibernate-mapping&gt;</span>
+    <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">&quot;News&quot;</span> <span class="na">table=</span><span class="s">&quot;news_table&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">name=</span><span class="s">&quot;id&quot;</span> <span class="na">type=</span><span class="s">&quot;java.lang.Integer&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">&quot;id&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;generator</span> <span class="na">class=</span><span class="s">&quot;identity&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;title&quot;</span> <span class="na">type=</span><span class="s">&quot;java.lang.String&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">&quot;title&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;content&quot;</span> <span class="na">type=</span><span class="s">&quot;java.lang.String&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">&quot;content&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;/class&gt;</span>
+<span class="nt">&lt;/hibernate-mapping&gt;</span>
+</pre></div>
+
+
+<p>通过对hibernate-mapping中的class进行配置，即可完成持久化对象的开发。</p>
+<h3>2. 编写Hibernate通用配置信息</h3>
+<p>对于web应用中连接数据库，以及数据库的配置信息是通用的，通过配置Hibernate的通用信息进行指定要连接的数据库，登录用户名和密码等。该配置通过xml文件完成，内容如下：</p>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="cp">&lt;!DOCTYPE hibernate-configuration PUBLIC</span>
+<span class="cp">    &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;</span>
+<span class="cp">    &quot;http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;hibernate-configuration&gt;</span>
+    <span class="nt">&lt;session-factory&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.driver_class&quot;</span><span class="nt">&gt;</span>com.mysql.jdbc.Driver<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.password&quot;</span><span class="nt">&gt;</span>32147<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.url&quot;</span><span class="nt">&gt;</span>jdbc:mysql://localhost:3306/hibernate<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.username&quot;</span><span class="nt">&gt;</span>root<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.dialect&quot;</span><span class="nt">&gt;</span>org.hibernate.dialect.MySQLInnoDBDialect<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.format_sql&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/property&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.hbm2ddl.auto&quot;</span><span class="nt">&gt;</span>update<span class="nt">&lt;/property&gt;</span>
+
+        <span class="nt">&lt;mapping</span> <span class="na">resource=</span><span class="s">&quot;org/crazyit/app/domain/News.hbm.xml&quot;</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/session-factory&gt;</span>
+<span class="nt">&lt;/hibernate-configuration&gt;</span>
+</pre></div>
+
+
+<h3>3. 编写操作类代码，使用面向对象的方法操作数据库</h3>
+<p>在完成Hibernate的配置后，即可使用面行对象的方法来操作数据库了，在此类的方法中实现对数据库的操作有以下几步。</p>
+<ol>
+<li>获取第二步中的通用配置信息</li>
+<li>创建SessionFactory</li>
+<li>创建Session</li>
+<li>开始事务，用面向对象的方法进行处理，最后提交处理</li>
+<li>关闭Session</li>
+</ol>
+<p>以下代码实现往数据库添加一条信息的功能。</p>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">hou</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">News</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">Session</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">SessionFactory</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">Transaction</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">cfg</span><span class="p">.</span><span class="n">Configuration</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="n">class</span> <span class="n">NewsManager</span> <span class="p">{</span>
+
+    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Configuration</span><span class="p">().</span><span class="n">configure</span><span class="p">();</span>
+        <span class="n">SessionFactory</span> <span class="n">sf</span> <span class="o">=</span> <span class="n">conf</span><span class="p">.</span><span class="n">buildSessionFactory</span><span class="p">();</span>
+
+        <span class="n">Session</span> <span class="n">sess</span> <span class="o">=</span> <span class="n">sf</span><span class="p">.</span><span class="n">openSession</span><span class="p">();</span>
+
+        <span class="n">Transaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="n">beginTransaction</span><span class="p">();</span>
+
+        <span class="n">News</span> <span class="n">n</span> <span class="o">=</span> <span class="n">new</span> <span class="n">News</span><span class="p">();</span>
+
+        <span class="n">n</span><span class="p">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s">&quot;一条信息&quot;</span><span class="p">);</span>
+        <span class="n">n</span><span class="p">.</span><span class="n">setContent</span><span class="p">(</span><span class="s">&quot;信息内容&quot;</span><span class="p">);</span>
+
+        <span class="n">sess</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">tx</span><span class="p">.</span><span class="n">commit</span><span class="p">();</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+        <span class="n">sf</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>参考</h2>
+<p><a href="http://book.douban.com/subject/6002664/">轻量级Java EE企业应用实战</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://github.com/zhichenghou">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                &copy; 2013 Zhicheng Hou.
+                Powered by <a href="http://getpelican.com/">Pelican</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'zhichenghou.github.io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

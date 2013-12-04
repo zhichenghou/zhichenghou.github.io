@@ -28,8 +28,7 @@
                 <h1><a href="/">Hou's blog </a></h1>
                 <nav><ul>
                     <li><a href="/pages/about.html">About</a></li>
-                    <li class="active"><a href="/category/machinelearning.html">MachineLearning</a></li>
-                    <li><a href="/category/python.html">Python</a></li>
+                    <li class="active"><a href="/category/blog.html">Blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -49,9 +48,14 @@
         <address class="vcard author">
                 By <a class="url fn" href="/author/zhicheng-hou.html">zhicheng hou</a>
         </address>
-<p>In <a href="/category/machinelearning.html">MachineLearning</a>. </p>
-<p>tags: <a href="/tag/pelican.html">pelican</a><a href="/tag/publishing.html">publishing</a></p>
+<p>In <a href="/category/blog.html">Blog</a>. </p>
+<p>tags: 
+<a href="/tag/machinelearning.html">MachineLearning</a> &nbsp;
+<a href="/tag/python.html">Python</a> &nbsp;
+</p>
 </footer><!-- /.post-info -->      <p>机器学习是一种广泛应用的技术，其中有监督的学习是其主要内容。本文介绍一类简单的有监督学习算法：线性回归。线性回归是最基础的有监督学习算法，本文将从理论介绍，算法实现，应用实例三个方面对该算法进行介绍。</p>
+<!-- more -->
+
 <h2>介绍</h2>
 <p>有监督学习方法通常具有三个要素：假设模型、优化目标(cost function)、算法。</p>
 <h3>假设模型</h3>
@@ -213,7 +217,44 @@
 
 
 <h2>例子</h2>
-<p>。 </p>
+<p>给出两个线性回归的例子，数据可在本文的源码一节找到。</p>
+<ol>
+<li>
+<p>一元线性回归例子：</p>
+<p>$$ h(x) = \theta_0 + \theta_1 * x_1 $$ </p>
+<p>对此线性函数找到合适的参数。</p>
+<p><code>linear_regression.py</code></p>
+<div class="highlight"><pre><span class="s-Atom">def</span> <span class="nf">main</span><span class="p">()</span><span class="s-Atom">:</span>
+    <span class="s-Atom">datasets</span> <span class="o">=</span> <span class="s-Atom">np</span><span class="p">.</span><span class="nf">genfromtxt</span><span class="p">(</span><span class="s-Atom">&#39;data.txt&#39;</span><span class="p">,</span> <span class="s-Atom">delimiter=&#39;,&#39;</span><span class="p">)</span>
+    <span class="nv">X_train</span> <span class="o">=</span> <span class="s-Atom">np</span><span class="p">.</span><span class="nf">matrix</span> <span class="p">(</span><span class="s-Atom">datasets</span><span class="p">[</span><span class="s-Atom">:</span><span class="p">,</span> <span class="p">:-</span><span class="m">1</span><span class="p">])</span>
+    <span class="s-Atom">m</span><span class="p">,</span> <span class="s-Atom">n</span> <span class="o">=</span> <span class="nv">X_train</span><span class="p">.</span><span class="s-Atom">shape</span>
+    <span class="nv">X_train</span> <span class="o">=</span> <span class="s-Atom">np</span><span class="p">.</span><span class="s-Atom">c_</span><span class="p">[</span><span class="s-Atom">np</span><span class="p">.</span><span class="nf">ones</span><span class="p">([</span><span class="s-Atom">m</span><span class="p">,</span><span class="m">1</span><span class="p">]),</span> <span class="nv">X_train</span><span class="p">]</span>
+    <span class="s-Atom">y_train</span> <span class="o">=</span> <span class="s-Atom">np</span><span class="p">.</span><span class="nf">matrix</span> <span class="p">(</span><span class="s-Atom">datasets</span><span class="p">[</span><span class="s-Atom">:</span><span class="p">,</span> <span class="o">-</span><span class="m">1</span><span class="p">]).</span><span class="nv">T</span>
+
+    <span class="s-Atom">lr</span> <span class="o">=</span> <span class="nv">LinearRegression</span><span class="p">(</span><span class="s-Atom">feature_scaling</span><span class="o">=</span><span class="nv">None</span><span class="p">)</span>
+    <span class="s-Atom">lr</span><span class="p">.</span><span class="nf">train</span><span class="p">(</span><span class="nv">X_train</span><span class="p">,</span> <span class="s-Atom">y_train</span><span class="p">,</span> <span class="s-Atom">algorithm</span> <span class="o">=</span> <span class="s-Atom">batch_gradient</span><span class="p">)</span>
+
+    <span class="s-Atom">pl</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="nv">X_train</span><span class="p">[</span><span class="s-Atom">:</span><span class="p">,</span><span class="m">1</span><span class="p">],</span> <span class="s-Atom">y_train</span><span class="p">)</span>
+    <span class="s-Atom">pl</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="nv">X_train</span><span class="p">[</span><span class="s-Atom">:</span><span class="p">,</span><span class="m">1</span><span class="p">],</span> <span class="nv">X_train</span> <span class="o">*</span> <span class="s-Atom">lr</span><span class="p">.</span><span class="s-Atom">theta</span><span class="p">,</span> <span class="s-Atom">&#39;r&#39;</span><span class="p">)</span>
+    <span class="s-Atom">pl</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+
+<span class="s-Atom">if</span> <span class="k">__</span><span class="s-Atom">name__</span> <span class="o">==</span> <span class="s-Atom">&#39;__main__&#39;:</span>
+    <span class="nf">main</span><span class="p">()</span>
+</pre></div>
+
+
+<p>回归结果如图</p>
+<p><img alt="result" src="/images/MachineLearning/LinearRegression/image.png" /></p>
+</li>
+<li>
+<p>多元线性回归例子</p>
+<p>$$ h(x) = \theta_0 + \theta_1 * x_1 + \theta_2 * x_2 $$ </p>
+<p>对此二元函数，找到合适的参数。对比实验，来比较不同梯度下降算法的性能。</p>
+<p><img alt="批梯度下降法" src="/images/MachineLearning/LinearRegression/batch_gradient.png" />
+<img alt="随机梯度下降法" src="/images/MachineLearning/LinearRegression/stochastic_gradient.png" /></p>
+<p>通过二图比较可知，随机梯度下降法算法学习速度快,能够收敛到一个近似的全局最小点。当数据量大时优势尤为明显。 </p>
+</li>
+</ol>
 <h2>总结</h2>
 <p>本文介绍来线性回归的原理以及实现，并通过实例给出回归结果及算法性能比较。通过本文可以了解机器学习中的线性回归算法，对于实际问题是否使用该算法还需要模型选择的知识，对于使用该算法的问题，还需要研究如何选择特征才能够达到好的学习性能，这些问题将在以后的文章中介绍。</p>
 <h2>源码</h2>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <meta charset="utf-8" />
+        <title>JaveEE学习之Spring技术</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          "HTML-CSS": {
+          styles: {
+          ".MathJax .mo, .MathJax .mi": {color: "black"}}
+          },
+          tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+          });
+        </script>
+
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Hou's blog </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li class="active"><a href="/category/blog.html">Blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/javeeexue-xi-zhi-springji-zhu.html" rel="bookmark"
+           title="Permalink to JaveEE学习之Spring技术">JaveEE学习之Spring技术</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-27T17:19:00">
+                周三 27 二月 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="/author/zhicheng-hou.html">Zhicheng Hou</a>
+        </address>
+<p>In <a href="/category/blog.html">Blog</a>. </p>
+<p>tags: 
+<a href="/tag/javeee.html">JaveEE</a> &nbsp;
+<a href="/tag/java.html">Java</a> &nbsp;
+</p>
+</footer><!-- /.post-info -->      <!-- more -->
+
+<h2>Spring框架使用流程</h2>
+<h3>0. 为web应用添加Spring支持</h3>
+<p>将Spring项目下的dist路径下的全部jar包和spring-framework-v复制到WEB-INF\lib路径下，即可在web应用中使用Spring框架。</p>
+<h3>1. 编写主程序初始化Spring容器</h3>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">hou</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">PersonService</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">ApplicationContext</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">support</span><span class="p">.</span><span class="n">ClassPathXmlApplicationContext</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="n">class</span> <span class="n">SpringTest</span>
+<span class="p">{</span>
+    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">ApplicationContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ClassPathXmlApplicationContext</span><span class="p">(</span><span class="s">&quot;bean.xml&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+        <span class="n">PersonService</span> <span class="n">p</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">getBean</span><span class="p">(</span><span class="s">&quot;personService&quot;</span> <span class="p">,</span> <span class="n">PersonService</span><span class="p">.</span><span class="n">class</span><span class="p">);</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">info</span><span class="p">();</span>   
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>2. 编写被Spring容器管理的bean</h3>
+<div class="highlight"><pre><span class="n">public</span> <span class="n">class</span> <span class="n">PersonService</span>
+<span class="p">{</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">info</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;名字&quot;</span><span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>3. 将bean类部署到Spring容器中，通过配置文件</h3>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.springframework.org/schema/beans</span>
+<span class="s">    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- 将PersonService类部署成Spring容器中的Bean  --&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&quot;personService&quot;</span> <span class="na">class=</span><span class="s">&quot;PersonService&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">value=</span><span class="s">&quot;wawa&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</pre></div>
+
+
+<p>通过以上的简单例子，可以发现Spring容器的一个作用，即IoC（控制反转），就是说Spring容器可以创建bean对象，并通过配置文件设置实例的属性值。这是一种通过Spring容器注入设置实例属性值的方法。</p>
+<h2>Spring框架的核心机制</h2>
+<p>Spring实现IoC的核心机制是依赖注入。通常当一个调用者的java实例需要另一个被调用者的java实例时，需要调用者来创建被调用者的实例; 而在依赖注入中，创建工作由Spring容器执行，而后注入到调用者中，实现动态管理各个实例。</p>
+<h2>参考</h2>
+<p><a href="http://book.douban.com/subject/6002664/">轻量级Java EE企业应用实战</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://github.com/zhichenghou">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                &copy; 2013 Zhicheng Hou.
+                Powered by <a href="http://getpelican.com/">Pelican</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'zhichenghou.github.io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
