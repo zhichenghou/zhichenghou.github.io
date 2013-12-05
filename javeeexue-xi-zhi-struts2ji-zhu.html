@@ -123,8 +123,8 @@
 
     <span class="n">public</span> <span class="n">String</span> <span class="nf">execute</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">getUsername</span><span class="p">().</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;easypi.github.com&quot;</span><span class="p">)</span>
-            <span class="o">&amp;&amp;</span> <span class="n">getPassword</span><span class="p">().</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;easypi&quot;</span><span class="p">)</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">getUsername</span><span class="p">().</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;zhichenghou.github.com&quot;</span><span class="p">)</span>
+            <span class="o">&amp;&amp;</span> <span class="n">getPassword</span><span class="p">().</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;zhichenghou&quot;</span><span class="p">)</span> <span class="p">)</span>
         <span class="p">{</span>
             <span class="n">ActionContext</span><span class="p">.</span><span class="n">getContext</span><span class="p">().</span><span class="n">getSession</span><span class="p">()</span>
                 <span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;user&quot;</span> <span class="p">,</span> <span class="n">getUsername</span><span class="p">());</span>
@@ -139,7 +139,7 @@
 </pre></div>
 
 
-<p>该类实现对登录的判断，如果用户名为<code>easypi.github.com</code>，密码为<code>easypi</code>则登录成功，否则失败。</p>
+<p>该类实现对登录的判断，如果用户名为<code>zhichenghou.github.com</code>，密码为<code>zhichenghou</code>则登录成功，否则失败。</p>
 <h3>4. 配置Action以及处理结果和物理视图资源之间的对应关系</h3>
 <p>在定义了请求并实现了处理请求action的类之后，需要将请求与action对应起来，用来实现MVC模型。建立struts.xml放置在<code>WEB-INF\classes</code>路径下，使用该文件实现web应用的配置。该文件代码如下：</p>
 <div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;GBK&quot;?&gt;</span>
