@@ -17,7 +17,9 @@
 /***** Global *****/
 /* Body */
 body {
-    background: #F5F4EF;
+    background: #E0E0E0;
+    background-image: url("../images/shadow.png"), url("../images/bg_grid.png");
+    background-repeat: repeat-x, repeat;
     color: #000305;
     font-size: 87.5%; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
