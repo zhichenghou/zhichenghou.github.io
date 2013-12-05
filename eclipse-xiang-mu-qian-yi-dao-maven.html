@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-12-03T10:20:00">
-                二 03 十二月 2013
+                周二 03 十二月 2013
         </abbr>
 
         <address class="vcard author">
@@ -71,7 +71,7 @@
 <li>对于在maven<a href="http://search.maven.org/">中心仓库</a>里能够找到的依赖，直接将在仓库中查到的依赖字段内容复制pom.xml中即可，maven会自动下载该依赖到本地仓库。</li>
 <li>
 <p>对于只有jar包，而不存在与中心仓库里的依赖，需首先将该jar包安装到本地仓库，然后在pom.xml中进行配置。比如对于oracle jdbc6的依赖，需要在该包所在的目录下执行如下命令进行安装（可在eclipse中maven build... 的Goals中执行）</p>
-<div class="highlight"><pre><span class="err">install:install-file</span> <span class="err">-DgroupId=com.oracle</span> <span class="err">-DartifactId=ojdbc6</span> <span class="err">-Dversion=11.2.0.1.0</span> <span class="err">-Dpackaging=jar</span> <span class="err">-Dfile=ojdbc6.jar</span> <span class="err">-DgeneratePom=true</span>
+<div class="highlight"><pre><span class="n">install</span><span class="o">:</span><span class="n">install</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">DgroupId</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">oracle</span> <span class="o">-</span><span class="n">DartifactId</span><span class="o">=</span><span class="n">ojdbc6</span> <span class="o">-</span><span class="n">Dversion</span><span class="o">=</span><span class="mf">11.2</span><span class="o">.</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">Dpackaging</span><span class="o">=</span><span class="n">jar</span> <span class="o">-</span><span class="n">Dfile</span><span class="o">=</span><span class="n">ojdbc6</span><span class="o">.</span><span class="na">jar</span> <span class="o">-</span><span class="n">DgeneratePom</span><span class="o">=</span><span class="kc">true</span>
 </pre></div>
 
 

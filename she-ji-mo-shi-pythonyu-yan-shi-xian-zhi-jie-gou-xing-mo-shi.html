@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-03-29T18:02:00">
-                五 29 三月 2013
+                周五 29 三月 2013
         </abbr>
 
         <address class="vcard author">
@@ -71,43 +71,43 @@
 <ul>
 <li>
 <p>Target类（<code>target.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Target</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">request</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;nomal request&quot;</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Target</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">request</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;nomal request&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>Adaptee类（<code>adaptee.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Adaptee</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">specific_request</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;specific request&quot;</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Adaptee</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">specific_request</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;specific request&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>Adapter类（<code>adapter.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">target</span> <span class="nb">import</span> <span class="o">*</span>
-<span class="n">from</span> <span class="n">adaptee</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">target</span> <span class="n">import</span> <span class="o">*</span>
+<span class="n">from</span> <span class="n">adaptee</span> <span class="n">import</span> <span class="o">*</span>
 
-<span class="n">class</span> <span class="n">Adapter</span><span class="p">(</span><span class="n">Target</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">myadaptee</span> <span class="o">=</span> <span class="n">Adaptee</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">Adapter</span><span class="p">(</span><span class="n">Target</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">myadaptee</span> <span class="o">=</span> <span class="n">Adaptee</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">request</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">myadaptee</span><span class="o">.</span><span class="n">specific_request</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">request</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">myadaptee</span><span class="p">.</span><span class="n">specific_request</span><span class="p">()</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>客户端（<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">adapter</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">adapter</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">target</span> <span class="o">=</span> <span class="n">Adapter</span><span class="p">()</span>
-<span class="n">target</span><span class="o">.</span><span class="n">request</span><span class="p">()</span>
+<span class="n">target</span><span class="p">.</span><span class="n">request</span><span class="p">()</span>
 </pre></div>
 
 
@@ -135,17 +135,17 @@
 <ul>
 <li>
 <p>Implementor 类（<code>Implementor.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Implementor</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation_imp</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Implementor</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation_imp</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-<span class="n">class</span> <span class="n">ConcreteImplementorA</span><span class="p">(</span><span class="n">Implementor</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation_imp</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;ConcreteImplementorA operate&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteImplementorA</span><span class="p">(</span><span class="n">Implementor</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation_imp</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;ConcreteImplementorA operate&quot;</span>
 
-<span class="n">class</span> <span class="n">ConcreteImplementorB</span><span class="p">(</span><span class="n">Implementor</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation_imp</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;ConcreteImplementorB operate&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteImplementorB</span><span class="p">(</span><span class="n">Implementor</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation_imp</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;ConcreteImplementorB operate&quot;</span>
 </pre></div>
 
 
@@ -153,28 +153,28 @@
 <li>
 <p>Abstraction 类（<code>abstraction.py</code>）
         from implementor import *</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Abstraction</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">imp</span> <span class="o">=</span> <span class="n">Implementor</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Abstraction</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">imp</span> <span class="o">=</span> <span class="n">Implementor</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">set_imp</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">conc_imple</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">imp</span> <span class="o">=</span> <span class="n">conc_imple</span><span class="p">;</span>
+    <span class="n">def</span> <span class="n">set_imp</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">conc_imple</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">imp</span> <span class="o">=</span> <span class="n">conc_imple</span><span class="p">;</span>
 
-    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">imp</span><span class="o">.</span><span class="n">operation_imp</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">operate</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">imp</span><span class="p">.</span><span class="n">operation_imp</span><span class="p">()</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>client （<code>client.py</code> ）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">abstraction</span> <span class="nb">import</span> <span class="o">*</span>
-<span class="n">from</span> <span class="n">implementor</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">abstraction</span> <span class="n">import</span> <span class="o">*</span>
+<span class="n">from</span> <span class="n">implementor</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">ab</span> <span class="o">=</span> <span class="n">Abstraction</span><span class="p">()</span>
 <span class="n">imp</span> <span class="o">=</span> <span class="n">ConcreteImplementorA</span><span class="p">()</span>
-<span class="n">ab</span><span class="o">.</span><span class="n">set_imp</span><span class="p">(</span><span class="n">imp</span><span class="p">)</span>
-<span class="n">ab</span><span class="o">.</span><span class="n">operate</span><span class="p">()</span>
+<span class="n">ab</span><span class="p">.</span><span class="n">set_imp</span><span class="p">(</span><span class="n">imp</span><span class="p">)</span>
+<span class="n">ab</span><span class="p">.</span><span class="n">operate</span><span class="p">()</span>
 </pre></div>
 
 
@@ -204,57 +204,57 @@
 <ul>
 <li>
 <p>(<code>composite.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Component</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">depth</span><span class="p">):</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Component</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">depth</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-    <span class="n">def</span> <span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-    <span class="n">def</span> <span class="n">remove</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
+    <span class="n">def</span> <span class="n">remove</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-<span class="c1"># Leaf</span>
-<span class="n">class</span> <span class="n">Leaf</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;-&quot;</span><span class="o">*</span><span class="n">depth</span> <span class="o">+</span> <span class="s">&quot;leaf&quot;</span>
+<span class="cp"># Leaf</span>
+<span class="n">class</span> <span class="n">Leaf</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;-&quot;</span><span class="o">*</span><span class="n">depth</span> <span class="o">+</span> <span class="s">&quot;leaf&quot;</span>
 
-<span class="c1"># Composite</span>
-<span class="n">class</span> <span class="n">Composite</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="cp"># Composite</span>
+<span class="n">class</span> <span class="n">Composite</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;-&quot;</span><span class="o">*</span><span class="n">depth</span> <span class="o">+</span> <span class="s">&quot;composite&quot;</span>
-        <span class="k">for</span> <span class="n">c</span> <span class="n">in</span> <span class="n">self</span><span class="o">.</span><span class="n">children:</span>
-            <span class="n">c</span><span class="o">.</span><span class="n">operation</span><span class="p">(</span><span class="n">depth</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;-&quot;</span><span class="o">*</span><span class="n">depth</span> <span class="o">+</span> <span class="s">&quot;composite&quot;</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="n">in</span> <span class="n">self</span><span class="p">.</span><span class="n">children</span><span class="o">:</span>
+            <span class="n">c</span><span class="p">.</span><span class="n">operation</span><span class="p">(</span><span class="n">depth</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">children</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
 
-    <span class="n">def</span> <span class="n">remove</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
+    <span class="n">def</span> <span class="n">remove</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">children</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>Client（<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">composite</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">composite</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">comp1</span> <span class="o">=</span> <span class="n">Composite</span><span class="p">()</span>
-<span class="n">comp1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Leaf</span><span class="p">())</span>
-<span class="n">comp1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Leaf</span><span class="p">())</span>
+<span class="n">comp1</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Leaf</span><span class="p">())</span>
+<span class="n">comp1</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Leaf</span><span class="p">())</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">Composite</span><span class="p">()</span>
 <span class="n">leaf</span> <span class="o">=</span> <span class="n">Leaf</span><span class="p">()</span>
-<span class="n">root</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">leaf</span><span class="p">)</span>
-<span class="n">root</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">comp1</span><span class="p">)</span>
+<span class="n">root</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">leaf</span><span class="p">)</span>
+<span class="n">root</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">comp1</span><span class="p">)</span>
 
-<span class="n">root</span><span class="o">.</span><span class="n">operation</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">root</span><span class="p">.</span><span class="n">operation</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">root</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">leaf</span><span class="p">)</span>
-<span class="n">root</span><span class="o">.</span><span class="n">operation</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">root</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">leaf</span><span class="p">)</span>
+<span class="n">root</span><span class="p">.</span><span class="n">operation</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 
@@ -282,66 +282,66 @@
 <ul>
 <li>
 <p>Component类（<code>component.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Component</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Component</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-<span class="n">class</span> <span class="n">ConcreteComponent</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;concrete component operate&quot;</span>
+<span class="n">class</span> <span class="n">ConcreteComponent</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;concrete component operate&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>Decorator类（<code>decorator.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">component</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">component</span> <span class="n">import</span> <span class="o">*</span>
 
-<span class="n">class</span> <span class="n">Decorator</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">comp</span> <span class="o">=</span> <span class="n">Component</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">Decorator</span><span class="p">(</span><span class="n">Component</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">comp</span> <span class="o">=</span> <span class="n">Component</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">set_component</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">comp</span> <span class="o">=</span> <span class="n">component</span>
+    <span class="n">def</span> <span class="n">set_component</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">comp</span> <span class="o">=</span> <span class="n">component</span>
 
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">operation</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">comp</span><span class="p">.</span><span class="n">operation</span><span class="p">()</span>
 
-<span class="n">class</span> <span class="n">ConcreteDecoratorA</span><span class="p">(</span><span class="n">Decorator</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorA</span><span class="p">,</span> <span class="n">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">added_state</span> <span class="o">=</span> <span class="s">&quot; &quot;</span>
+<span class="n">class</span> <span class="n">ConcreteDecoratorA</span><span class="p">(</span><span class="n">Decorator</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorA</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">added_state</span> <span class="o">=</span> <span class="s">&quot; &quot;</span>
 
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorA</span><span class="p">,</span> <span class="n">self</span><span class="p">)</span><span class="o">.</span><span class="n">operation</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">added_state</span> <span class="o">+=</span> <span class="s">&quot;new state&quot;</span>
-        <span class="k">print</span> <span class="n">self</span><span class="o">.</span><span class="n">added_state</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorA</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="n">operation</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">added_state</span> <span class="o">+=</span> <span class="s">&quot;new state&quot;</span>
+        <span class="n">print</span> <span class="n">self</span><span class="p">.</span><span class="n">added_state</span>
 
-<span class="n">class</span> <span class="n">ConcreteDecoratorB</span><span class="p">(</span><span class="n">Decorator</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorB</span><span class="p">,</span> <span class="n">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">ConcreteDecoratorB</span><span class="p">(</span><span class="n">Decorator</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorB</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorB</span><span class="p">,</span> <span class="n">self</span><span class="p">)</span><span class="o">.</span><span class="n">operation</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">super</span><span class="p">(</span><span class="n">ConcreteDecoratorB</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="n">operation</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">added_behavior</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;added behavior&quot;</span>
+    <span class="n">def</span> <span class="n">added_behavior</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;added behavior&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>客户端（<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">decorator</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">decorator</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">ConcreteComponent</span><span class="p">()</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">ConcreteDecoratorA</span><span class="p">()</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">ConcreteDecoratorB</span><span class="p">()</span>
 
-<span class="n">d1</span><span class="o">.</span><span class="n">set_component</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="n">d2</span><span class="o">.</span><span class="n">set_component</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">set_component</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">d2</span><span class="p">.</span><span class="n">set_component</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
 
-<span class="n">d2</span><span class="o">.</span><span class="n">operation</span><span class="p">()</span>
+<span class="n">d2</span><span class="p">.</span><span class="n">operation</span><span class="p">()</span>
 </pre></div>
 
 
@@ -367,51 +367,51 @@
 <ul>
 <li>
 <p>SubSystem类（<code>subsystem.py</code>）</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">SubSystem1</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">method1</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;sub system 1 method 1&quot;</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">SubSystem1</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">method1</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;sub system 1 method 1&quot;</span>
 
-<span class="n">class</span> <span class="n">SubSystem2</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">method2</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;sub system 2 method 2&quot;</span>
+<span class="n">class</span> <span class="n">SubSystem2</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">method2</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;sub system 2 method 2&quot;</span>
 
-<span class="n">class</span> <span class="n">SubSystem3</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">method3</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;sub system 3 method 3&quot;</span>
+<span class="n">class</span> <span class="n">SubSystem3</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">method3</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;sub system 3 method 3&quot;</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>Facade类（<code>facade.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">subsystem</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">subsystem</span> <span class="n">import</span> <span class="o">*</span>
 
-<span class="n">class</span> <span class="n">Facade</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub1</span> <span class="o">=</span> <span class="n">SubSystem1</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub2</span> <span class="o">=</span> <span class="n">SubSystem2</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub3</span> <span class="o">=</span> <span class="n">SubSystem3</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">Facade</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub1</span> <span class="o">=</span> <span class="n">SubSystem1</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub2</span> <span class="o">=</span> <span class="n">SubSystem2</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub3</span> <span class="o">=</span> <span class="n">SubSystem3</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">method_a</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub1</span><span class="o">.</span><span class="n">method1</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub3</span><span class="o">.</span><span class="n">method3</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub2</span><span class="o">.</span><span class="n">method2</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">method_a</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub1</span><span class="p">.</span><span class="n">method1</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub3</span><span class="p">.</span><span class="n">method3</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub2</span><span class="p">.</span><span class="n">method2</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">method_b</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub3</span><span class="o">.</span><span class="n">method3</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub2</span><span class="o">.</span><span class="n">method2</span><span class="p">()</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">sub1</span><span class="o">.</span><span class="n">method1</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">method_b</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub3</span><span class="p">.</span><span class="n">method3</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub2</span><span class="p">.</span><span class="n">method2</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">sub1</span><span class="p">.</span><span class="n">method1</span><span class="p">()</span>
 </pre></div>
 
 
 </li>
 <li>
 <p>client（<code>client.py</code>）</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">facade</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">facade</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">fc</span> <span class="o">=</span> <span class="n">Facade</span><span class="p">()</span>
-<span class="n">fc</span><span class="o">.</span><span class="n">method_a</span><span class="p">()</span>
-<span class="n">fc</span><span class="o">.</span><span class="n">method_b</span><span class="p">()</span>
+<span class="n">fc</span><span class="p">.</span><span class="n">method_a</span><span class="p">()</span>
+<span class="n">fc</span><span class="p">.</span><span class="n">method_b</span><span class="p">()</span>
 </pre></div>
 
 
@@ -440,28 +440,28 @@
 <ul>
 <li>
 <p>flyweight.py</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Flyweight</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">extrainsicstate</span><span class="p">):</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Flyweight</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">extrainsicstate</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-<span class="n">class</span> <span class="n">ConcreteFlyweight</span><span class="p">(</span><span class="n">Flyweight</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">extrainsicstate</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;concrete flyweight&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">extrainsicstate</span><span class="p">)</span>
+<span class="n">class</span> <span class="n">ConcreteFlyweight</span><span class="p">(</span><span class="n">Flyweight</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">extrainsicstate</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;concrete flyweight&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">extrainsicstate</span><span class="p">)</span>
 
-<span class="n">class</span> <span class="n">UnsharedConcreteFlyweight</span><span class="p">(</span><span class="n">Flyweight</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">extrainsicstate</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;unshared concrete flyweight&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">extrainsicstate</span><span class="p">)</span>
+<span class="n">class</span> <span class="n">UnsharedConcreteFlyweight</span><span class="p">(</span><span class="n">Flyweight</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">extrainsicstate</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;unshared concrete flyweight&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">extrainsicstate</span><span class="p">)</span>
 
-<span class="n">class</span> <span class="n">FlyweightFactory</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">flyweights</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">class</span> <span class="n">FlyweightFactory</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">flyweights</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="n">def</span> <span class="n">get_flyweight</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">self</span><span class="o">.</span><span class="n">flyweights</span><span class="o">.</span><span class="n">has_key</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">self</span><span class="o">.</span><span class="n">flyweights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
+    <span class="n">def</span> <span class="n">get_flyweight</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">flyweights</span><span class="p">.</span><span class="n">has_key</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">:</span>
+            <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">flyweights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="nl">else:</span>
             <span class="n">fw</span> <span class="o">=</span> <span class="n">ConcreteFlyweight</span><span class="p">()</span>
-            <span class="n">self</span><span class="o">.</span><span class="n">flyweights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">fw</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">flyweights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">fw</span>
             <span class="k">return</span> <span class="n">fw</span>
 </pre></div>
 
@@ -469,18 +469,18 @@
 </li>
 <li>
 <p>client.py</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">flyweight</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">flyweight</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">extrinsicstate</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">FlyweightFactory</span><span class="p">()</span>
-<span class="n">fx</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">get_flyweight</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
-<span class="n">fx</span><span class="o">.</span><span class="n">operation</span><span class="p">(</span><span class="n">extrinsicstate</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">get_flyweight</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">fx</span><span class="p">.</span><span class="n">operation</span><span class="p">(</span><span class="n">extrinsicstate</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">fy</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">get_flyweight</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
-<span class="n">fy</span><span class="o">.</span><span class="n">operation</span><span class="p">(</span><span class="n">extrinsicstate</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fy</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">get_flyweight</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">fy</span><span class="p">.</span><span class="n">operation</span><span class="p">(</span><span class="n">extrinsicstate</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">uf</span> <span class="o">=</span> <span class="n">UnsharedConcreteFlyweight</span><span class="p">()</span>
-<span class="n">uf</span><span class="o">.</span><span class="n">operation</span><span class="p">(</span><span class="n">extrinsicstate</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">uf</span><span class="p">.</span><span class="n">operation</span><span class="p">(</span><span class="n">extrinsicstate</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 
@@ -507,30 +507,30 @@
 <ul>
 <li>
 <p><code>proxy.py</code></p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Subject</span><span class="p">(</span><span class="n">object</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Subject</span><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
         <span class="n">pass</span>
 
-<span class="n">class</span> <span class="n">RealSubject</span><span class="p">(</span><span class="n">Subject</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;real subject operation&quot;</span>
+<span class="n">class</span> <span class="n">RealSubject</span><span class="p">(</span><span class="n">Subject</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">print</span> <span class="s">&quot;real subject operation&quot;</span>
 
-<span class="n">class</span> <span class="n">Proxy</span><span class="p">(</span><span class="n">Subject</span><span class="p">):</span>
-    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">rs</span> <span class="o">=</span> <span class="n">RealSubject</span><span class="p">()</span>
+<span class="n">class</span> <span class="n">Proxy</span><span class="p">(</span><span class="n">Subject</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">def</span> <span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">rs</span> <span class="o">=</span> <span class="n">RealSubject</span><span class="p">()</span>
 
-    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="o">.</span><span class="n">rs</span><span class="o">.</span><span class="n">operation</span><span class="p">()</span>
+    <span class="n">def</span> <span class="n">operation</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">rs</span><span class="p">.</span><span class="n">operation</span><span class="p">()</span>
 </pre></div>
 
 
 </li>
 <li>
 <p><code>client.py</code> </p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">proxy</span> <span class="nb">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">proxy</span> <span class="n">import</span> <span class="o">*</span>
 
 <span class="n">proxy</span> <span class="o">=</span> <span class="n">Proxy</span><span class="p">()</span>
-<span class="n">proxy</span><span class="o">.</span><span class="n">operation</span><span class="p">()</span>
+<span class="n">proxy</span><span class="p">.</span><span class="n">operation</span><span class="p">()</span>
 </pre></div>
 
 

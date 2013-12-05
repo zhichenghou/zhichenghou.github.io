@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-01-11T17:35:00">
-                五 11 一月 2013
+                周五 11 一月 2013
         </abbr>
 
         <address class="vcard author">
@@ -101,95 +101,95 @@
 
 
 <p>在刚才的hello.jsp文件中加入了一个for循环结构来控制输出字体的大小。为了更加清楚的了解JSP的实现原理，需要分析该JSP文件编译而成的Servlet文件，该文件可以在tomcat的work文件夹中找到（如果使用eclipse并将tomcat的项目部署在workspace的.metadata文件夹下，则work不在tomcat目录下，而在.metadata文件夹下）。找到的对应的Hello_jsp.java文件如下</p>
-<div class="highlight"><pre><span class="nb">package</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">jsp</span><span class="p">;</span>
+<div class="highlight"><pre><span class="nx">package</span> <span class="nx">org.apache.jsp</span><span class="p">;</span>
 
-<span class="nb">import</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.*</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">http</span><span class="o">.*</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.*</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">javax.servlet.</span><span class="o">*</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">javax.servlet.http.</span><span class="o">*</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">javax.servlet.jsp.</span><span class="o">*</span><span class="p">;</span>
 
-<span class="n">public</span> <span class="n">final</span> <span class="n">class</span> <span class="n">Hello_jsp</span> <span class="n">extends</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">jasper</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">HttpJspBase</span>
-    <span class="n">implements</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">jasper</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">JspSourceDependent</span> <span class="p">{</span>
+<span class="k">public</span> <span class="nf">final</span> <span class="nb">class</span> <span class="nx">Hello_jsp</span> <span class="nx">extends</span> <span class="nx">org.apache.jasper.runtime.HttpJspBase</span>
+    <span class="nx">implements</span> <span class="nx">org.apache.jasper.runtime.JspSourceDependent</span> <span class="p">{</span>
 
-  <span class="n">private</span> <span class="n">static</span> <span class="n">final</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">JspFactory</span> <span class="n">_jspxFactory</span> <span class="o">=</span>
-          <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">JspFactory</span><span class="o">.</span><span class="n">getDefaultFactory</span><span class="p">();</span>
+  <span class="k">private</span> <span class="nf">static</span> <span class="nx">final</span> <span class="nx">javax.servlet.jsp.JspFactory</span> <span class="n">_jspxFactory</span> <span class="o">=</span>
+          <span class="nx">javax.servlet.jsp.JspFactory.getDefaultFactory</span><span class="p">();</span>
 
-  <span class="n">private</span> <span class="n">static</span> <span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">Map</span><span class="sr">&lt;java.lang.String,java.lang.Long&gt;</span> <span class="n">_jspx_dependants</span><span class="p">;</span>
+  <span class="k">private</span> <span class="nf">static</span> <span class="nx">java.util.Map</span><span class="o">&lt;</span><span class="nx">java.lang.String</span><span class="p">,</span><span class="nx">java.lang.Long</span><span class="o">&gt;</span> <span class="nx">_jspx_dependants</span><span class="p">;</span>
 
-  <span class="n">private</span> <span class="n">javax</span><span class="o">.</span><span class="n">el</span><span class="o">.</span><span class="n">ExpressionFactory</span> <span class="n">_el_expressionfactory</span><span class="p">;</span>
-  <span class="n">private</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">tomcat</span><span class="o">.</span><span class="n">InstanceManager</span> <span class="n">_jsp_instancemanager</span><span class="p">;</span>
+  <span class="k">private</span> <span class="nf">javax.el.ExpressionFactory</span> <span class="nx">_el_expressionfactory</span><span class="p">;</span>
+  <span class="k">private</span> <span class="nf">org.apache.tomcat.InstanceManager</span> <span class="nx">_jsp_instancemanager</span><span class="p">;</span>
 
-  <span class="n">public</span> <span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">Map</span><span class="sr">&lt;java.lang.String,java.lang.Long&gt;</span> <span class="n">getDependants</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">_jspx_dependants</span><span class="p">;</span>
+  <span class="k">public</span> <span class="nf">java.util.Map</span><span class="o">&lt;</span><span class="nx">java.lang.String</span><span class="p">,</span><span class="nx">java.lang.Long</span><span class="o">&gt;</span> <span class="nx">getDependants</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">_jspx_dependants</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="n">public</span> <span class="n">void</span> <span class="n">_jspInit</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">_el_expressionfactory</span> <span class="o">=</span> <span class="n">_jspxFactory</span><span class="o">.</span><span class="n">getJspApplicationContext</span><span class="p">(</span><span class="n">getServletConfig</span><span class="p">()</span><span class="o">.</span><span class="n">getServletContext</span><span class="p">())</span><span class="o">.</span><span class="n">getExpressionFactory</span><span class="p">();</span>
-    <span class="n">_jsp_instancemanager</span> <span class="o">=</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">jasper</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">InstanceManagerFactory</span><span class="o">.</span><span class="n">getInstanceManager</span><span class="p">(</span><span class="n">getServletConfig</span><span class="p">());</span>
+  <span class="k">public</span> <span class="nf">void</span> <span class="nx">_jspInit</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">_el_expressionfactory</span> <span class="o">=</span> <span class="nx">_jspxFactory.getJspApplicationContext</span><span class="p">(</span><span class="nx">getServletConfig</span><span class="p">()</span><span class="bp">.</span><span class="nx">getServletContext</span><span class="p">())</span><span class="bp">.</span><span class="nx">getExpressionFactory</span><span class="p">();</span>
+    <span class="n">_jsp_instancemanager</span> <span class="o">=</span> <span class="nx">org.apache.jasper.runtime.InstanceManagerFactory.getInstanceManager</span><span class="p">(</span><span class="nx">getServletConfig</span><span class="p">());</span>
   <span class="p">}</span>
 
-  <span class="n">public</span> <span class="n">void</span> <span class="n">_jspDestroy</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="nf">void</span> <span class="nx">_jspDestroy</span><span class="p">()</span> <span class="p">{</span>
   <span class="p">}</span>
 
-  <span class="n">public</span> <span class="n">void</span> <span class="n">_jspService</span><span class="p">(</span><span class="n">final</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">final</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">)</span>
-        <span class="n">throws</span> <span class="n">java</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">IOException</span><span class="p">,</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">ServletException</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="nf">void</span> <span class="nx">_jspService</span><span class="p">(</span><span class="nx">final</span> <span class="nx">javax.servlet.http.HttpServletRequest</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">final</span> <span class="nx">javax.servlet.http.HttpServletResponse</span> <span class="nb">response</span><span class="p">)</span>
+        <span class="nx">throws</span> <span class="nx">java.io.IOException</span><span class="p">,</span> <span class="nx">javax.servlet.ServletException</span> <span class="p">{</span>
 
-    <span class="n">final</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">PageContext</span> <span class="n">pageContext</span><span class="p">;</span>
-    <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-    <span class="n">final</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">ServletContext</span> <span class="n">application</span><span class="p">;</span>
-    <span class="n">final</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">ServletConfig</span> <span class="n">config</span><span class="p">;</span>
-    <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">JspWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-    <span class="n">final</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Object</span> <span class="n">page</span> <span class="o">=</span> <span class="n">this</span><span class="p">;</span>
-    <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">JspWriter</span> <span class="n">_jspx_out</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-    <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">PageContext</span> <span class="n">_jspx_page_context</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+    <span class="nx">final</span> <span class="nx">javax.servlet.jsp.PageContext</span> <span class="nx">pageContext</span><span class="p">;</span>
+    <span class="nx">javax.servlet.http.HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="kt">null</span><span class="p">;</span>
+    <span class="nx">final</span> <span class="nx">javax.servlet.ServletContext</span> <span class="nx">application</span><span class="p">;</span>
+    <span class="nx">final</span> <span class="nx">javax.servlet.ServletConfig</span> <span class="nx">config</span><span class="p">;</span>
+    <span class="nx">javax.servlet.jsp.JspWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="kt">null</span><span class="p">;</span>
+    <span class="nx">final</span> <span class="nx">java.lang.Object</span> <span class="n">page</span> <span class="o">=</span> <span class="nx">this</span><span class="p">;</span>
+    <span class="nx">javax.servlet.jsp.JspWriter</span> <span class="n">_jspx_out</span> <span class="o">=</span> <span class="kt">null</span><span class="p">;</span>
+    <span class="nx">javax.servlet.jsp.PageContext</span> <span class="n">_jspx_page_context</span> <span class="o">=</span> <span class="kt">null</span><span class="p">;</span>
 
 
-    <span class="n">try</span> <span class="p">{</span>
-      <span class="n">response</span><span class="o">.</span><span class="n">setContentType</span><span class="p">(</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="p">);</span>
-      <span class="n">pageContext</span> <span class="o">=</span> <span class="n">_jspxFactory</span><span class="o">.</span><span class="n">getPageContext</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span>
-                <span class="n">null</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="mi">8192</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
-      <span class="n">_jspx_page_context</span> <span class="o">=</span> <span class="n">pageContext</span><span class="p">;</span>
-      <span class="n">application</span> <span class="o">=</span> <span class="n">pageContext</span><span class="o">.</span><span class="n">getServletContext</span><span class="p">();</span>
-      <span class="n">config</span> <span class="o">=</span> <span class="n">pageContext</span><span class="o">.</span><span class="n">getServletConfig</span><span class="p">();</span>
-      <span class="n">session</span> <span class="o">=</span> <span class="n">pageContext</span><span class="o">.</span><span class="n">getSession</span><span class="p">();</span>
-      <span class="n">out</span> <span class="o">=</span> <span class="n">pageContext</span><span class="o">.</span><span class="n">getOut</span><span class="p">();</span>
-      <span class="n">_jspx_out</span> <span class="o">=</span> <span class="n">out</span><span class="p">;</span>
+    <span class="nx">try</span> <span class="p">{</span>
+      <span class="nx">response.setContentType</span><span class="p">(</span><span class="s2">&quot;text/html; charset=UTF-8&quot;</span><span class="p">);</span>
+      <span class="n">pageContext</span> <span class="o">=</span> <span class="nx">_jspxFactory.getPageContext</span><span class="p">(</span><span class="nx">this</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="nb">response</span><span class="p">,</span>
+                <span class="kt">null</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">8192</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+      <span class="n">_jspx_page_context</span> <span class="o">=</span> <span class="nx">pageContext</span><span class="p">;</span>
+      <span class="n">application</span> <span class="o">=</span> <span class="nx">pageContext.getServletContext</span><span class="p">();</span>
+      <span class="n">config</span> <span class="o">=</span> <span class="nx">pageContext.getServletConfig</span><span class="p">();</span>
+      <span class="n">session</span> <span class="o">=</span> <span class="nx">pageContext.getSession</span><span class="p">();</span>
+      <span class="n">out</span> <span class="o">=</span> <span class="nx">pageContext.getOut</span><span class="p">();</span>
+      <span class="n">_jspx_out</span> <span class="o">=</span> <span class="nb">out</span><span class="p">;</span>
 
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD HTML 4.01 Transitional//EN\&quot; \&quot;http://www.w3.org/TR/html4/loose.dtd\&quot;&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;html&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;head&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;meta http-equiv=\&quot;Content-Type\&quot; content=\&quot;text/html; charset=UTF-8\&quot;&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;title&gt; 欢迎&lt;/title&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;/head&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;body&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;欢迎学习JaveEE知识，现在时间是&lt;br/&gt;\n&quot;</span><span class="p">);</span>
-<span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">Date</span><span class="p">());</span> 
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;br/&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;!-- 在JSP中加入java代码，实现动态 --&gt;\n&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;!DOCTYPE html PUBLIC </span><span class="se">\&quot;</span><span class="s2">-//W3C//DTD HTML 4.01 Transitional//EN</span><span class="se">\&quot;</span><span class="s2"> </span><span class="se">\&quot;</span><span class="s2">http://www.w3.org/TR/html4/loose.dtd</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;head&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;meta http-equiv=</span><span class="se">\&quot;</span><span class="s2">Content-Type</span><span class="se">\&quot;</span><span class="s2"> content=</span><span class="se">\&quot;</span><span class="s2">text/html; charset=UTF-8</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;title&gt; 欢迎&lt;/title&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;/head&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;body&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;欢迎学习JaveEE知识，现在时间是&lt;br/&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="nx">out.println</span><span class="p">(</span><span class="nb">new</span> <span class="nx">java.util.Date</span><span class="p">());</span> 
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;br/&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;!-- 在JSP中加入java代码，实现动态 --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
 
-<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;&lt;font size=&#39;&quot;</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="s">&quot;&#39;&gt;&quot;</span><span class="p">);</span>
+<span class="nb">for</span> <span class="p">(</span><span class="nx">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out.println</span><span class="p">(</span><span class="s2">&quot;&lt;font size=&#39;&quot;</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s2">&quot;&#39;&gt;&quot;</span><span class="p">);</span>
 
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;测试字体大小 &lt;/font&gt; &lt;br/&gt;\n&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;测试字体大小 &lt;/font&gt; &lt;br/&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
  <span class="p">}</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;/body&gt;\n&quot;</span><span class="p">);</span>
-      <span class="n">out</span><span class="o">.</span><span class="nb">write</span><span class="p">(</span><span class="s">&quot;&lt;/html&gt;&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Throwable</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">t</span> <span class="n">instanceof</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">jsp</span><span class="o">.</span><span class="n">SkipPageException</span><span class="p">)){</span>
-        <span class="n">out</span> <span class="o">=</span> <span class="n">_jspx_out</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">out</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="n">out</span><span class="o">.</span><span class="n">getBufferSize</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
-          <span class="n">try</span> <span class="p">{</span> <span class="n">out</span><span class="o">.</span><span class="n">clearBuffer</span><span class="p">();</span> <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">java</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">_jspx_page_context</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="n">_jspx_page_context</span><span class="o">.</span><span class="n">handlePageException</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
-        <span class="k">else</span> <span class="n">throw</span> <span class="k">new</span> <span class="n">ServletException</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;/body&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+      <span class="nx">out.write</span><span class="p">(</span><span class="s2">&quot;&lt;/html&gt;&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="nx">catch</span> <span class="p">(</span><span class="nx">java.lang.Throwable</span> <span class="nb">t</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nb">t</span> <span class="nx">instanceof</span> <span class="nx">javax.servlet.jsp.SkipPageException</span><span class="p">)){</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="nx">_jspx_out</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">out</span> <span class="o">!=</span> <span class="kt">null</span> <span class="o">&amp;&amp;</span> <span class="nx">out.getBufferSize</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+          <span class="nx">try</span> <span class="p">{</span> <span class="nx">out.clearBuffer</span><span class="p">();</span> <span class="p">}</span> <span class="nx">catch</span> <span class="p">(</span><span class="nx">java.io.IOException</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">_jspx_page_context</span> <span class="o">!=</span> <span class="kt">null</span><span class="p">)</span> <span class="nx">_jspx_page_context.handlePageException</span><span class="p">(</span><span class="nb">t</span><span class="p">);</span>
+        <span class="k">else</span> <span class="nb">throw</span> <span class="nb">new</span> <span class="nx">ServletException</span><span class="p">(</span><span class="nb">t</span><span class="p">);</span>
       <span class="p">}</span>
-    <span class="p">}</span> <span class="n">finally</span> <span class="p">{</span>
-      <span class="n">_jspxFactory</span><span class="o">.</span><span class="n">releasePageContext</span><span class="p">(</span><span class="n">_jspx_page_context</span><span class="p">);</span>
+    <span class="p">}</span> <span class="nx">finally</span> <span class="p">{</span>
+      <span class="nx">_jspxFactory.releasePageContext</span><span class="p">(</span><span class="nx">_jspx_page_context</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
