@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-02-26T15:39:00">
-                二 26 二月 2013
+                Tue 26 February 2013
         </abbr>
 
         <address class="vcard author">
@@ -95,39 +95,39 @@
 <p>在本jsp的编写中声明使用了struts2的标签库，并使用该标签库来编写表单请求代码。</p>
 <h3>3. 定义处理用户请求的Action类</h3>
 <p>在上述的jsp页面中指定了表单的action为login，因此需要实现一个java类来处理该请求动作。该类通常继承与ActionSupport基类，其代码如下：</p>
-<div class="highlight"><pre><span class="nb">import</span> <span class="n">com</span><span class="o">.</span><span class="n">opensymphony</span><span class="o">.</span><span class="n">xwork2</span><span class="o">.</span><span class="n">ActionContext</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">com</span><span class="o">.</span><span class="n">opensymphony</span><span class="o">.</span><span class="n">xwork2</span><span class="o">.</span><span class="n">ActionSupport</span><span class="p">;</span>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">com</span><span class="p">.</span><span class="n">opensymphony</span><span class="p">.</span><span class="n">xwork2</span><span class="p">.</span><span class="n">ActionContext</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">com</span><span class="p">.</span><span class="n">opensymphony</span><span class="p">.</span><span class="n">xwork2</span><span class="p">.</span><span class="n">ActionSupport</span><span class="p">;</span>
 
 <span class="n">public</span> <span class="n">class</span> <span class="n">LoginAction</span> <span class="n">extends</span> <span class="n">ActionSupport</span>
 <span class="p">{</span>
     <span class="n">private</span> <span class="n">String</span> <span class="n">username</span><span class="p">;</span>
     <span class="n">private</span> <span class="n">String</span> <span class="n">password</span><span class="p">;</span>
 
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getUsername</span><span class="p">()</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getUsername</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="n">username</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setUsername</span><span class="p">(</span><span class="n">String</span> <span class="n">username</span><span class="p">)</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setUsername</span><span class="p">(</span><span class="n">String</span> <span class="n">username</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="p">;</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getPassword</span><span class="p">()</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getPassword</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="n">password</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setPassword</span><span class="p">(</span><span class="n">String</span> <span class="n">password</span><span class="p">)</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setPassword</span><span class="p">(</span><span class="n">String</span> <span class="n">password</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">;</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">String</span> <span class="n">execute</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">execute</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">getUsername</span><span class="p">()</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;zhichenghou.github.com&quot;</span><span class="p">)</span>
-            <span class="o">&amp;&amp;</span> <span class="n">getPassword</span><span class="p">()</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;zhichenghou&quot;</span><span class="p">)</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">getUsername</span><span class="p">().</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;zhichenghou.github.com&quot;</span><span class="p">)</span>
+            <span class="o">&amp;&amp;</span> <span class="n">getPassword</span><span class="p">().</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;zhichenghou&quot;</span><span class="p">)</span> <span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">ActionContext</span><span class="o">.</span><span class="n">getContext</span><span class="p">()</span><span class="o">.</span><span class="n">getSession</span><span class="p">()</span>
-                <span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;user&quot;</span> <span class="p">,</span> <span class="n">getUsername</span><span class="p">());</span>
+            <span class="n">ActionContext</span><span class="p">.</span><span class="n">getContext</span><span class="p">().</span><span class="n">getSession</span><span class="p">()</span>
+                <span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;user&quot;</span> <span class="p">,</span> <span class="n">getUsername</span><span class="p">());</span>
         <span class="k">return</span> <span class="n">SUCCESS</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">else</span>

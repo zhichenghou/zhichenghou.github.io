@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-02-27T16:05:00">
-                三 27 二月 2013
+                Wed 27 February 2013
         </abbr>
 
         <address class="vcard author">
@@ -65,25 +65,25 @@
     <span class="n">private</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
     <span class="n">private</span> <span class="n">String</span> <span class="n">content</span><span class="p">;</span>
 
-    <span class="n">public</span> <span class="n">Integer</span> <span class="n">getId</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">Integer</span> <span class="nf">getId</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">id</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setId</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="p">(</span><span class="n">Integer</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getTitle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">title</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setTitle</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setTitle</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getContent</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getContent</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">content</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setContent</span><span class="p">(</span><span class="n">String</span> <span class="n">content</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span><span class="p">;</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setContent</span><span class="p">(</span><span class="n">String</span> <span class="n">content</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -148,34 +148,34 @@
 <li>关闭Session</li>
 </ol>
 <p>以下代码实现往数据库添加一条信息的功能。</p>
-<div class="highlight"><pre><span class="nb">package</span> <span class="n">hou</span><span class="p">;</span>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">hou</span><span class="p">;</span>
 
-<span class="nb">import</span> <span class="n">News</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">org</span><span class="o">.</span><span class="n">hibernate</span><span class="o">.</span><span class="n">Session</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">org</span><span class="o">.</span><span class="n">hibernate</span><span class="o">.</span><span class="n">SessionFactory</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">org</span><span class="o">.</span><span class="n">hibernate</span><span class="o">.</span><span class="n">Transaction</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">org</span><span class="o">.</span><span class="n">hibernate</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">Configuration</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">News</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">Session</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">SessionFactory</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">Transaction</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">hibernate</span><span class="p">.</span><span class="n">cfg</span><span class="p">.</span><span class="n">Configuration</span><span class="p">;</span>
 
 <span class="n">public</span> <span class="n">class</span> <span class="n">NewsManager</span> <span class="p">{</span>
 
-    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
         <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
-        <span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="p">()</span><span class="o">.</span><span class="n">configure</span><span class="p">();</span>
-        <span class="n">SessionFactory</span> <span class="n">sf</span> <span class="o">=</span> <span class="n">conf</span><span class="o">.</span><span class="n">buildSessionFactory</span><span class="p">();</span>
+        <span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Configuration</span><span class="p">().</span><span class="n">configure</span><span class="p">();</span>
+        <span class="n">SessionFactory</span> <span class="n">sf</span> <span class="o">=</span> <span class="n">conf</span><span class="p">.</span><span class="n">buildSessionFactory</span><span class="p">();</span>
 
-        <span class="n">Session</span> <span class="n">sess</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">openSession</span><span class="p">();</span>
+        <span class="n">Session</span> <span class="n">sess</span> <span class="o">=</span> <span class="n">sf</span><span class="p">.</span><span class="n">openSession</span><span class="p">();</span>
 
-        <span class="n">Transaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">beginTransaction</span><span class="p">();</span>
+        <span class="n">Transaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="n">sess</span><span class="p">.</span><span class="n">beginTransaction</span><span class="p">();</span>
 
-        <span class="n">News</span> <span class="n">n</span> <span class="o">=</span> <span class="k">new</span> <span class="n">News</span><span class="p">();</span>
+        <span class="n">News</span> <span class="n">n</span> <span class="o">=</span> <span class="n">new</span> <span class="n">News</span><span class="p">();</span>
 
-        <span class="n">n</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s">&quot;一条信息&quot;</span><span class="p">);</span>
-        <span class="n">n</span><span class="o">.</span><span class="n">setContent</span><span class="p">(</span><span class="s">&quot;信息内容&quot;</span><span class="p">);</span>
+        <span class="n">n</span><span class="p">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s">&quot;一条信息&quot;</span><span class="p">);</span>
+        <span class="n">n</span><span class="p">.</span><span class="n">setContent</span><span class="p">(</span><span class="s">&quot;信息内容&quot;</span><span class="p">);</span>
 
-        <span class="n">sess</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-        <span class="n">tx</span><span class="o">.</span><span class="n">commit</span><span class="p">();</span>
-        <span class="n">sess</span><span class="o">.</span><span class="nb">close</span><span class="p">();</span>
-        <span class="n">sf</span><span class="o">.</span><span class="nb">close</span><span class="p">();</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">tx</span><span class="p">.</span><span class="n">commit</span><span class="p">();</span>
+        <span class="n">sess</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+        <span class="n">sf</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>

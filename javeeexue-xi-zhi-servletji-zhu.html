@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-01-14T20:17:00">
-                一 14 一月 2013
+                Mon 14 January 2013
         </abbr>
 
         <address class="vcard author">
@@ -55,16 +55,16 @@
 </p>
 </footer><!-- /.post-info -->      <h2>Servlet类介绍</h2>
 <p>Servlet类是一个继承自<code>HttpServlet</code>的特殊类，可以用来响应用户的请求。在编写自己的Servlet时最常使用的方法是<code>service()</code>方法，该方法处理客户端的请求。因此，一个Servlet类的典型结构为：</p>
-<div class="highlight"><pre><span class="sr">//</span><span class="err">使用</span><span class="nv">@WebServlet</span> <span class="n">Annotation</span> <span class="err">配置</span><span class="n">servlet</span>
-<span class="nv">@WebServlet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;firstServlet&quot;</span><span class="p">,</span> <span class="n">urlPatterns</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;/firstServlet&quot;</span><span class="p">})</span>
-<span class="sr">//</span><span class="n">Servlet</span><span class="err">类定义</span>
-<span class="n">public</span> <span class="n">class</span> <span class="n">FirstServlet</span> <span class="n">extends</span> <span class="n">HttpServlet</span>
+<div class="highlight"><pre><span class="c1">//使用@WebServlet Annotation 配置servlet</span>
+<span class="p">@</span><span class="n">WebServlet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;firstServlet&quot;</span><span class="p">,</span> <span class="n">urlPatterns</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;/firstServlet&quot;</span><span class="p">})</span>
+<span class="c1">//Servlet类定义</span>
+<span class="n">public</span> <span class="k">class</span> <span class="n">FirstServlet</span> <span class="k">extends</span> <span class="n">HttpServlet</span>
 <span class="p">{</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">service</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span>
+    <span class="n">public</span> <span class="k">void</span> <span class="n">service</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span>
     <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">)</span> 
-    <span class="n">throws</span> <span class="n">ServletException</span><span class="p">,</span><span class="n">java</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">IOException</span> 
+    <span class="n">throws</span> <span class="n">ServletException</span><span class="p">,</span><span class="n">java</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">IOException</span> 
     <span class="p">{</span>
-        <span class="sr">//</span><span class="err">相应用户请求代码</span>
+        <span class="c1">//相应用户请求代码</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -103,70 +103,70 @@
 
 
 <p>然后给出控制器Servlet类<code>LoginServlet.java</code>:</p>
-<div class="highlight"><pre><span class="nb">import</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.*</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">http</span><span class="o">.*</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">javax</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">annotation</span><span class="o">.*</span><span class="p">;</span>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">javax</span><span class="p">.</span><span class="n">servlet</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">javax</span><span class="p">.</span><span class="n">servlet</span><span class="p">.</span><span class="n">http</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">javax</span><span class="p">.</span><span class="n">servlet</span><span class="p">.</span><span class="n">annotation</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
 
-<span class="nb">import</span> <span class="n">java</span><span class="o">.</span><span class="n">sql</span><span class="o">.*</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">java</span><span class="o">.</span><span class="n">io</span><span class="o">.*</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">sql</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
 
-<span class="nv">@WebServlet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;login&quot;</span><span class="p">,</span> <span class="n">urlPatterns</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;/login&quot;</span><span class="p">})</span>
+<span class="err">@</span><span class="n">WebServlet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;login&quot;</span><span class="p">,</span> <span class="n">urlPatterns</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;/login&quot;</span><span class="p">})</span>
 
 <span class="n">public</span> <span class="n">class</span> <span class="n">LoginServlet</span> <span class="n">extends</span> <span class="n">HttpServlet</span> <span class="p">{</span>
 
-    <span class="n">public</span> <span class="n">void</span> <span class="n">service</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">)</span>
-        <span class="n">throws</span> <span class="n">ServletException</span><span class="p">,</span> <span class="n">java</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">IOException</span> 
+    <span class="n">public</span> <span class="kt">void</span> <span class="n">service</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">)</span>
+        <span class="n">throws</span> <span class="n">ServletException</span><span class="p">,</span> <span class="n">java</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">IOException</span> 
     <span class="p">{</span>
             <span class="n">String</span> <span class="n">errMsg</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span>
-            <span class="sr">//</span><span class="n">Servlet</span><span class="err">不输出响应到客户端，因此必须将请求转发</span>
+            <span class="c1">//Servlet不输出响应到客户端，因此必须将请求转发</span>
             <span class="n">RequestDispatcher</span> <span class="n">rd</span><span class="p">;</span>
 
-            <span class="sr">//</span><span class="err">获取请求参数</span>    
-            <span class="n">String</span> <span class="n">username</span> <span class="o">=</span>  <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span>
-            <span class="n">String</span> <span class="n">pass</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s">&quot;pass&quot;</span><span class="p">);</span>
-            <span class="n">PrintStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintStream</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">getOutputStream</span><span class="p">());</span>
-            <span class="sr">//o</span><span class="n">ut</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;name&quot;</span> <span class="o">+</span> <span class="n">username</span><span class="p">);</span>
+            <span class="c1">//获取请求参数    </span>
+            <span class="n">String</span> <span class="n">username</span> <span class="o">=</span>  <span class="n">request</span><span class="p">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">pass</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s">&quot;pass&quot;</span><span class="p">);</span>
+            <span class="n">PrintStream</span> <span class="n">out</span> <span class="o">=</span> <span class="n">new</span> <span class="n">PrintStream</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">getOutputStream</span><span class="p">());</span>
+            <span class="c1">//out.println(&quot;name&quot; + username);</span>
 
             <span class="n">try</span> <span class="p">{</span>
-                <span class="sr">//</span><span class="n">Servlet</span> <span class="err">本身不处理业务逻辑，调用</span><span class="n">JavaBean</span><span class="err">处理用户请求</span>
-                <span class="n">DbDao</span> <span class="n">dd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DbDao</span><span class="p">(</span><span class="s">&quot;com.mysql.jdbc.Driver&quot;</span><span class="p">,</span>
+                <span class="c1">//Servlet 本身不处理业务逻辑，调用JavaBean处理用户请求</span>
+                <span class="n">DbDao</span> <span class="n">dd</span> <span class="o">=</span> <span class="n">new</span> <span class="n">DbDao</span><span class="p">(</span><span class="s">&quot;com.mysql.jdbc.Driver&quot;</span><span class="p">,</span>
                     <span class="s">&quot;jdbc:mysql://localhost:3306/JaveEE&quot;</span><span class="p">,</span><span class="s">&quot;root&quot;</span><span class="p">,</span><span class="s">&quot;mysql&quot;</span><span class="p">);</span>
-                <span class="sr">//</span><span class="err">查询结果集</span>
-                <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s">&quot;select pass from user_table&quot;</span>
+                <span class="c1">//查询结果集</span>
+                <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">dd</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">&quot;select pass from user_table&quot;</span>
                     <span class="o">+</span> <span class="s">&quot;where name = ?&quot;</span><span class="p">,</span> <span class="n">username</span><span class="p">);</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">rs</span><span class="o">.</span><span class="k">next</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="n">next</span><span class="p">())</span> <span class="p">{</span>
 
-                    <span class="sr">//</span><span class="err">用户名和密码匹配</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">rs</span><span class="o">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&quot;pass&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">pass</span><span class="p">))</span> <span class="p">{</span>
-                        <span class="sr">//</span> <span class="err">获取</span><span class="n">session</span><span class="err">对象</span>
-                        <span class="n">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getSession</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
-                        <span class="sr">//</span><span class="err">设置</span><span class="n">session</span><span class="err">属性，跟踪用户会话状态</span>
-                        <span class="n">session</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="n">username</span><span class="p">);</span>
-                        <span class="sr">//</span><span class="err">获取转发对象</span>
-                        <span class="n">rd</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getRequestDispatcher</span><span class="p">(</span><span class="s">&quot;/welcome.jsp&quot;</span><span class="p">);</span>
-                        <span class="n">rd</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">);</span>
+                    <span class="c1">//用户名和密码匹配</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&quot;pass&quot;</span><span class="p">).</span><span class="n">equals</span><span class="p">(</span><span class="n">pass</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="c1">// 获取session对象</span>
+                        <span class="n">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">getSession</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+                        <span class="c1">//设置session属性，跟踪用户会话状态</span>
+                        <span class="n">session</span><span class="p">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="n">username</span><span class="p">);</span>
+                        <span class="c1">//获取转发对象</span>
+                        <span class="n">rd</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">getRequestDispatcher</span><span class="p">(</span><span class="s">&quot;/welcome.jsp&quot;</span><span class="p">);</span>
+                        <span class="n">rd</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">);</span>
                     <span class="p">}</span>
                     <span class="k">else</span> <span class="p">{</span>
-                        <span class="sr">//</span><span class="err">用户名密码不匹配</span>
+                        <span class="c1">//用户名密码不匹配</span>
                         <span class="n">errMsg</span> <span class="o">+=</span> <span class="s">&quot;您的用户名密码不符合，请重试&quot;</span><span class="p">;</span>
                     <span class="p">}</span>
                 <span class="p">}</span>
                 <span class="k">else</span> <span class="p">{</span>
-                    <span class="sr">//</span><span class="err">用户名不存在时</span>
+                    <span class="c1">//用户名不存在时</span>
                     <span class="n">errMsg</span> <span class="o">+=</span> <span class="s">&quot;您的用户名不存在，请先注册&quot;</span><span class="p">;</span>
                 <span class="p">}</span>
 
             <span class="p">}</span>
             <span class="n">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">errMsg</span><span class="p">);</span>
-                <span class="n">e</span><span class="o">.</span><span class="n">printStackTrace</span><span class="p">();</span>
+                <span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">errMsg</span><span class="p">);</span>
+                <span class="n">e</span><span class="p">.</span><span class="n">printStackTrace</span><span class="p">();</span>
             <span class="p">}</span>
 
-            <span class="sr">//</span><span class="err">如果出错，转发到重新登录</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">errMsg</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">errMsg</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">rd</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getRequestDispatcher</span><span class="p">(</span><span class="s">&quot;/login.jsp&quot;</span><span class="p">);</span>
-                <span class="n">request</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;err&quot;</span><span class="p">,</span> <span class="n">errMsg</span><span class="p">);</span>
-                <span class="n">rd</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">);</span>
+            <span class="c1">//如果出错，转发到重新登录</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">errMsg</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">errMsg</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">rd</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">getRequestDispatcher</span><span class="p">(</span><span class="s">&quot;/login.jsp&quot;</span><span class="p">);</span>
+                <span class="n">request</span><span class="p">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s">&quot;err&quot;</span><span class="p">,</span> <span class="n">errMsg</span><span class="p">);</span>
+                <span class="n">rd</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">);</span>
             <span class="p">}</span>
 
         <span class="p">}</span>   
@@ -175,7 +175,7 @@
 
 
 <p>最后给出Model类<code>DbDao.java</code>：</p>
-<div class="highlight"><pre><span class="nb">import</span> <span class="n">java</span><span class="o">.</span><span class="n">sql</span><span class="o">.*</span><span class="p">;</span>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">sql</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
 
 <span class="n">public</span> <span class="n">class</span> <span class="n">DbDao</span> <span class="p">{</span>
     <span class="n">private</span> <span class="n">Connection</span> <span class="n">conn</span><span class="p">;</span>
@@ -184,79 +184,79 @@
     <span class="n">private</span> <span class="n">String</span> <span class="n">username</span><span class="p">;</span>
     <span class="n">private</span> <span class="n">String</span> <span class="n">pass</span><span class="p">;</span>
 
-    <span class="n">public</span> <span class="n">DbDao</span><span class="p">()</span> <span class="p">{}</span>
-    <span class="n">public</span> <span class="n">DbDao</span><span class="p">(</span><span class="n">String</span> <span class="n">driver</span><span class="p">,</span> <span class="n">String</span> <span class="n">url</span><span class="p">,</span> <span class="n">String</span> <span class="n">username</span><span class="p">,</span> <span class="n">String</span> <span class="n">pass</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">driver</span><span class="p">;</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="p">;</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="p">;</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">pass</span> <span class="o">=</span> <span class="n">pass</span><span class="p">;</span>
+    <span class="n">public</span> <span class="nf">DbDao</span><span class="p">()</span> <span class="p">{}</span>
+    <span class="n">public</span> <span class="nf">DbDao</span><span class="p">(</span><span class="n">String</span> <span class="n">driver</span><span class="p">,</span> <span class="n">String</span> <span class="n">url</span><span class="p">,</span> <span class="n">String</span> <span class="n">username</span><span class="p">,</span> <span class="n">String</span> <span class="n">pass</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">driver</span><span class="p">;</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="p">;</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="p">;</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">pass</span> <span class="o">=</span> <span class="n">pass</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="sr">//</span><span class="err">各属性的</span><span class="n">setter</span><span class="err">和</span><span class="n">getter</span><span class="err">方法</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setDriver</span><span class="p">(</span><span class="n">String</span> <span class="n">driver</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">driver</span><span class="p">;</span>
+    <span class="c1">//各属性的setter和getter方法</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setDriver</span><span class="p">(</span><span class="n">String</span> <span class="n">driver</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">driver</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setUrl</span><span class="p">(</span><span class="n">String</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="p">;</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setUrl</span><span class="p">(</span><span class="n">String</span> <span class="n">url</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setUsername</span><span class="p">(</span><span class="n">String</span> <span class="n">username</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">;</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setUsername</span><span class="p">(</span><span class="n">String</span> <span class="n">username</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setPass</span><span class="p">(</span><span class="n">String</span> <span class="n">pass</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">pass</span> <span class="o">=</span> <span class="n">pass</span><span class="p">;</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setPass</span><span class="p">(</span><span class="n">String</span> <span class="n">pass</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">pass</span> <span class="o">=</span> <span class="n">pass</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getDriver</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">driver</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getDriver</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">this</span><span class="p">.</span><span class="n">driver</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getUrl</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">url</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getUrl</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">this</span><span class="p">.</span><span class="n">url</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getUsername</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">username</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getUsername</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">this</span><span class="p">.</span><span class="n">username</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getPass</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">pass</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">String</span> <span class="nf">getPass</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">this</span><span class="p">.</span><span class="n">pass</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="sr">//</span><span class="err">获取数据库连接</span>
-    <span class="n">public</span> <span class="n">Connection</span> <span class="n">getConnection</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span><span class="p">{</span>
+    <span class="c1">//获取数据库连接</span>
+    <span class="n">public</span> <span class="n">Connection</span> <span class="nf">getConnection</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span><span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">conn</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">Class</span><span class="o">.</span><span class="n">forName</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">driver</span><span class="p">);</span>
-            <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="o">.</span><span class="n">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">this</span><span class="o">.</span><span class="n">pass</span><span class="p">);</span>
+            <span class="n">Class</span><span class="p">.</span><span class="n">forName</span><span class="p">(</span><span class="n">this</span><span class="p">.</span><span class="n">driver</span><span class="p">);</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="p">.</span><span class="n">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">this</span><span class="p">.</span><span class="n">pass</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">conn</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="sr">//</span> <span class="err">插入记录</span>
-    <span class="n">public</span> <span class="n">boolean</span> <span class="n">insert</span><span class="p">(</span><span class="n">String</span> <span class="n">sql</span><span class="p">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
-        <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">getConnection</span><span class="p">()</span><span class="o">.</span><span class="n">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">args</span><span class="o">.</span><span class="nb">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pstmt</span><span class="o">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="c1">// 插入记录</span>
+    <span class="n">public</span> <span class="n">boolean</span> <span class="n">insert</span><span class="p">(</span><span class="n">String</span> <span class="n">sql</span><span class="p">,</span> <span class="n">Object</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">getConnection</span><span class="p">().</span><span class="n">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">args</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pstmt</span><span class="p">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">pstmt</span><span class="o">.</span><span class="n">executeUpdate</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">pstmt</span><span class="p">.</span><span class="n">executeUpdate</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="sr">//</span> <span class="err">执行查询</span>
-    <span class="n">public</span> <span class="n">ResultSet</span> <span class="n">query</span><span class="p">(</span><span class="n">String</span> <span class="n">sql</span><span class="p">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
-        <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">getConnection</span><span class="p">()</span><span class="o">.</span><span class="n">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="nb">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pstmt</span><span class="o">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="c1">// 执行查询</span>
+    <span class="n">public</span> <span class="n">ResultSet</span> <span class="n">query</span><span class="p">(</span><span class="n">String</span> <span class="n">sql</span><span class="p">,</span> <span class="n">Object</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">getConnection</span><span class="p">().</span><span class="n">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pstmt</span><span class="p">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="n">pstmt</span><span class="o">.</span><span class="n">executeQuery</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">pstmt</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="sr">//</span><span class="err">执行修改</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">moify</span> <span class="p">(</span><span class="n">String</span> <span class="n">sql</span><span class="p">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
-        <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">getConnection</span><span class="p">()</span><span class="o">.</span><span class="n">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="nb">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pstmt</span><span class="o">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="c1">//执行修改</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="n">moify</span> <span class="p">(</span><span class="n">String</span> <span class="n">sql</span><span class="p">,</span> <span class="n">Object</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="n">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="n">getConnection</span><span class="p">().</span><span class="n">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pstmt</span><span class="p">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
         <span class="p">}</span>
-        <span class="n">pstmt</span><span class="o">.</span><span class="n">executeUpdate</span><span class="p">();</span>
-        <span class="n">pstmt</span><span class="o">.</span><span class="nb">close</span><span class="p">();</span>
+        <span class="n">pstmt</span><span class="p">.</span><span class="n">executeUpdate</span><span class="p">();</span>
+        <span class="n">pstmt</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="sr">//</span><span class="err">关闭数据库连接的方法</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">closeConn</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">conn</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">conn</span><span class="o">.</span><span class="n">isClosed</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">conn</span><span class="o">.</span><span class="nb">close</span><span class="p">();</span>
+    <span class="c1">//关闭数据库连接的方法</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="n">closeConn</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">conn</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">conn</span><span class="p">.</span><span class="n">isClosed</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">conn</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>

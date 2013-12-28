@@ -42,7 +42,7 @@
     <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2013-02-27T17:19:00">
-                三 27 二月 2013
+                Wed 27 February 2013
         </abbr>
 
         <address class="vcard author">
@@ -59,20 +59,20 @@
 <h3>0. 为web应用添加Spring支持</h3>
 <p>将Spring项目下的dist路径下的全部jar包和spring-framework-v复制到WEB-INF\lib路径下，即可在web应用中使用Spring框架。</p>
 <h3>1. 编写主程序初始化Spring容器</h3>
-<div class="highlight"><pre><span class="nb">package</span> <span class="n">hou</span><span class="p">;</span>
+<div class="highlight"><pre><span class="n">package</span> <span class="n">hou</span><span class="p">;</span>
 
-<span class="nb">import</span> <span class="n">PersonService</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">org</span><span class="o">.</span><span class="n">springframework</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">ApplicationContext</span><span class="p">;</span>
-<span class="nb">import</span> <span class="n">org</span><span class="o">.</span><span class="n">springframework</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">support</span><span class="o">.</span><span class="n">ClassPathXmlApplicationContext</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">PersonService</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">ApplicationContext</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">springframework</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">support</span><span class="p">.</span><span class="n">ClassPathXmlApplicationContext</span><span class="p">;</span>
 
 <span class="n">public</span> <span class="n">class</span> <span class="n">SpringTest</span>
 <span class="p">{</span>
-    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">ApplicationContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClassPathXmlApplicationContext</span><span class="p">(</span><span class="s">&quot;bean.xml&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
-        <span class="n">PersonService</span> <span class="n">p</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">getBean</span><span class="p">(</span><span class="s">&quot;personService&quot;</span> <span class="p">,</span> <span class="n">PersonService</span><span class="o">.</span><span class="n">class</span><span class="p">);</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">info</span><span class="p">();</span>   
+        <span class="n">ApplicationContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ClassPathXmlApplicationContext</span><span class="p">(</span><span class="s">&quot;bean.xml&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+        <span class="n">PersonService</span> <span class="n">p</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">getBean</span><span class="p">(</span><span class="s">&quot;personService&quot;</span> <span class="p">,</span> <span class="n">PersonService</span><span class="p">.</span><span class="n">class</span><span class="p">);</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">info</span><span class="p">();</span>   
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -83,13 +83,13 @@
 <span class="p">{</span>
     <span class="n">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
 
-    <span class="n">public</span> <span class="n">void</span> <span class="n">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="n">this</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">info</span><span class="p">()</span>
+    <span class="n">public</span> <span class="kt">void</span> <span class="nf">info</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;名字&quot;</span><span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;名字&quot;</span><span class="o">+</span> <span class="n">name</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
