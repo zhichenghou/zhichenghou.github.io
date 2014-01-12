@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <meta charset="utf-8" />
+        <title>机器学习之logistic回归</title>
+        <link rel="stylesheet" href="./theme/css/main.css" />
+
+
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          "HTML-CSS": {
+          styles: {
+          ".MathJax .mo, .MathJax .mi": {color: "black"}}
+          },
+          tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+          });
+        </script>
+
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">Hou's blog </a></h1>
+                <nav><ul>
+                    <li><a href="./pages/about.html">About</a></li>
+                    <li class="active"><a href="./category/blog.html">Blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./ji-qi-xue-xi-zhi-logistichui-gui.html" rel="bookmark"
+           title="Permalink to 机器学习之logistic回归">机器学习之logistic回归</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-01-11T22:56:00">
+                Sat 11 January 2014
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="./author/zhicheng-hou.html">zhicheng hou</a>
+        </address>
+<p>In <a href="./category/blog.html">Blog</a>. </p>
+<p>tags: 
+<a href="./tag/machinelearning.html">MachineLearning</a> &nbsp;
+<a href="./tag/python.html">Python</a> &nbsp;
+</p>
+</footer><!-- /.post-info -->      <p>logistic回归是一种做分类而不是做回归的方法，该方法是在线性回归的基础上借助sigmoid函数实现的分类器，是一种属于概率统计的分类模型。该方法多用于解决二值分类问题，比如广告点击预测、病人是否患病等。本文将给出该方法的理论介绍，代码实现和一个具体应用的实例。</p>
+<h2>介绍</h2>
+<p>该方法与线性回归有很多相似之处，有些概念可以参考之前关于<a href="http://zhichenghou.github.io/ji-qi-xue-xi-zhi-xian-xing-hui-gui.html">线性回归的文章</a>。</p>
+<h3>假设模型</h3>
+<p>线性回归的假设模型用 $h(x)$ 表示：</p>
+<p>$$ h(x) = \sum_{i=0}^{n}{\theta_i x_i} = \theta^T x $$</p>
+<p>其中 $\theta$ 称为参数或权重， $x$ 为输入或特征，$n$ 为特征个数（不包括$x_0$）</p>
+<p>该函数的结果取值范围变化很大，可以拟合各种回归问题，而对于分类问题，我们希望得到的结果在一个固定不变动区间范围内，以便我们据此来设定阈值实现分类的判断，sigmoid函数正是这样一种能够使结果在0～1之间的一种函数，sigmoid的函数表示如下</p>
+<p>$$ g(z) = \frac{1}{1+e^{-z}}$$</p>
+<p>该函数的形状如图所示<img alt="sigmoid" src="/images/MachineLearning/LogisticRegression/sigmoid.png" /></p>
+<p>将上述两个函数结合就得到了logistic回归的假设模型 $h(x)$ </p>
+<p>$$ h(x) = g(\theta^T x ) =  \frac{1}{1+e^{-\theta^T x }}$$</p>
+<p>对于该假设模型的解释为：对于输入$x$，$h(x)$ 为在$\theta$条件下，分类输出为1的概率，数学表示如下</p>
+<p>$$ h(x) = P(y=1 | x; \theta) $$</p>
+<h3>优化目标</h3>
+<p>logistic回归的优化目标是使cost function最小，其中cost function 用 $J(\theta)$ 表示， 为</p>
+<p>$$ J(\theta) = \sum_{1}^{n}y^{i}log(h(x^{i})) +(1-y^{i})log(1-h(x^{i})) $$</p>
+<h3>算法</h3>
+<p>上述的cost function为凸函数，可以使用梯度下降法来找到最小值。计算上述cost function 偏导数为</p>
+<p>$$ \frac{\partial}{\partial \theta_j} J(\theta) = (h_\theta (x)-y)x_j$$</p>
+<p>使用梯度下降法的更新规则为：</p>
+<p>因此对于一个训练样本，更新规则为：</p>
+<p>$$\theta_j := \theta_j + \alpha(y^{(i)} - h_\theta (x^{(i)})) x_j ^{(i)} $$</p>
+<p>对比发现这和线性回归的形式一模一样，但其实这并不是相同的算法，因为不同于线性回归，logistic 回归的$h(x)$是 $\theta^T x$ 的非线性函数。</p>
+<p>对于小数据量可以采取批梯度下降找到全局最优解，对于大数据量而言可以采取随机梯度下降算法来提高算法性能，通过改变学习速度等方法得到近似全局最优解。</p>
+<h2>其它</h2>
+<h3>决策边界</h3>
+<p>logistic 回归的假设模型在$\theta^Tx$后加入了一层sigmoid函数，此时$\theta^Tx$不作为直接输出而是作为决策边界，对于线性的$\theta^Tx$决策边界为一条直线，直线两侧分为两类，对于非线性的$\theta^Tx$，决策边界则为非线性的。</p>
+<h3>多类问题</h3>
+<p>对于多个类别的分类问题，可以采取one－vs－rest的方法，训练时对每一类得到一个假设模型，对于新的输入，计算每一个假设模型，将其中概率最大的那个假设模型对应的类作为该输入的分类。</p>
+<h2>参考</h2>
+<ul>
+<li><a href="http://cs229.stanford.edu/">stanford machine learning cs229</a></li>
+<li><a href="https://www.coursera.org/course/ml">Coursera: machine learning by Andrew Ng</a></li>
+</ul>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "ji-qi-xue-xi-zhi-logistichui-gui.html";
+        var disqus_url = "./ji-qi-xue-xi-zhi-logistichui-gui.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://zhichenghoublog.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://github.com/zhichenghou">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                &copy; 2013 Zhicheng Hou.
+                Powered by <a href="http://getpelican.com/">Pelican</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'zhichenghoublog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
