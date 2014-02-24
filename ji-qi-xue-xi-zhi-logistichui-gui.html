@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
 <head>
         <meta charset="utf-8" />
+        <meta name="author" content="hou zhicheng" />
+        <meta name="robots" content="all" />
+        <meta name="keywords" content="houzhicheng, hou zhicheng, blog, tech, 厚之成, 技术, 博客" />
+        <meta name="description" content="厚之成的技术博客, 关注计算广告和大数据，hou zhicheng's personal blog." />
+        
         <title>机器学习之logistic回归</title>
         <link rel="stylesheet" href="./theme/css/main.css" />
 
@@ -25,7 +30,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="./">Hou's blog </a></h1>
+                <h1><a href="./">Hou Zhicheng's Blog </a></h1>
                 <nav><ul>
                     <li><a href="./pages/about.html">About</a></li>
                     <li class="active"><a href="./category/blog.html">Blog</a></li>
@@ -55,7 +60,7 @@
 </p>
 </footer><!-- /.post-info -->      <p>logistic回归是一种做分类而不是做回归的方法，该方法是在线性回归的基础上借助sigmoid函数实现的分类器，是一种属于概率统计的分类模型。该方法多用于解决二值分类问题，比如广告点击预测、病人是否患病等。本文将对该方法进行介绍。</p>
 <h2>介绍</h2>
-<p>该方法与线性回归有很多相似之处，有些概念可以参考之前关于<a href="http://zhichenghou.github.io/ji-qi-xue-xi-zhi-xian-xing-hui-gui.html">线性回归的文章</a>。</p>
+<p>该方法与线性回归有很多相似之处，有些概念可以参考之前关于<a href="../ji-qi-xue-xi-zhi-xian-xing-hui-gui.html">线性回归的文章</a>。</p>
 <h3>假设模型</h3>
 <p>线性回归的假设模型用 $h(x)$ 表示：</p>
 <p>$$ h(x) = \sum_{i=0}^{n}{\theta_i x_i} = \theta^T x $$</p>
@@ -89,19 +94,6 @@
 <li><a href="https://www.coursera.org/course/ml">Coursera: machine learning by Andrew Ng</a></li>
 </ul>
     </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "ji-qi-xue-xi-zhi-logistichui-gui.html";
-        var disqus_url = "./ji-qi-xue-xi-zhi-logistichui-gui.html";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://zhichenghoublog.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-    </div>
 
   </article>
 </section>
@@ -117,19 +109,9 @@
 
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
-                &copy; 2013 Zhicheng Hou.
-                Powered by <a href="http://getpelican.com/">Pelican</a>.
+                &copy; 2014 Hou zhicheng. Powered by <a href="http://getpelican.com/">Pelican</a>
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
 
-<script type="text/javascript">
-    var disqus_shortname = 'zhichenghoublog';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 </body>
 </html>
