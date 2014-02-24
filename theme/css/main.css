@@ -243,7 +243,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 #content {
 	background: #fff;
 	margin-bottom: 2em;
-	overflow: hidden;
+	overflow: auto;
 	padding: 20px 20px;
 	width: 760px;
 }
