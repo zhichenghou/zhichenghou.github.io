@@ -1,0 +1,220 @@
+<p>Title: 使用pelican和github pages搭建博客<br />
+Date: 2013-12-05 10:20<br />
+Category: Blog<br />
+Tags: Pelican, Python<br />
+Summary: pelican是一个使用python的静态博客生成工具，可以将markdown等语言写成的博客翻译为静态的html文件，方便部署在github pages等其它静态博客托管平台上，本文记录了你现在看到的这个blog生成的过程。</p>
+
+<h2 id="section">介绍</h2>
+
+<p><a href="http://getpelican.com/">pelican</a> 是一个使用python的静态博客生成工具，可以将markdown等语言写成的博客翻译为静态的html文件，方便部署在github pages等其它静态博客托管平台上，本文记录了你现在看到的这个blog生成的过程。</p>
+
+<h2 id="section-1">安装</h2>
+
+<p>按照pelican的<a href="http://docs.getpelican.com/en/latest/">官方文档</a>即可方便的安装成功：</p>
+
+<ol>
+  <li>
+    <p>使用pip安装pelican：</p>
+
+    <pre><code> pip install pelican
+</code></pre>
+  </li>
+  <li>
+    <p>安装markdown：</p>
+
+    <pre><code> pip install markdown
+</code></pre>
+  </li>
+</ol>
+
+<h2 id="section-2">生成博客目录</h2>
+
+<p>pelican自带了一个生成网站目录文件结构的工具，在终端执行：</p>
+
+<pre><code>pelican-quickstart
+</code></pre>
+
+<p>pelican会询问一些问题来生成网站的配置，这些配置最终保存在<code>pelicanconf.py</code>文件中。</p>
+
+<h2 id="section-3">一些设置</h2>
+
+<p>pelican的设置最终保存在<code>pelicanconf.py</code>文件中， <a href="http://docs.getpelican.com/en/latest/settings.html">设置文档</a>给出了所有可用的设置，在此列出几个常用的设置。</p>
+
+<ol>
+  <li>
+    <p>设置主题：可以在pelican的安装目录下找到默认的主题，该主题名为<code>notmyidea</code>。为了对此主题进行定制，可以将该文件夹复制到当前项目的themes文件夹中，然后在<code>pelicanconf.py</code>中增加如下配置</p>
+
+    <pre><code>THEME = 'themes/notmyidea'
+</code></pre>
+
+    <p>本博客对该模板主要定制了三个地方：</p>
+
+    <ul>
+      <li>
+        <p>修改index页： 修改<code>index.html</code>，只显示标题和summary</p>
+      </li>
+      <li>
+        <p>修改样式： 在<code>main.css</code>添加如下内容，使得代码和图片的显示更加美观：</p>
+
+        <pre><code>	code, pre {
+	  padding: 0 3px 2px;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #333333;
+  }
+
+  img{ 
+      width:90%;
+  }
+</code></pre>
+      </li>
+      <li>
+        <p>修改来支持mathjax： 修改<code>base.html</code>, 在<code>head</code>中增加如下内容来支持mathjax，可以使用latex写公式：</p>
+
+        <pre><code>  {# latex #}
+  &lt;script type="text/x-mathjax-config"&gt;
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    styles: {
+    ".MathJax .mo, .MathJax .mi": {color: "black"}}
+    },
+    tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+    });
+  &lt;/script&gt;
+
+  &lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;&lt;/script&gt;
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>设置静态文件路径：对于文章中的图片, markdown文件中可以使用<code>![UML图](images/DPython/chain_of_responsibility.png)</code>来指明， images文件夹在content目录下，为了使生成的output目录中同样有image文件夹，可以增加如下配置</p>
+
+    <pre><code>STATIC_PATHS = ['images']
+</code></pre>
+  </li>
+</ol>
+
+<p>这样当pelican生成output时会复制该目录到output目录中。</p>
+
+<h2 id="section-4">书写文章</h2>
+
+<p>当完成以上步骤后，只要在content文件夹中新建markdown文件，然后就可以在该文件中书写文章了，不过pelican会根据文章的元数据来生成最终的文章，因此在每篇文章的开头要指定该文档的元数据，就像下面这样：</p>
+
+<pre><code>Title: 使用pelican和github pages搭建博客
+Date: 2013-12-05 10:20
+Category: Blog
+Tags: Pelican, Python
+Summary: pelican是一个使用python的静态博客生成工具，可以将markdown等语言写成的博客翻译为静态的html文件，方便部署在github pages等其它静态博客托管平台上，本文记录了你现在看到的这个blog生成的过程。
+</code></pre>
+
+<h2 id="html">生成html</h2>
+
+<p>当书写完文章就可以使用pelican生成html了，在项目文件夹下执行如下操作：</p>
+
+<pre><code>pelican content -s pelicanconf.py
+</code></pre>
+
+<p>生成的网站的文件在output文件夹下，可以进入该文件夹，执行下面的命令来进行预览：</p>
+
+<pre><code>python -m SimpleHTTPServer
+</code></pre>
+
+<p>访问 http://localhost:8000 就可以预览了。</p>
+
+<h2 id="github-pages">部署到github pages</h2>
+
+<p><a href="http://pages.github.com">github pages</a>提供了静态网页的托管平台，通过在github中新建一个名为”username.github.io”的项目(该处以及以下的username表示你的github用户名)，然后将pelican生成的静态网页（output文件夹下的所有内容）放到该项目的master分支下就可以得到一个博客网站了。为了实现这个目的首先需要将本地的output文件夹下的内容push到项目的master分支，需要在output文件夹下进行如下操作：</p>
+
+<pre><code>git init .
+git remote add origin https://github.com/username/username.github.io.git
+git add .
+git commit 
+git push origin master:master
+</code></pre>
+
+<p>至此访问http://username.github.io应该可以看到你的博客了。</p>
+
+<p>此外，为了将本地博客项目的所有内容放到github上，可以将博客项目的内容放到github项目的source分支上， 在本地项目的文件夹下执行如下操作：</p>
+
+<pre><code>git init .
+git remote add origin https://github.com/username/username.github.io.git
+git add .
+git commit 
+git push origin source:source
+</code></pre>
+
+<p>这样博客的原始内容也放在github上了。</p>
+
+<h2 id="section-5">自动化脚本</h2>
+
+<p>为了简化以后的操作，我还写了一个小脚本来简化操作，将该脚本放到项目文件夹下，可以通过如下命令来完成相应操作：</p>
+
+<pre><code>python cli.py &lt;target&gt;
+</code></pre>
+
+<p>其中target可以为 clean，generate， preview， deploy 和push_source，分别实现清理，生成，预览，部署和上传源代码的操作。该脚本<code>cli.py</code>的内容如下</p>
+
+<pre><code>:::python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+
+from os import system, chdir, getcwd
+from sys import argv
+
+def execute(cmd):
+	print cmd
+	system(cmd)
+
+def clean():
+	cmd = 'rm -rf output/*'
+	execute(cmd)
+
+def generate():
+	clean()
+	cmd = 'pelican content -s pelicanconf.py'
+	execute(cmd)
+
+def preview():
+	generate()
+	chdir('output')
+	cmd = 'python -m SimpleHTTPServer'
+	execute(cmd)
+
+def deploy():
+	generate()
+	chdir('output')
+	print getcwd()
+	cmd = 'git add --all .'
+	execute(cmd)
+	cmd = 'git commit'
+	execute(cmd)
+	cmd = 'git push origin master:master'
+	execute(cmd)
+
+def push_source():
+	cmd = 'git add --all .'
+	execute(cmd)
+	cmd = 'git commit'
+	execute(cmd)
+	cmd = 'git push origin source:source'
+	execute(cmd)
+
+if __name__ == '__main__':
+	if len(argv) != 2:
+		print 'cli require 1 parameter,  you hava these options: \n clean generate preview deploy push_source'
+	else:
+		try :
+			action = argv[1] + "()"
+			exec(action)
+		except:
+			print "command is error, you hava these options: \n clean generate preview deploy push_source"
+</code></pre>
+
+<h2 id="section-6">参考</h2>
+<ul>
+  <li><a href="http://docs.getpelican.com/en/latest/">pelican doc</a> </li>
+  <li><a href="http://jinja.pocoo.org/">jinja2</a></li>
+</ul>
+
+<h3 id="section-7">完</h3>

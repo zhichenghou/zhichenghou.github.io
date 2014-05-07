@@ -1,0 +1,14 @@
+# Site settings
+name: Hou Zhicheng's Blog
+title: 
+email: zhichenghou@gmail.com
+description: ""
+baseurl: 
+url: "http://houzhicheng.com"
+username: zhichenghou
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+permalinks: pretty
