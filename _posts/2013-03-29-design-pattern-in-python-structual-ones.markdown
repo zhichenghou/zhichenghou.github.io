@@ -14,7 +14,7 @@ categories: blog python
 将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。
 
 ### 结构
-![UML图](images/DPython/adapter.png)
+![UML图](/images/DPython/adapter.png)
 
 ### 参与者
 - Target: 客户所期待的与特定领域相关的接口。
@@ -69,7 +69,7 @@ class Target(object):
 将抽象部分与它的实现部分分离，使它们都可以独立的变化。
 
 ### 结构
-![UML图](images/DPython/bridge.png)
+![UML图](/images/DPython/bridge.png)
 
 ### 参与者
 - Abstraction: 定义抽象类的接口，维护一个指向Implementor类对象的指针。
@@ -131,7 +131,7 @@ class Target(object):
 将对象组合成树形结构以表示“部分-整体”的层次结构。该模式使得用户对单个对象和组合对象的使用具有一致性。
 
 ### 结构
-![UML图](images/DPython/composite.png)
+![UML图](/images/DPython/composite.png)
 
 ### 参与者
 - Component：为组合中的对象声明接口，在适当情况下实现所有类公有接口的缺省行为，声明一个用于管理Component的子组件
@@ -206,7 +206,7 @@ class Target(object):
 该模式也叫Wrapper（包装器），动态的给一个对象添加一些额外的职责。就增加功能来说，该模式比生成子类更为灵活。
 
 ### 结构
-![UML图](images/DPython/decorator.png)
+![UML图](/images/DPython/decorator.png)
 
 ### 参与者
 - Component：定义一个对象接口，可以给这些对象动态的添加职责。
@@ -284,7 +284,7 @@ class Target(object):
 为子系统中的一组接口提供一个一致的界面，该模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。
 
 ### 结构
-![UML图](images/DPython/facade.png)
+![UML图](/images/DPython/facade.png)
 
 ### 参与者
 - Facade：知道哪些子系统负责处理请求，将客户的请求代理给合适的子系统对象。
@@ -345,7 +345,7 @@ class Target(object):
 运用共享技术有效的支持大量的细粒度对象。
 
 ### 结构
-![UML图](images/DPython/flyweight.png)
+![UML图](/images/DPython/flyweight.png)
 
 ### 参与者
 - Flyweight：描述一个接口，通过这个接口flyweight可以接受并作用于外部状态。
@@ -408,7 +408,7 @@ class Target(object):
 为其他对象提供一种代理以控制对这个对象的访问。
 
 ### 结构
-![UML图](images/DPython/proxy.png)
+![UML图](/images/DPython/proxy.png)
 
 ### 参与者
 - Proxy：保存一个引用，使得代理可以访问实体，提供与Subject相同的接口，代理就可以代替实体，控制对实体的新建、存储、删除。

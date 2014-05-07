@@ -1,8 +1,11 @@
-Title: JaveEE学习之Servlet技术
-Date: 2013-01-14 20:17
-Category: Blog
-Tags: JaveEE, Java
-Summary:JSP的本质就是Servlet，编写JSP将其放入web容器中，web容器将JSP编译为Servlet。 由于作为表现层技术使用时，直接使用Servlet的开发效率低下，因此一般使用如JSP等的表现层技术实现。在MVC规范中，Servlet通常被当作控制器使用，虽然还有很多其他MVC的框架可用，但Servlet作为底层实现，对学习JaveEE技术，了解技术原理是有意义的。本文给出一个简单的符合MVC规范的web应用例子，并使用Servlet作为其中的控制器来学习Servlet的相关技术。
+---
+layout: post
+title:  "JaveEE学习之Servlet技术"
+date:   2013-01-14 20:17
+categories: J2EE
+---
+
+JSP的本质就是Servlet，编写JSP将其放入web容器中，web容器将JSP编译为Servlet。 由于作为表现层技术使用时，直接使用Servlet的开发效率低下，因此一般使用如JSP等的表现层技术实现。在MVC规范中，Servlet通常被当作控制器使用，虽然还有很多其他MVC的框架可用，但Servlet作为底层实现，对学习JaveEE技术，了解技术原理是有意义的。本文给出一个简单的符合MVC规范的web应用例子，并使用Servlet作为其中的控制器来学习Servlet的相关技术。
 
 
 ## Servlet类介绍

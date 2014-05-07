@@ -1,8 +1,11 @@
-Title: Eclipse 项目迁移到 Maven
-Date: 2013-12-03 10:20
-Category: Blog
-Tags: Java, Maven
-Summary: maven是一种广泛使用的java项目管理工具, 有很多优点，本文记录了eclipse 项目迁移到 maven的步骤。
+---
+layout: post
+title:  "Eclipse 项目迁移到 Maven"
+date:   2013-12-03 10:20
+categories: Java
+---
+
+maven是一种广泛使用的java项目管理工具, 有很多优点，本文记录了eclipse 项目迁移到 maven的步骤。
 
 ## maven的优势
 

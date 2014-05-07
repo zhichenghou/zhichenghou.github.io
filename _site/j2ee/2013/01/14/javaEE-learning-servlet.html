@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JaveEE学习之Servlet技术</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <link rel="canonical" href="/j2ee/2013/01/14/javaEE-learning-servlet.html">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- mathjax js -->
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="">Hou Zhicheng's Blog</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+          <a class="page-link" href="/about/">About</a>
+        
+          <a class="page-link" href="/feed.xml"></a>
+        
+          <a class="page-link" href="/index.html"></a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>JaveEE学习之Servlet技术</h1>
+    <p class="meta">Jan 14, 2013</p>
+  </header>
+
+  <article class="post-content">
+  <p>JSP的本质就是Servlet，编写JSP将其放入web容器中，web容器将JSP编译为Servlet。 由于作为表现层技术使用时，直接使用Servlet的开发效率低下，因此一般使用如JSP等的表现层技术实现。在MVC规范中，Servlet通常被当作控制器使用，虽然还有很多其他MVC的框架可用，但Servlet作为底层实现，对学习JaveEE技术，了解技术原理是有意义的。本文给出一个简单的符合MVC规范的web应用例子，并使用Servlet作为其中的控制器来学习Servlet的相关技术。</p>
+
+<h2 id="servlet">Servlet类介绍</h2>
+
+<p>Servlet类是一个继承自<code>HttpServlet</code>的特殊类，可以用来响应用户的请求。在编写自己的Servlet时最常使用的方法是<code>service()</code>方法，该方法处理客户端的请求。因此，一个Servlet类的典型结构为：</p>
+
+<pre><code>//使用@WebServlet Annotation 配置servlet
+@WebServlet(name="firstServlet", urlPatterns={"/firstServlet"})
+//Servlet类定义
+public class FirstServlet extends HttpServlet
+{
+    public void service(HttpServletRequest request,
+    HttpServletResponse response) 
+    throws ServletException,java.io.IOException 
+    {
+        //相应用户请求代码
+    }
+}
+</code></pre>
+
+<h2 id="servlet-1">Servlet类配置</h2>
+
+<p>为了使Servlet响应用户请求，还需将Servlet与Web应用配置起来。配置Servlet有两种方法：在web.xml中配置和使用@WebServlet Annotation配置。使用@WebServlet Annotation直接在Java类的编辑中即可实现，不需web.xml，我认为是更好的方法，因此使用该法进行配置。在使用@WebServlet Annotation时，其常用的几个属性如下：</p>
+
+<ul>
+  <li>name:                  指定该Servlet的名称</li>
+  <li>urlPatterns/value:     指定该Servlet要处理的url</li>
+  <li>initParams：           指定该Servlet的参数</li>
+  <li>loadOnStartup:         指定该Servlet是否为load on startup 的Servlet</li>
+</ul>
+
+<h2 id="servlet-2">Servlet类作为控制器</h2>
+
+<p>在MVC模式中，Model通常由JavaBean来充当，用来实现业务逻辑、数据访问逻辑等; View通常由JSP来充当，用来收集用户的请求参数、将应用处理的结果和状态等返回呈现给用户等; Controller则由Servlet来充当，实现类似调度员的作用，即用户请求发送到Servlet，Servlet调用Model来处理用户请求，并将结果调用JSP呈现给用户。MVC模式通过对三者作用的分工，实现应用的解耦，方便多人协同开发同一个项目。</p>
+
+<p>现在给出一个简单的MVC模式的应用，实现登录的验证。首先给出<code>login.jsp</code>:</p>
+
+<pre><code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+请输入用户名和密码
+&lt;!-- 登录表单，被提交至一个Servlet --&gt;
+&lt;form id="login" method="post" action="login"&gt;
+用户名： &lt;input type="text" name="username"/&gt; &lt;br/&gt;
+密码：  &lt;input type="password" name="pass" /&gt; &lt;br/&gt;
+&lt;input type="submit" value="登录" /&gt; &lt;br/&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>然后给出控制器Servlet类<code>LoginServlet.java</code>:</p>
+
+<pre><code>import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+
+import java.sql.*;
+import java.io.*;
+
+@WebServlet(name="login", urlPatterns={"/login"})
+
+public class LoginServlet extends HttpServlet {
+
+    public void service(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, java.io.IOException 
+    {
+            String errMsg="";
+            //Servlet不输出响应到客户端，因此必须将请求转发
+            RequestDispatcher rd;
+
+            //获取请求参数    
+            String username =  request.getParameter("username");
+            String pass = request.getParameter("pass");
+            PrintStream out = new PrintStream(response.getOutputStream());
+            //out.println("name" + username);
+
+            try {
+                //Servlet 本身不处理业务逻辑，调用JavaBean处理用户请求
+                DbDao dd = new DbDao("com.mysql.jdbc.Driver",
+                    "jdbc:mysql://localhost:3306/JaveEE","root","mysql");
+                //查询结果集
+                ResultSet rs = dd.query("select pass from user_table"
+                    + "where name = ?", username);
+                if (rs.next()) {
+            
+                    //用户名和密码匹配
+                    if (rs.getString("pass").equals(pass)) {
+                        // 获取session对象
+                        HttpSession session = request.getSession(true);
+                        //设置session属性，跟踪用户会话状态
+                        session.setAttribute("name", username);
+                        //获取转发对象
+                        rd = request.getRequestDispatcher("/welcome.jsp");
+                        rd.forward(request, response);
+                    }
+                    else {
+                        //用户名密码不匹配
+                        errMsg += "您的用户名密码不符合，请重试";
+                    }
+                }
+                else {
+                    //用户名不存在时
+                    errMsg += "您的用户名不存在，请先注册";
+                }
+            
+            }
+            catch (Exception e) {
+                out.println(errMsg);
+                e.printStackTrace();
+            }
+
+            //如果出错，转发到重新登录
+            if (errMsg != null &amp;&amp; !errMsg.equals("")) {
+                rd = request.getRequestDispatcher("/login.jsp");
+                request.setAttribute("err", errMsg);
+                rd.forward(request, response);
+            }
+
+        }   
+}
+</code></pre>
+
+<p>最后给出Model类<code>DbDao.java</code>：</p>
+
+<pre><code>import java.sql.*;
+
+public class DbDao {
+    private Connection conn;
+    private String driver;
+    private String url;
+    private String username;
+    private String pass;
+
+    public DbDao() {}
+    public DbDao(String driver, String url, String username, String pass) {
+        this.driver = driver;
+        this.url = url;
+        this.username = username;
+        this.pass = pass;
+    }
+    //各属性的setter和getter方法
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    public void setUsername(String username) {
+        this.username=username;
+    }
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+    public String getDriver() {
+        return this.driver;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+    public String getUsername() {
+        return this.username;
+    }
+    public String getPass() {
+        return this.pass;
+    }
+
+    //获取数据库连接
+    public Connection getConnection() throws Exception{
+        if (conn == null) {
+            Class.forName(this.driver);
+            conn = DriverManager.getConnection(url, username, this.pass);
+        }
+        return conn;
+    }
+    // 插入记录
+    public boolean insert(String sql, Object... args) throws Exception {
+        PreparedStatement pstmt = getConnection().prepareStatement(sql);
+        for (int i=0; i&lt;args.length; i++) {
+            pstmt.setObject(i+1, args[i]);
+        }
+        if (pstmt.executeUpdate() != 1) {
+            return false;
+        }
+        return true;
+    }
+    // 执行查询
+    public ResultSet query(String sql, Object... args) throws Exception {
+        PreparedStatement pstmt = getConnection().prepareStatement(sql);
+        for (int i = 0; i &lt; args.length; i++) {
+            pstmt.setObject(i+1, args[i]);
+        }
+        return pstmt.executeQuery();
+    }
+    //执行修改
+    public void moify (String sql, Object... args) throws Exception {
+        PreparedStatement pstmt = getConnection().prepareStatement(sql);
+        for (int i = 0; i &lt; args.length; i++) {
+            pstmt.setObject(i+1, args[i]);
+        }
+        pstmt.executeUpdate();
+        pstmt.close();
+    }
+    //关闭数据库连接的方法
+    public void closeConn() throws Exception {
+        if (conn != null &amp;&amp; !conn.isClosed()) {
+            conn.close();
+        }
+    }
+}
+</code></pre>
+
+<p>至此，一个完整的MVC模式的web应用就完成了，其中JSP充当View，用来提供用户交流界面; Servlet充当控制器, 起调动作用；JavaBean充当模型，处理业务逻辑和数据逻辑。 </p>
+
+<h2 id="servlet-3">Servlet类相关</h2>
+
+<h3 id="filter">Filter</h3>
+
+<p>Filter可以看作Servlet的加强版，它是一个处理链，典型的使用流程是：使用Filter对用户请求进行预处理，然后将请求交给Servlet进行处理，最后对服务器响应进行后处理。Filter的作用主要有以下几个方面：</p>
+
+<ul>
+  <li>拦截HttpServletRequest进行预处理，可以修改请求数据，然后交给Servlet处理</li>
+  <li>拦截HttpServletResponse进行后处理，可以修改Servlet的处理结果，然后作为服务器的响应结果。</li>
+</ul>
+
+<p>Filter的使用和Servlet非常类似，包括定义Filter类和配置Filter两步。其中Filter类必须实现<code>javax.servlet.Filter</code>接口，主要功能在<code>doFilter()</code>函数内实现。Filter的配置也可使用@webFilter Annotation进行配置。</p>
+
+<h3 id="listener">Listener</h3>
+
+<p>Listener完成对web应用内事件的监听和处理，从而允许当web应用内有事件发生时，可以回调事件监听器内的方法。Listener的使用与Servlet类似，分为定义Listener实现类和配置Listener两步。自定义的Listener类根据不同的web应用时间需实现不同的接口，常见的web监听器接口有以下几个：</p>
+
+<ul>
+  <li>ServletContextListener: 用于监听web应用的启动和关闭</li>
+  <li>ServletContextAttributerListener: 用于监听ServletContext范围（application）内属性的更改</li>
+  <li>ServletRequestListener： 用于监听用户请求</li>
+  <li>ServletRequestAttributerListener: 用于监听ServletRequest范围（request）内属性的更改</li>
+  <li>ServletSessionListener： 用于监听用户Session的开始和结束</li>
+  <li>ServletSessionAttributerListener: 用于监听ServletSession范围（session）内属性的更改</li>
+</ul>
+
+<h2 id="section">参考</h2>
+<p><a href="http://book.douban.com/subject/6002664/">轻量级Java EE企业应用实战</a></p>
+
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <h2 class="footer-heading">Hou Zhicheng's Blog</h2>
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li></li>
+        <!-- <li><a href="mailto:zhichenghou@gmail.com">zhichenghou@gmail.com</a></li> -->
+      </ul>
+    </div>
+
+    <!-- <div class="footer-col-2 column">
+      <ul>
+        <li>
+          <a href="https://github.com/zhichenghou">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">zhichenghou</span>
+          </a>
+        </li>
+       <li>
+          <a href="https://twitter.com/zhichenghou">
+            <span class="icon twitter">
+              <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
+                c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
+                c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206
+                C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271
+                c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469
+                c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+              </svg>
+            </span>
+            <span class="username">zhichenghou</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text"></p>
+    </div> -->
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>

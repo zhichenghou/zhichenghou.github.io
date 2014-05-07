@@ -1,8 +1,11 @@
-Title: JaveEE学习之JSP技术
-Date: 2013-01-11 17:35
-Category: Blog
-Tags: JaveEE, Java
-Summary:JSP(Java Server Page)与Servlet是JaveEE的基本成员，基本形式为在HTMl文件中添加Java代码，辅以使用JSP标签，在静态的HTML的基础上有了动态提供页面内容的能力，使从事java开发的人员可以将java知识运用到动态网页开发的应用中。
+---
+layout: post
+title:  "JaveEE学习之JSP技术"
+date:   2013-01-11 17:35
+categories: J2EE
+---
+
+JSP(Java Server Page)与Servlet是JaveEE的基本成员，基本形式为在HTMl文件中添加Java代码，辅以使用JSP标签，在静态的HTML的基础上有了动态提供页面内容的能力，使从事java开发的人员可以将java知识运用到动态网页开发的应用中。
 
 本文是JaveEE学习笔记的第一篇，以一个简单的使用JSP的web应用来开始JaveEE技术的学习，并且说明JSP与Servlet类之间的联系和工作原理，最后还总结了一些包括脚本语法、编译和动作指令、内置Servlet对象、和自定义标签等一些具体的JSP的技术。
 

@@ -7,27 +7,6 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!&lt;br /&gt;
-To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 08 May 2014 04:36:04 +0800</pubDate>
-        <link>/jekyll/update/2014/05/08/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">/jekyll/update/2014/05/08/welcome-to-jekyll.html</guid>
-      </item>
-    
-      <item>
         <title>机器学习之logistic回归</title>
         <description>&lt;p&gt;logistic回归是一种做分类而不是做回归的方法，该方法是在线性回归的基础上借助sigmoid函数实现的分类器，是一种属于概率统计的分类模型。该方法多用于解决二值分类问题，比如广告点击预测、病人是否患病等。本文将对该方法进行介绍。&lt;/p&gt;
 
@@ -107,15 +86,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
       </item>
     
       <item>
-        <title>Machine Learning Knn</title>
-        <description>&lt;p&gt;Title: 机器学习之K最近邻分类&lt;br /&gt;
-Date: 2013-12-27 21:20&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: MachineLearning, Python&lt;br /&gt;
-Author: zhicheng hou&lt;br /&gt;
-Summary: K最近邻 (k-nearest neighbors, KNN) 是最简单的机器学习算法。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。是一种借由计算与已知类别样本之相似度，来评估未知类别样本可能分类的方法。本文将给出KNN的方法简介和KNN的python代码实现，最后通过一个识别手写数字的具体实例来实际使用knn方法。&lt;/p&gt;
-
-&lt;p&gt;K最近邻 (k-nearest neighbors, KNN) 是最简单的机器学习算法。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。是一种借由计算与已知类别样本之相似度，来评估未知类别样本可能分类的方法。本文将给出KNN的方法简介和KNN的python代码实现，最后通过一个识别手写数字的具体实例来实际使用knn方法。&lt;/p&gt;
+        <title>机器学习之K最近邻分类</title>
+        <description>&lt;p&gt;K最近邻 (k-nearest neighbors, KNN) 是最简单的机器学习算法。该方法的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。是一种借由计算与已知类别样本之相似度，来评估未知类别样本可能分类的方法。本文将给出KNN的方法简介和KNN的python代码实现，最后通过一个识别手写数字的具体实例来实际使用knn方法。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;介绍&lt;/h2&gt;
 
@@ -226,246 +198,14 @@ if __name__ == &#39;__main__&#39;:
 &lt;p&gt;本文介绍了机器学习中简单的k最近邻法分类算法，首先介绍了该方法的思路和需要明确的问题点，并用python给出了一个简单的实现，最后通过识别手写数字的实例展现其在应用上的威力，说明了KNN是一种简单而有效的分类方法。通过本文可以对KNN有一个初步的了解，然而在实际应用中还需根据具体问题要求，找到恰当的样本特征表示方法、距离计算方法和k参数，进而达到预期的效果，这需要对问题本身有深刻而准确的理解往往也比算法本身更加困难。&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 27 Dec 2013 00:00:00 +0800</pubDate>
-        <link>/2013/12/27/machine-learning-knn.html</link>
-        <guid isPermaLink="true">/2013/12/27/machine-learning-knn.html</guid>
+        <pubDate>Fri, 27 Dec 2013 21:20:00 +0800</pubDate>
+        <link>/ml/2013/12/27/machine-learning-knn.html</link>
+        <guid isPermaLink="true">/ml/2013/12/27/machine-learning-knn.html</guid>
       </item>
     
       <item>
-        <title>Using Pelican And Github Pages To Build A Blog</title>
-        <description>&lt;p&gt;Title: 使用pelican和github pages搭建博客&lt;br /&gt;
-Date: 2013-12-05 10:20&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: Pelican, Python&lt;br /&gt;
-Summary: pelican是一个使用python的静态博客生成工具，可以将markdown等语言写成的博客翻译为静态的html文件，方便部署在github pages等其它静态博客托管平台上，本文记录了你现在看到的这个blog生成的过程。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;介绍&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://getpelican.com/&quot;&gt;pelican&lt;/a&gt; 是一个使用python的静态博客生成工具，可以将markdown等语言写成的博客翻译为静态的html文件，方便部署在github pages等其它静态博客托管平台上，本文记录了你现在看到的这个blog生成的过程。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;安装&lt;/h2&gt;
-
-&lt;p&gt;按照pelican的&lt;a href=&quot;http://docs.getpelican.com/en/latest/&quot;&gt;官方文档&lt;/a&gt;即可方便的安装成功：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;使用pip安装pelican：&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; pip install pelican
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装markdown：&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; pip install markdown
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;生成博客目录&lt;/h2&gt;
-
-&lt;p&gt;pelican自带了一个生成网站目录文件结构的工具，在终端执行：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pelican-quickstart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pelican会询问一些问题来生成网站的配置，这些配置最终保存在&lt;code&gt;pelicanconf.py&lt;/code&gt;文件中。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;一些设置&lt;/h2&gt;
-
-&lt;p&gt;pelican的设置最终保存在&lt;code&gt;pelicanconf.py&lt;/code&gt;文件中， &lt;a href=&quot;http://docs.getpelican.com/en/latest/settings.html&quot;&gt;设置文档&lt;/a&gt;给出了所有可用的设置，在此列出几个常用的设置。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;设置主题：可以在pelican的安装目录下找到默认的主题，该主题名为&lt;code&gt;notmyidea&lt;/code&gt;。为了对此主题进行定制，可以将该文件夹复制到当前项目的themes文件夹中，然后在&lt;code&gt;pelicanconf.py&lt;/code&gt;中增加如下配置&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;THEME = &#39;themes/notmyidea&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-    &lt;p&gt;本博客对该模板主要定制了三个地方：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;修改index页： 修改&lt;code&gt;index.html&lt;/code&gt;，只显示标题和summary&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;修改样式： 在&lt;code&gt;main.css&lt;/code&gt;添加如下内容，使得代码和图片的显示更加美观：&lt;/p&gt;
-
-        &lt;pre&gt;&lt;code&gt;	code, pre {
-	  padding: 0 3px 2px;
-    font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace;
-    font-size: 12px;
-    color: #333333;
-  }
-
-  img{ 
-      width:90%;
-  }
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;修改来支持mathjax： 修改&lt;code&gt;base.html&lt;/code&gt;, 在&lt;code&gt;head&lt;/code&gt;中增加如下内容来支持mathjax，可以使用latex写公式：&lt;/p&gt;
-
-        &lt;pre&gt;&lt;code&gt;  {# latex #}
-  &amp;lt;script type=&quot;text/x-mathjax-config&quot;&amp;gt;
-    MathJax.Hub.Config({
-    &quot;HTML-CSS&quot;: {
-    styles: {
-    &quot;.MathJax .mo, .MathJax .mi&quot;: {color: &quot;black&quot;}}
-    },
-    tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\\\(&#39;,&#39;\\\\)&#39;]],processEscapes: true}
-    });
-  &amp;lt;/script&amp;gt;
-
-  &amp;lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;设置静态文件路径：对于文章中的图片, markdown文件中可以使用&lt;code&gt;![UML图](images/DPython/chain_of_responsibility.png)&lt;/code&gt;来指明， images文件夹在content目录下，为了使生成的output目录中同样有image文件夹，可以增加如下配置&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;STATIC_PATHS = [&#39;images&#39;]
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;这样当pelican生成output时会复制该目录到output目录中。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;书写文章&lt;/h2&gt;
-
-&lt;p&gt;当完成以上步骤后，只要在content文件夹中新建markdown文件，然后就可以在该文件中书写文章了，不过pelican会根据文章的元数据来生成最终的文章，因此在每篇文章的开头要指定该文档的元数据，就像下面这样：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Title: 使用pelican和github pages搭建博客
-Date: 2013-12-05 10:20
-Category: Blog
-Tags: Pelican, Python
-Summary: pelican是一个使用python的静态博客生成工具，可以将markdown等语言写成的博客翻译为静态的html文件，方便部署在github pages等其它静态博客托管平台上，本文记录了你现在看到的这个blog生成的过程。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;html&quot;&gt;生成html&lt;/h2&gt;
-
-&lt;p&gt;当书写完文章就可以使用pelican生成html了，在项目文件夹下执行如下操作：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pelican content -s pelicanconf.py
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成的网站的文件在output文件夹下，可以进入该文件夹，执行下面的命令来进行预览：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;访问 http://localhost:8000 就可以预览了。&lt;/p&gt;
-
-&lt;h2 id=&quot;github-pages&quot;&gt;部署到github pages&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://pages.github.com&quot;&gt;github pages&lt;/a&gt;提供了静态网页的托管平台，通过在github中新建一个名为”username.github.io”的项目(该处以及以下的username表示你的github用户名)，然后将pelican生成的静态网页（output文件夹下的所有内容）放到该项目的master分支下就可以得到一个博客网站了。为了实现这个目的首先需要将本地的output文件夹下的内容push到项目的master分支，需要在output文件夹下进行如下操作：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git init .
-git remote add origin https://github.com/username/username.github.io.git
-git add .
-git commit 
-git push origin master:master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;至此访问http://username.github.io应该可以看到你的博客了。&lt;/p&gt;
-
-&lt;p&gt;此外，为了将本地博客项目的所有内容放到github上，可以将博客项目的内容放到github项目的source分支上， 在本地项目的文件夹下执行如下操作：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git init .
-git remote add origin https://github.com/username/username.github.io.git
-git add .
-git commit 
-git push origin source:source
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这样博客的原始内容也放在github上了。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;自动化脚本&lt;/h2&gt;
-
-&lt;p&gt;为了简化以后的操作，我还写了一个小脚本来简化操作，将该脚本放到项目文件夹下，可以通过如下命令来完成相应操作：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;python cli.py &amp;lt;target&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;其中target可以为 clean，generate， preview， deploy 和push_source，分别实现清理，生成，预览，部署和上传源代码的操作。该脚本&lt;code&gt;cli.py&lt;/code&gt;的内容如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;:::python
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-
-from os import system, chdir, getcwd
-from sys import argv
-
-def execute(cmd):
-	print cmd
-	system(cmd)
-
-def clean():
-	cmd = &#39;rm -rf output/*&#39;
-	execute(cmd)
-
-def generate():
-	clean()
-	cmd = &#39;pelican content -s pelicanconf.py&#39;
-	execute(cmd)
-
-def preview():
-	generate()
-	chdir(&#39;output&#39;)
-	cmd = &#39;python -m SimpleHTTPServer&#39;
-	execute(cmd)
-
-def deploy():
-	generate()
-	chdir(&#39;output&#39;)
-	print getcwd()
-	cmd = &#39;git add --all .&#39;
-	execute(cmd)
-	cmd = &#39;git commit&#39;
-	execute(cmd)
-	cmd = &#39;git push origin master:master&#39;
-	execute(cmd)
-
-def push_source():
-	cmd = &#39;git add --all .&#39;
-	execute(cmd)
-	cmd = &#39;git commit&#39;
-	execute(cmd)
-	cmd = &#39;git push origin source:source&#39;
-	execute(cmd)
-
-if __name__ == &#39;__main__&#39;:
-	if len(argv) != 2:
-		print &#39;cli require 1 parameter,  you hava these options: \n clean generate preview deploy push_source&#39;
-	else:
-		try :
-			action = argv[1] + &quot;()&quot;
-			exec(action)
-		except:
-			print &quot;command is error, you hava these options: \n clean generate preview deploy push_source&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;参考&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://docs.getpelican.com/en/latest/&quot;&gt;pelican doc&lt;/a&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jinja.pocoo.org/&quot;&gt;jinja2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-7&quot;&gt;完&lt;/h3&gt;
-</description>
-        <pubDate>Thu, 05 Dec 2013 00:00:00 +0800</pubDate>
-        <link>/2013/12/05/using-pelican-and-github-pages-to-build-a-blog.html</link>
-        <guid isPermaLink="true">/2013/12/05/using-pelican-and-github-pages-to-build-a-blog.html</guid>
-      </item>
-    
-      <item>
-        <title>Elipse Project To Maven</title>
-        <description>&lt;p&gt;Title: Eclipse 项目迁移到 Maven&lt;br /&gt;
-Date: 2013-12-03 10:20&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: Java, Maven&lt;br /&gt;
-Summary: maven是一种广泛使用的java项目管理工具, 有很多优点，本文记录了eclipse 项目迁移到 maven的步骤。&lt;/p&gt;
+        <title>Eclipse 项目迁移到 Maven</title>
+        <description>&lt;p&gt;maven是一种广泛使用的java项目管理工具, 有很多优点，本文记录了eclipse 项目迁移到 maven的步骤。&lt;/p&gt;
 
 &lt;h2 id=&quot;maven&quot;&gt;maven的优势&lt;/h2&gt;
 
@@ -550,21 +290,14 @@ Summary: maven是一种广泛使用的java项目管理工具, 有很多优点，
   &lt;li&gt;运行。将得到的jar包上传至服务器，即可使用 &lt;code&gt;java -cp *.jar mainClass parms&lt;/code&gt; 来执行。&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Tue, 03 Dec 2013 00:00:00 +0800</pubDate>
-        <link>/2013/12/03/elipse-project-to-maven.html</link>
-        <guid isPermaLink="true">/2013/12/03/elipse-project-to-maven.html</guid>
+        <pubDate>Tue, 03 Dec 2013 10:20:00 +0800</pubDate>
+        <link>/java/2013/12/03/elipse-project-to-maven.html</link>
+        <guid isPermaLink="true">/java/2013/12/03/elipse-project-to-maven.html</guid>
       </item>
     
       <item>
-        <title>Linear Regression Of Machine Regression</title>
-        <description>&lt;p&gt;Title: 机器学习之线性回归&lt;br /&gt;
-Date: 2013-04-28 16:56&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: MachineLearning, Python&lt;br /&gt;
-Author: zhicheng hou&lt;br /&gt;
-Summary: 机器学习是一种广泛应用的技术，其中有监督的学习是其主要内容。本文介绍一类简单的有监督学习算法：线性回归。线性回归是最基础的有监督学习算法，本文将从理论介绍，算法实现，应用实例三个方面对该算法进行介绍。有监督的学习是其主要内容。本文介绍一类简单的有监督学习算法：线性回归。线性回归是最基础的有监督学习算法，本文将从理论介绍，算法实现，应用实例三个方面对该算法进行介绍。&lt;/p&gt;
-
-&lt;p&gt;机器学习是一种广泛应用的技术，其中有监督的学习是其主要内容。本文介绍一类简单的有监督学习算法：线性回归。线性回归是最基础的有监督学习算法，本文将从理论介绍，算法实现，应用实例三个方面对该算法进行介绍。&lt;/p&gt;
+        <title>机器学习之线性回归</title>
+        <description>&lt;p&gt;机器学习是一种广泛应用的技术，其中有监督的学习是其主要内容。本文介绍一类简单的有监督学习算法：线性回归。线性回归是最基础的有监督学习算法，本文将从理论介绍，算法实现，应用实例三个方面对该算法进行介绍。&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;介绍&lt;/h2&gt;
 
@@ -842,1435 +575,14 @@ class LinearRegression(object):
   &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera: machine learning by Andrew Ng&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 28 Apr 2013 00:00:00 +0800</pubDate>
-        <link>/2013/04/28/linear-regression-of-machine-regression.html</link>
-        <guid isPermaLink="true">/2013/04/28/linear-regression-of-machine-regression.html</guid>
+        <pubDate>Sun, 28 Apr 2013 16:56:00 +0800</pubDate>
+        <link>/ml/2013/04/28/linear-regression-of-machine-regression.html</link>
+        <guid isPermaLink="true">/ml/2013/04/28/linear-regression-of-machine-regression.html</guid>
       </item>
     
       <item>
-        <title>Design Pattern In Python Behavioral Ones</title>
-        <description>&lt;p&gt;Title: 设计模式：Python语言实现之行为型模式&lt;br /&gt;
-Date: 2013-04-02 18:02&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: DesignPattern, Python&lt;br /&gt;
-Summary: 行为型模式对类和对象怎样交互和分配职责进行描述，不仅描述对象或类的模式，还描述它们之间的通信模式。按范围分为行为类模式和行为对象模式，其中类模式使用继承机制在类间分配职责，包括Interpreter和Template Method两种；而对象模式通过对象复合机制实现，包括包括Chain of Responsibility、Command、Iterator、Mediator、Memento、Observer、State、Strategy和Visitor模式。本文将分别介绍。&lt;/p&gt;
-
-&lt;h2 id=&quot;chain-of-responsibility--&quot;&gt;Chain of Responsibility (职责链) 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，知道有一个对象处理它为止。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/chain_of_responsibility.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Handler：定义一个处理请求的接口&lt;/li&gt;
-  &lt;li&gt;ConcreteHandler：处理它负责的请求，可访问它的后继者，如果可处理该请求，就处理之；否则将请求转发给它的后继者。&lt;/li&gt;
-  &lt;li&gt;Client：向链上的具体处理者对象提交请求。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;handler.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Handler(object):
-      def set_successor(self, successor):
-          self.successor = successor
-      def handle_request(self, request):
-          pass
-
-  class ConcreteHandler1(Handler):
-      def handle_request(self, request):
-          if request &amp;gt;= 0 and request &amp;lt;= 10:
-              print &quot;Concrete Handler 1 handled the request &quot; + str(request)
-          elif self.successor is not None:
-              self.successor.handle_request(request)
-          else:
-              print &quot;no successor to handle it&quot;
-
-  class ConcreteHandler2(Handler):
-      def handle_request(self, request):
-          if request &amp;gt;= 10:
-              print &quot;Concrete Handler 2 handled the request &quot; + str(request)
-          elif self.successor is not None:
-              self.successor.handle_request(request)
-          else:
-              print &quot;no successor to handle it&quot;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;client.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from handler import *
-
-  h1 = ConcreteHandler1()
-  h2 = ConcreteHandler2()
-  h1.set_successor(h2)
-
-  for request in range(1,20,2):
-      h1.handle_request(request)
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;当有多个对象都可以处理一个请求，但哪个对象处理该请求运行时刻自动确定时，使用该模式。&lt;/li&gt;
-  &lt;li&gt;可以在不确定接收者的情况下，向多个对象中的一个提交请求&lt;/li&gt;
-  &lt;li&gt;可以修改处理请求的结构，增加了给对象指派职责的灵活性。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;command-&quot;&gt;Command（命令） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化；将请求排队或记录请求日志，以及支持可撤销的操作。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-6&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/command.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-7&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Command：声明执行操作的接口&lt;/li&gt;
-  &lt;li&gt;ConcreteCommand：将一个接收者对象绑定于一个动作，调用接收者相应的操作，以实现Execute&lt;/li&gt;
-  &lt;li&gt;Client：创建一个具体命令对象并设定它的接收者。&lt;/li&gt;
-  &lt;li&gt;Invoker：要求该命令执行这个请求&lt;/li&gt;
-  &lt;li&gt;Receiver：知道如何实施与执行一个请求相关的操作。任何类都可以作为一个接收者。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-8&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;command.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Command(object):
-      def __init__(self, receiver):
-          self.receiver = receiver    
-      def execute(self):
-          pass
-
-  class ConcreteCommand(Command):
-      def execute(self):
-          self.receiver.action()
-
-  class Invoker(object):
-      def set_command(self, command):
-          self.command = command
-
-      def execute_command(self):
-          self.command.execute()
-
-  class Receiver(object):
-      def action(self):
-          print &quot;action!&quot;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;client.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from command import * 
-
-  r = Receiver()
-  c = ConcreteCommand(r)
-  i = Invoker()
-  i.set_command(c)
-  i.execute_command()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-9&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;当希望容易的设计一个命令队列，并容易的将命令计入日志&lt;/li&gt;
-  &lt;li&gt;希望容易实现对请求的撤销与重做。&lt;/li&gt;
-  &lt;li&gt;将请求操作的对象鱼执行操作的对象分割开。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;interpreter-&quot;&gt;Interpreter（解释器） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-10&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。是类行为型模式。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-11&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/interpreter.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-12&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;AbstractExpression：声明一个抽象的解释操作，这个接口为抽象语法树中的所有节点共享。&lt;/li&gt;
-  &lt;li&gt;TerminalExpression：终结符表达式，句子中的终结符需要该类的一个实例。&lt;/li&gt;
-  &lt;li&gt;NonterminalExpression：非终结符表达式，文法中的每一条规则都需要一个该类，对文中的非终结符实现解释操作。&lt;/li&gt;
-  &lt;li&gt;Context：包括解释器之外的一些全局信息。&lt;/li&gt;
-  &lt;li&gt;Client：构建该文法定义语言中的一个特定的句子的抽象语法树，调用解释操作。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-13&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;interpreter.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class AbstractExpression(object):
-      def interpret(self, context):
-          pass
-
-  class TerminalExpression(AbstractExpression):
-      def interpret(self, context):
-          print &quot;terminal interpret&quot;
-
-  class NonterminalExpression(AbstractExpression):
-      def interpret(self, context):
-          print &quot;nonterminal interpret&quot;
-
-  class Context(object):
-      def __init__(self, arg_string):
-          self.arg_string = arg_string
-
-  def main():
-      c = Context(&quot;context text&quot;)
-      sentence = []
-      sentence.append(NonterminalExpression())
-      sentence.append(TerminalExpression())
-      sentence.append(NonterminalExpression())   
-
-      for expression in sentence:
-          expression.interpret(c)
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-14&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;当语言需要解释执行，并且可将该语言的句子表示为抽象语法树时，可以使用。&lt;/li&gt;
-  &lt;li&gt;将复杂语法转换形式，使用简单的句法构建复杂的结构。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;iterator-&quot;&gt;Iterator（迭代器） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-15&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-16&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/command.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-17&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Iterator：迭代器定义访问和遍历元素的接口。&lt;/li&gt;
-  &lt;li&gt;ConcreteIterator：具体迭代器实现迭代器接口，对该聚合遍历时跟踪当前位置。&lt;/li&gt;
-  &lt;li&gt;Aggregate：聚合定义创建相应迭代器对象的接口。&lt;/li&gt;
-  &lt;li&gt;ConcreteAggregate：具体聚合实现创建相应迭代器的接口，返回具体迭代器的一个适当实例。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-18&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;iterator.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Iterator(object):
-      def first(self):
-          pass
-        
-      def next(self):
-          pass
-
-      def is_done(self):
-          pass
-
-      def current_itern(self):
-          pass
-
-  class ConcreteIterator(Iterator):
-      def __init__(self, aggregate):
-          self.aggregate = aggregate
-          self.current = 0
-
-      def first(self):
-          return self.aggregate.get(0)
-      def next(self):
-          self.current += 1  
-          if self.current &amp;lt; self.aggregate.count():
-              return self.aggregate.get(self.current)
-
-      def is_done(self):
-          if self.current &amp;gt;= self.aggregate.count():
-              return True
-          else:
-              return False
-
-      def current_itern(self):
-          return self.aggregate.get(self.current)
-
-  class Aggregate(object):
-      def create_iterator(self):
-          pass
-
-  class ConcreteAggregate(Aggregate):
-      def __init__(self):
-          self.list = []
-
-      def get(self, idx):
-          return self.list[idx]
-
-      def set(self, idx, value):
-          self.list.insert(idx, value)
-
-      def count(self):
-          return len(self.list)
-
-      def create_iterator(self):
-          return ConcreteIterator(self)
-
-
-  def main():
-      a = ConcreteAggregate()
-      a.set(0,&quot;no.1&quot;)
-      a.set(1,&quot;no.2&quot;)
-      a.set(2,&quot;no.3&quot;)
-
-      it = a.create_iterator()
-
-      while not it.is_done():
-          print it.current_itern() + &quot; do something&quot;
-          it.next()
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-19&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;希望访问一个聚合对象的内容而无需暴露它的内部表示&lt;/li&gt;
-  &lt;li&gt;支持对聚合对象的多种遍历&lt;/li&gt;
-  &lt;li&gt;为遍历不同的聚合结构提供一个统一的接口 &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;mediator-&quot;&gt;Mediator（中介者） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-20&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;用一个中介对象来封装一系列对象的交互。中介者使各对象不需要显示的相互引用，从而使其耦合松散，而且可以独立的改变它们之间的交互。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-21&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/mediator.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-22&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Mediator：中介者定义一个接口用于与各同事对象通信。&lt;/li&gt;
-  &lt;li&gt;ConcreteMediator：具体中介者通过协调各同事对象实现协作行为，了解并维护它的各个同事&lt;/li&gt;
-  &lt;li&gt;Colleague：抽象同事类&lt;/li&gt;
-  &lt;li&gt;ConcreteColleague：具体同事类，每个同事知道它的中介者对象，不知道其他同事，需要通信时与中介者通信。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-23&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;mediator.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Mediator(object):
-      def send(self, colleague, message):
-          pass
-
-  class Colleague(object):
-      def __init__(self, mediator):
-          self.mediator = mediator
-     
-  class ConcreteMediator(Mediator):
-      def set_colleague(self, colleague1, colleague2):
-          self.colleague1 = colleague1
-          self.colleague2 = colleague2
-
-      def send(self, colleague, message):
-          if self.colleague1 is colleague:
-              self.colleague2.notify(message)
-          elif self.colleague2 is colleague:
-              self.colleague1.notify(message)
-          else:
-              print &quot;no such colleague&quot;
-
-  class ConcreteColleague1(Colleague):
-      def send(self, message):
-          self.mediator.send(self, message)
-
-      def notify(self, message):
-          print &quot;concrete colleague 1 get message: &quot; + message
-
-  class ConcreteColleague2(Colleague):
-      def send(self, message):
-          self.mediator.send(self, message)
-
-      def notify(self, message):
-          print &quot;concrete colleague 2 get message: &quot; + message
-
-  def main():
-      cm = ConcreteMediator()
-      cc1 = ConcreteColleague1(cm)
-      cc2 = ConcreteColleague2(cm)
-
-      cm.set_colleague(cc1, cc2)
-
-      cc1.send(&quot;hello cc2&quot;)
-      cc2.send(&quot;what&#39;s up? cc1&quot;)
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-24&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;一组对象以定义良好但是复杂的方式进行通信，产生的依赖关系结构混乱且难以理解。&lt;/li&gt;
-  &lt;li&gt;定制一个分布在多个类中的行为，而又不希望太多的子类&lt;/li&gt;
-  &lt;li&gt;一个对象引用其他很多对象并且直接与这些对象通信，导致难以复用该对象。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;memento-&quot;&gt;Memento（备忘录） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-25&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可以将该对象恢复到原先保存的状态。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-26&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/memento.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-27&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Memento：备忘录存储Originator对象的内部状态，防止Originator以外的其他对象访问备忘录。它只有两个接口，Caretaker只能看到其窄接口，只能将备忘传给其他对象；originator看到宽接口，可以访问其内部状态以返回到保存的状态。理想情况下只允许生成备忘的原发器访问该备忘。&lt;/li&gt;
-  &lt;li&gt;Originator：原发器创建一个备忘录，用以记录当前时刻的内部状态。使用备忘录恢复内部状态。&lt;/li&gt;
-  &lt;li&gt;Caretaker：负责保存好备忘录，不能对备忘录的内容进行操作或检查。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-28&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;memento.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Originator(object):
-      def __init__(self):
-          self.state = &quot; &quot;
-
-      def change_state(self, state):
-          self.state = state
-
-      def show(self):
-          print self.state
-
-      def set_memento(self, memento):
-          self.state = memento.state
-
-      def create_memento(self):
-          return Memento(self.state)
-
-  class Memento(object):
-      def __init__(self, state):
-          self.state = state
-
-      def get_state(self):
-          return self.state
-
-
-  class Craetaker(object):
-      def set_memento(self, memento):
-          self.memento = memento
-      def get_memento(self):
-          return self.memento
-
-  def main():
-      o = Originator()
-      o.change_state(&quot;state 1&quot;)
-      o.show()
-      c = Craetaker()
-      c.set_memento(o.create_memento())
-
-      o.change_state(&quot;state 2&quot;)
-      o.show()
-
-      o.set_memento(c.get_memento())
-      o.show()
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-29&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;必须保存某一对象的某一时刻状态，以后需要时可以恢复到先前的状态。但是不希望让其他对象直接得到这些状态，不希望破坏对象的封装性。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;observer-&quot;&gt;Observer（观察者） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-30&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-31&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/observer.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-32&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Subject：目标知道它的观察者，可以有任何数量的观察者，提供注册和删除观察者对象的接口。&lt;/li&gt;
-  &lt;li&gt;Observer：为目标发生改变时需获得通知的对象定义更新接口。 &lt;/li&gt;
-  &lt;li&gt;ConcreteSubject：将有关状态存入各个ConcreteObserver对象，当它的状态发生改变时，向它的各个观察者发出通知&lt;/li&gt;
-  &lt;li&gt;ConcreteObserver：维护指向ConcreteSubject对象的引用，存储有关状态，这些状态应保持与目标的状态一致，并实现Observer的自身状态更新接口。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-33&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;observer.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Subject(object):
-      def __init__(self):
-          self.observers = []
-
-      def attach(self, observer):
-          self.observers.append(observer)
-
-      def detach(self, observer):
-          self.observers.remove(observer)
-
-      def notify(self):
-          for observer in self.observers:
-              observer.update()
-
-  class Observer(object):
-      def update(self):
-          pass
-
-  class ConcreteSubject(Subject):
-      def __init__(self):
-          super(ConcreteSubject, self).__init__()
-          self.state = &quot;&quot;
-
-      def set_state(self, state):
-          self.state = state
-
-      def get_state(self):
-          return self.state
-
-  class ConcreteObserver(Observer):
-      def __init__(self, subject):
-          self.subject = subject
-          self.state = &quot;&quot;
-
-      def set_subject(self, subject):
-          self.subject = subject
-
-      def get_subject(self):
-          return self.subject
-
-      def update(self):
-          self.state = self.subject.get_state()
-          print self.state
-
-  def main():
-      s = ConcreteSubject()
-     
-      c1 = ConcreteObserver(s)
-      c2 = ConcreteObserver(s)
-      s.attach(c1)
-      s.attach(c2)
-
-      s.set_state(&quot;I&#39;m back!&quot;)
-      s.notify()
-
-      s.set_state(&quot;I&#39;m leaving!&quot;)
-      s.notify()
-
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-34&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;当一个抽象对象模型有两个方面，其中一个方面依赖于另一个方面。将这二者封装在独立的对象中以使它们可以各自独立的改变和复用。&lt;/li&gt;
-  &lt;li&gt;当一个对象的改变需要同时改变其他对象，而又不知道具体有多少对象有待改变时。或者是当对象不是紧耦合的，即不能假定其他对象是谁时。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;state-&quot;&gt;State（状态） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-35&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;允许一个对象在其内部状态改变时改变它的行为，看起来似乎修改了它的类。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-36&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/state.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-37&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Context：定义客户感兴趣的接口，维护一个ConcreteState子类的实例，这个实例定义了当前的状态。&lt;/li&gt;
-  &lt;li&gt;State：定义一个接口以封装与context的一个特定状态相关的行为。&lt;/li&gt;
-  &lt;li&gt;ConcreteState：每一个子类实现一个与Context的一个状态相关的行为。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-38&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;state.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class State(object):
-      def handle(self, context):
-          pass
-
-  class ConcreteState1(State):
-      def handle(self, context):
-          next_state = ConcreteState2()
-          context.set_state(next_state)
-
-  class ConcreteState2(State):
-      def handle(self, context):
-          next_state = ConcreteState1()
-          context.set_state(next_state)
-
-  class Context(object):
-      def __init__(self, state):
-          self.state = state
-
-      def set_state(self, state):
-          self.state = state
-          print &quot;self.state is &quot; + self.state.__class__.__name__
-
-      def get_state(self):
-          return self.state
-
-      def request(self):
-          self.state.handle(self)
-            
-  def main():
-      s1 = ConcreteState1()
-      c = Context(s1)
-      c.request()
-      c.request()
-      c.request()
-      c.request()
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-39&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;当一个对象的行为取决于它的状态，并且必须在运行时刻根据状态改变行为，希望把状态和行为分割开来。&lt;/li&gt;
-  &lt;li&gt;当一个操作中有大量的分支和条件语句时，且这些分支依赖于对象的状态。该模式将不同状态下的分支分别放入一个独立的类中，可以根据自身情况将对象的状态作为对象，而该对象不依赖于其他对象而独立变化。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;strategy-&quot;&gt;Strategy（策略） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-40&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;定义一系列的算法，把他们一个一个封装起来，并且使他们可以互相替换。使算法可独立于它的客户端而变化。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-41&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/strategy.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-42&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Strategy：定义所有支持的算法的公共接口，Context使用这个接口调用某ConcreteStrategy定义的算法&lt;/li&gt;
-  &lt;li&gt;ConcreteStrategy：实现具体接口的算法类&lt;/li&gt;
-  &lt;li&gt;Context：用一个ConcreteStrategy来配置，维护一个对Strategy的引用，定义一个接口来让Strategy访问它的数据库。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-43&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;strategy.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Strategy(object):
-      def algorithm_interface(self):
-          pass
-
-  class ConcreteStrategy1(Strategy):
-      def algorithm_interface(self):
-          print &quot;algorithm 1 &quot;
-
-  class ConcreteStrategy2(Strategy):
-      def algorithm_interface(self):
-          print &quot;algorithm 2 &quot;
-
-  class ConcreteStrategy3(Strategy):
-      def algorithm_interface(self):
-          print &quot;algorithm 3 &quot;
-
-  class Context(object):
-      def __init__(self, cs):
-          self.s = Strategy()
-          self.s = cs
-
-      def context_interface(self):
-          self.s.algorithm_interface()
-
-  def main():
-      cs1 = ConcreteStrategy1()
-      c = Context(cs1)
-      c.context_interface()
-
-      cs2 = ConcreteStrategy2()
-      c = Context(cs2)
-      c.context_interface()
-
-      cs3 = ConcreteStrategy3()
-      c = Context(cs3)
-      c.context_interface()
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-44&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;但许多相关类仅仅是行为有异。&lt;/li&gt;
-  &lt;li&gt;需要使用一个算法的不同变体，或定义了多种行为，并且这些行为在这个类的操作中以多个条件语句的形式出现。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;template-method-&quot;&gt;Template Method（模板方法） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-45&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;模板方法是类行为型模式。定义一个操作中的算法和骨架，而将一些步骤延迟到子类中，该模式可以不改变一个算法的结构即可重定义该算法的某些特地步骤。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-46&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/template_method.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-47&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;AbstractClass：定义抽象的原语操作（primitive operation），具体的子类将重新定义它们以实现一个算法的各步骤。实现一个模板方法，定义一个算法的骨架。&lt;/li&gt;
-  &lt;li&gt;ConcreteClass：具体实现原语操作中的特定步骤和算法&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-48&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;template_method.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class AbstractClass(object):
-      def primitive_operation1(self):
-          pass
-
-      def primitive_operation1(self):
-          pass
-
-      def template_method(self):
-          self.primitive_operation1()
-          self.primitive_operation2()
-          print &quot;!!&quot;
-
-  class ConcreteClass1(AbstractClass):
-      def primitive_operation1(self):
-          print &quot;class 1 operation 1 &quot;
-      def primitive_operation2(self):
-          print &quot;class 1 operation 2 &quot;
-
-  class ConcreteClass2(AbstractClass):
-      def primitive_operation1(self):
-          print &quot;class 2 operation 1 &quot;
-      def primitive_operation2(self):
-          print &quot;class 2 operation 2 &quot;
-
-  def main():
-      c = ConcreteClass1()
-      c.template_method()
-
-      c = ConcreteClass2()
-      c.template_method()
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-49&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;将步骤等共同部分通过模板方法一次实现，避免重复。&lt;/li&gt;
-  &lt;li&gt;算法的可变部分由子类实现。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;visitor-&quot;&gt;Visitor（访问者） 模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-50&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;表示一个作用于某对象结构中的各元素的操作，它使你可以在不改变各元素的类型的前提下定义作用于这些元素的新操作。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-51&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/visitor.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-52&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Visitor：为给对象结构中的ConcreteElement的每一个类声明一个Visit操作，该操作的名字和特征标识了发起Visit请求给访问者的那个类，使得访问者可以确定正被访问的元素的具体的类。&lt;/li&gt;
-  &lt;li&gt;ConcreteVisitor：实现每个Visitor声明的操作。&lt;/li&gt;
-  &lt;li&gt;Element：定义一个Accept操作，以一个访问者为参数。&lt;/li&gt;
-  &lt;li&gt;ConcreteElement：实现Accept操作，以访问者为参数。&lt;/li&gt;
-  &lt;li&gt;ObjectStructure：枚举它的元素，提供高层接口以允许该访问者访问它的元素。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-53&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;visitor.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Visitor(object):
-      def visit_concrete_element_a(self, concrete_element_a):
-          pass
-      def visit_concrete_element_b(self, concrete_element_b):
-          pass
-
-  class ConcreteVisitor1(Visitor):
-      def visit_concrete_element_a(self, concrete_element_a):
-          print concrete_element_a.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
-      def visit_concrete_element_b(self, concrete_element_b):
-          print concrete_element_b.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
-
-  class ConcreteVisitor2(Visitor):
-      def visit_concrete_element_a(self, concrete_element_a):
-          print concrete_element_a.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
-      def visit_concrete_element_b(self, concrete_element_b):
-          print concrete_element_b.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
-
-  class Element(object):
-      def accept(self, visitor):
-          pass
-
-  class ConcreteElementA(Element):
-      def accept(self, visitor):
-          visitor.visit_concrete_element_a(self)
-      def operation(self):
-          pass
-
-  class ConcreteElementB(Element):
-      def accept(self, visitor):
-          visitor.visit_concrete_element_b(self)
-      def operation(self):
-          pass
-
-  class ObjectStructure(object):
-      def __init__(self):
-          self.elements = []
-
-      def attach(self, element):
-          self.elements.append(element)
-
-      def detach(self, element):
-          self.elements.remove(element)
-
-      def accept(self, visitor):
-          for element in self.elements:
-              element.accept(visitor)
-
-  def main():
-      o = ObjectStructure()
-      o.attach(ConcreteElementA())
-      o.attach(ConcreteElementB())
-
-      v1 = ConcreteVisitor1()
-      v2 = ConcreteVisitor2()
-
-      o.accept(v1)
-      o.accept(v2)
-
-  if __name__ == &#39;__main__&#39;:
-      main()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-54&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;需要对一个对象的结构中的对象进行很多不同的并且不相关的操作，visitor让相关操作集中到一个类中。&lt;/li&gt;
-  &lt;li&gt;需要把处理从数据结构中分离出来。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;### 参考&lt;br /&gt;
-- &lt;a href=&quot;http://book.douban.com/subject/1052241/&quot;&gt;设计模式-可复用面向对象软件的基础&lt;/a&gt; &lt;br /&gt;
-- &lt;a href=&quot;http://book.douban.com/subject/2334288/&quot;&gt;大话设计模式&lt;/a&gt;&lt;br /&gt;
-- &lt;a href=&quot;http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf&quot;&gt;Thinking in python&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 02 Apr 2013 00:00:00 +0800</pubDate>
-        <link>/2013/04/02/design-pattern-in-python-behavioral-ones.html</link>
-        <guid isPermaLink="true">/2013/04/02/design-pattern-in-python-behavioral-ones.html</guid>
-      </item>
-    
-      <item>
-        <title>设计模式：Python语言实现之结构型模式</title>
-        <description>&lt;p&gt;结构型模式涉及到如何组合类和对象以获得更大的结构。本文将给出结构型模式的定义，结构，代码实现和特点等内容。本文涉及的结构型模式包括：adapter模式，bridge模式，composite模式，decorator模式，facade模式，flyweight模式，和proxy模式。&lt;/p&gt;
-
-&lt;h2 id=&quot;adapter&quot;&gt;Adapter（适配器）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/adapter.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Target: 客户所期待的与特定领域相关的接口。&lt;/li&gt;
-  &lt;li&gt;Adaptee: 需要适配的类，是一个已存在的接口。&lt;/li&gt;
-  &lt;li&gt;Adapter：对Adaptee的接口与Target接口进行适配。&lt;/li&gt;
-  &lt;li&gt;Client：客户端，与复合Target接口的对象协同。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Target类（&lt;code&gt;target.py&lt;/code&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class Target(object):
-
-    def request(self):
-        print &quot;nomal request&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adaptee类（&lt;code&gt;adaptee.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Adaptee(object):
-      def specific_request(self):
-          print &quot;specific request&quot;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adapter类（&lt;code&gt;adapter.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from target import *
-  from adaptee import *
-
-  class Adapter(Target):
-      def __init__(self):
-          self.myadaptee = Adaptee()
-
-      def request(self):
-          self.myadaptee.specific_request()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;客户端（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from adapter import *
-
-  target = Adapter()
-  target.request()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;想使用一个已经存在的类，而他的接口不符合你的要求时可以使用此模式。&lt;/li&gt;
-  &lt;li&gt;客户端代码可以统一调用同一接口，即使是对不相关或不可预见的类。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;bridge&quot;&gt;Bridge（桥接）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;将抽象部分与它的实现部分分离，使它们都可以独立的变化。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-6&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/bridge.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-7&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Abstraction: 定义抽象类的接口，维护一个指向Implementor类对象的指针。&lt;/li&gt;
-  &lt;li&gt;RefinedAbstraction：扩充Abstraction定义的接口。&lt;/li&gt;
-  &lt;li&gt;Implementor: 定义实现类的接口，该接口不一定要与Abstraction的接口一致，该类接口提供基本操作，Abstraction类定义了基于这些基本操作的较高层次的操作。&lt;/li&gt;
-  &lt;li&gt;ConcreteImplementor：具体实现Implementor的接口。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-8&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Implementor 类（&lt;code&gt;Implementor.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Implementor(object):
-      def operation_imp(self):
-          pass
-
-  class ConcreteImplementorA(Implementor):
-      def operation_imp(self):
-          print &quot;ConcreteImplementorA operate&quot;
-
-  class ConcreteImplementorB(Implementor):
-      def operation_imp(self):
-          print &quot;ConcreteImplementorB operate&quot;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Abstraction 类（&lt;code&gt;abstraction.py&lt;/code&gt;）&lt;br /&gt;
-      from implementor import *&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Abstraction(object):
-      def __init__(self):
-          self.imp = Implementor()
-
-      def set_imp(self,conc_imple):
-          self.imp = conc_imple;
-
-      def operate(self):
-          self.imp.operation_imp()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;client （&lt;code&gt;client.py&lt;/code&gt; ）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from abstraction import *
-  from implementor import *
-
-  ab = Abstraction()
-  imp = ConcreteImplementorA()
-  ab.set_imp(imp)
-  ab.operate()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-9&quot;&gt;适用性&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;不希望抽象与实现部分有一个固定的绑定，该模式可以在运行时刻配置抽象类的实现。&lt;/li&gt;
-  &lt;li&gt;希望抽象部分和实现部分都可通过子类进行扩充。该模式可以独立的对抽象与实现分别扩充。&lt;/li&gt;
-  &lt;li&gt;希望实现系统的多角度分类，减少各分类之间的耦合。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;composite&quot;&gt;Composite（组合）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-10&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;将对象组合成树形结构以表示“部分-整体”的层次结构。该模式使得用户对单个对象和组合对象的使用具有一致性。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-11&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/composite.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-12&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Component：为组合中的对象声明接口，在适当情况下实现所有类公有接口的缺省行为，声明一个用于管理Component的子组件&lt;/li&gt;
-  &lt;li&gt;Leaf：在组合中表示叶节点对象，叶节点没有子节点。&lt;/li&gt;
-  &lt;li&gt;Composite：定义有子部件的那些部件的行为，存储子部件，实现接口中与子部件有关的操作&lt;/li&gt;
-  &lt;li&gt;Client：通过Component接口操作组合部件对象。&lt;/li&gt;
-  &lt;li&gt;协作： 用户使用Component接口与组合结构中的对象进行交互，如果接受者是一个叶节点，则直接处理请求，如果接受者是Composite，它通常将请求发送给它的子部件，并执行一些辅助动作。 &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-13&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;(&lt;code&gt;composite.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Component(object):
-      def operation(self,depth):
-          pass
-
-      def add(self, component):
-          pass
-
-      def remove(self, component):
-          pass
-
-  # Leaf
-  class Leaf(Component):
-      def operation(self, depth):
-          print &quot;-&quot;*depth + &quot;leaf&quot;
-
-  # Composite
-  class Composite(Component):
-      def __init__(self):
-          self.children = []
-
-      def operation(self, depth):
-          print &quot;-&quot;*depth + &quot;composite&quot;
-          for c in self.children:
-              c.operation(depth+2)
-
-      def add(self, component):
-          self.children.append(component)
-
-      def remove(self, component):
-          self.children.remove(component)
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Client（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from composite import *
-
-  comp1 = Composite()
-  comp1.add(Leaf())
-  comp1.add(Leaf())
-
-  root = Composite()
-  leaf = Leaf()
-  root.add(leaf)
-  root.add(comp1)
-
-  root.operation(2)
-
-  root.remove(leaf)
-  root.operation(2)
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-14&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;希望表达对象的部分-整体层次结构，且希望用户忽略组合对象与单个对象的不同并统一的使用组合结构中的所有对象时。&lt;/li&gt;
-  &lt;li&gt;使设计更加一般化，并且容易增加新的组件，客户端不需根据新组间而改变。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;decorator&quot;&gt;Decorator（装饰）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-15&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;该模式也叫Wrapper（包装器），动态的给一个对象添加一些额外的职责。就增加功能来说，该模式比生成子类更为灵活。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-16&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/decorator.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-17&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Component：定义一个对象接口，可以给这些对象动态的添加职责。&lt;/li&gt;
-  &lt;li&gt;ConcreteComponent：定义一个对象，可以给这个对象添加一些职责。&lt;/li&gt;
-  &lt;li&gt;Decorator：维持一个指向Component对象的指针，并定义一个与Component接口一致的接口。&lt;/li&gt;
-  &lt;li&gt;ConcreteDecorator：具体的装饰对象，向组件添加职责。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-18&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Component类（&lt;code&gt;component.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Component(object):
-      def operation(self):
-          pass
-
-  class ConcreteComponent(Component):
-      def operation(self):
-          print &quot;concrete component operate&quot;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Decorator类（&lt;code&gt;decorator.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from component import *
-
-  class Decorator(Component):
-      def __init__(self):
-          self.comp = Component()
-
-      def set_component(self, component):
-          self.comp = component
-
-      def operation(self):
-          self.comp.operation()
-
-  class ConcreteDecoratorA(Decorator):
-      def __init__(self):
-          super(ConcreteDecoratorA, self).__init__()
-          self.added_state = &quot; &quot;
-
-      def operation(self):
-          super(ConcreteDecoratorA, self).operation()
-          self.added_state += &quot;new state&quot;
-          print self.added_state
-
-  class ConcreteDecoratorB(Decorator):
-      def __init__(self):
-          super(ConcreteDecoratorB, self).__init__()
-        
-      def operation(self):
-          super(ConcreteDecoratorB, self).operation()
-
-      def added_behavior(self):
-          print &quot;added behavior&quot;      
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;客户端（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from decorator import *
-
-  c = ConcreteComponent()
-  d1 = ConcreteDecoratorA()
-  d2 = ConcreteDecoratorB()
-
-  d1.set_component(c)
-  d2.set_component(d1)
-
-  d2.operation()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-19&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;希望不影响其他对象的情况下，以动态，透明的方式给单个对象添加职责，比静态继承更灵活。&lt;/li&gt;
-  &lt;li&gt;把类的核心职责和装饰功能区分开来，去除类中重复的装饰逻辑。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;facade&quot;&gt;Facade（外观）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-20&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;为子系统中的一组接口提供一个一致的界面，该模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-21&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/facade.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-22&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Facade：知道哪些子系统负责处理请求，将客户的请求代理给合适的子系统对象。&lt;/li&gt;
-  &lt;li&gt;SubSystem：实现子系统的功能，处理Facade对象指派的任务，无需Facade对象的任何信息。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-23&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;SubSystem类（&lt;code&gt;subsystem.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class SubSystem1(object):
-      def method1(self):
-          print &quot;sub system 1 method 1&quot;
-
-  class SubSystem2(object):
-      def method2(self):
-          print &quot;sub system 2 method 2&quot;
-
-  class SubSystem3(object):
-      def method3(self):
-          print &quot;sub system 3 method 3&quot;
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Facade类（&lt;code&gt;facade.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from subsystem import *
-
-  class Facade(object):
-      def __init__(self):
-          self.sub1 = SubSystem1()
-          self.sub2 = SubSystem2()
-          self.sub3 = SubSystem3()
-
-      def method_a(self):
-          self.sub1.method1()
-          self.sub3.method3()
-          self.sub2.method2()
-
-      def method_b(self):
-          self.sub3.method3()
-          self.sub2.method2()
-          self.sub1.method1()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;client（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from facade import *
-
-  fc = Facade()
-  fc.method_a()
-  fc.method_b()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-24&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;希望复杂的系统提供简单的接口时，从更高层次上操作组合各子系统。&lt;/li&gt;
-  &lt;li&gt;希望减少客户程序与抽象类的实现部分之间的依赖性，可以入facade层。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;flyweight&quot;&gt;Flyweight（享元）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-25&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;运用共享技术有效的支持大量的细粒度对象。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-26&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/flyweight.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-27&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Flyweight：描述一个接口，通过这个接口flyweight可以接受并作用于外部状态。&lt;/li&gt;
-  &lt;li&gt;ConcreteFlyweight：实现Flyweight接口，并为内部状态增加存储空间，其对象必须是可共享的。&lt;/li&gt;
-  &lt;li&gt;UnsharedConcreteFlyweight：Flyweight接口使共享成为可能，但是并不强制共享。该类指那些不需要被共享的子类。&lt;/li&gt;
-  &lt;li&gt;FlyweightFactory：创建并管理Flyweight对象，确保合理的共享Flyweight对象。&lt;/li&gt;
-  &lt;li&gt;client：维持一个对Flyweight的引用，计算或存储一个或多个flyweight的内部状态。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-28&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;flyweight.py&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Flyweight(object):
-      def operation(self, extrainsicstate):
-          pass
-
-  class ConcreteFlyweight(Flyweight):
-      def operation(self, extrainsicstate):
-          print &quot;concrete flyweight&quot; + str(extrainsicstate)
-
-  class UnsharedConcreteFlyweight(Flyweight):
-      def operation(self, extrainsicstate):
-          print &quot;unshared concrete flyweight&quot; + str(extrainsicstate)
-
-  class FlyweightFactory(object):
-      def __init__(self):
-          self.flyweights = {}
-
-      def get_flyweight(self, key):
-          if self.flyweights.has_key(key):
-              return self.flyweights[key]
-          else:
-              fw = ConcreteFlyweight()
-              self.flyweights[key] = fw
-              return fw
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;client.py&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from flyweight import *
-
-  extrinsicstate = 20
-  f = FlyweightFactory()
-  fx = f.get_flyweight(&quot;x&quot;)
-  fx.operation(extrinsicstate-1)
-
-  fy = f.get_flyweight(&quot;y&quot;)
-  fy.operation(extrinsicstate-1)
-
-  uf = UnsharedConcreteFlyweight()
-  uf.operation(extrinsicstate-2)
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-29&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;当一个程序使用了大量的对象，造成很大的存储开销时。&lt;/li&gt;
-  &lt;li&gt;对象的大多数状态都可变为外部状态，如果删除外部对象则可使用较少的共享对象取代很多组对象。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;proxy&quot;&gt;Proxy（代理）模式&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-30&quot;&gt;定义&lt;/h3&gt;
-&lt;p&gt;为其他对象提供一种代理以控制对这个对象的访问。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-31&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/proxy.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-32&quot;&gt;参与者&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Proxy：保存一个引用，使得代理可以访问实体，提供与Subject相同的接口，代理就可以代替实体，控制对实体的新建、存储、删除。&lt;/li&gt;
-  &lt;li&gt;Subject：定义Proxy与RealSubject的公用接口。&lt;/li&gt;
-  &lt;li&gt;RealSubject：实体类。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-33&quot;&gt;代码实现&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;proxy.py&lt;/code&gt;&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  class Subject(object):
-      def operation(self):
-          pass
-
-  class RealSubject(Subject):
-      def operation(self):
-          print &quot;real subject operation&quot;
-
-  class Proxy(Subject):
-      def __init__(self):
-          self.rs = RealSubject()
-
-      def operation(self):
-          self.rs.operation()
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;client.py&lt;/code&gt; &lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;  from proxy import *
-
-  proxy = Proxy()
-  proxy.operation() 
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-34&quot;&gt;适用性&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;远程代理：为一个在不同地址空间的对象提供局部代表。&lt;/li&gt;
-  &lt;li&gt;虚代理：需要创建开销很大的对象时，通过代理存放真实对象。&lt;/li&gt;
-  &lt;li&gt;保护代理：控制对原来对象的访问。&lt;/li&gt;
-  &lt;li&gt;智能指引：代理处理附加操作&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-35&quot;&gt;几种结构型模式的讨论&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Adapter和Bridge模式都给另一对象提供了一定程度上的间接性，有利于系统的灵活性。二者不同在于Adapter主要解决已有接口之间的不匹配问题，而bridge模式则是对抽象接口和实现部分进行桥接。&lt;/li&gt;
-  &lt;li&gt;Composite和Decorator模式具有类似的结构图，都基于递归组合来组织可变数目的对象。但Decorator旨在不需要生成子类即可给对象添加职责；而composite则旨在构造类，重点在表示不在装饰。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;### 源码&lt;br /&gt;
-欢迎大家去github上查看&lt;a href=&quot;https://github.com/zhichenghou/DPython.git&quot;&gt;本项目&lt;/a&gt;的所有源文件。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-36&quot;&gt;参考&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/1052241/&quot;&gt;设计模式-可复用面向对象软件的基础&lt;/a&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/2334288/&quot;&gt;大话设计模式&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf&quot;&gt;Thinking in python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 29 Mar 2013 18:02:00 +0800</pubDate>
-        <link>/blog/python/2013/03/29/design-pattern-in-python-structual-ones.html</link>
-        <guid isPermaLink="true">/blog/python/2013/03/29/design-pattern-in-python-structual-ones.html</guid>
-      </item>
-    
-      <item>
-        <title>Design Pattern In Python Creational Ones</title>
-        <description>&lt;p&gt;Title: 设计模式：Python语言实现之创建型模式&lt;br /&gt;
-Date: 2013-03-15 20:45&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: DesignPattern, Python&lt;br /&gt;
-Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模式、工厂方法模式、抽象工厂模式、生成器模式、原型模式和单例模式。说明了每种模式的定义、结构、特点，并给出了使用python语言实现的代码。&lt;/p&gt;
+        <title>设计模式：Python语言实现之创建型模式</title>
+        <description>&lt;p&gt;本文介绍设计模式中的创建型模式，包括简单工厂模式、工厂方法模式、抽象工厂模式、生成器模式、原型模式和单例模式。说明了每种模式的定义、结构、特点，并给出了使用python语言实现的代码。&lt;/p&gt;
 
 &lt;h2 id=&quot;simple-factory-&quot;&gt;simple factory 模式&lt;/h2&gt;
 
@@ -2278,7 +590,7 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
 &lt;p&gt;简单工厂模式是属于创建型模式，又叫做静态工厂方法（Static Factory Method）模式，是由一个工厂对象决定创建出哪一种产品类的实例。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/simplefactory.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/simplefactory.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-2&quot;&gt;参与者&lt;/h3&gt;
 &lt;ul&gt;
@@ -2359,7 +671,7 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
 &lt;p&gt;工厂方法模式又叫做虚构造器，它定义一个用于创建对象的接口，让子类决定实例化哪一个对象。该模式使一个类的实例化延迟到其子类。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-6&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/factorymethod.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/factorymethod.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-7&quot;&gt;参与者&lt;/h3&gt;
 &lt;ul&gt;
@@ -2455,7 +767,7 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
 &lt;p&gt;抽象工厂模式，又叫kit模式，提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。适用于具有多个产品系列的应用情况。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-11&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/abstractfactory.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/abstractfactory.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-12&quot;&gt;参与者&lt;/h3&gt;
 &lt;ul&gt;
@@ -2576,7 +888,7 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
 &lt;p&gt;生成器模式将一个复杂对象的创建过程与它的表示分离，使得同样的创建过程可以创建不同的表示。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-16&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/builder.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/builder.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-17&quot;&gt;参与者&lt;/h3&gt;
 &lt;ul&gt;
@@ -2686,7 +998,7 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
 &lt;p&gt;用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-21&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/prototype.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/prototype.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-22&quot;&gt;参与者&lt;/h3&gt;
 &lt;ul&gt;
@@ -2740,7 +1052,7 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
 &lt;p&gt;保证一个类仅有一个实例，并提供一个访问它的全局访问点。&lt;/p&gt;
 
 &lt;h3 id=&quot;section-26&quot;&gt;结构&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;images/DPython/singleton.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/singleton.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-27&quot;&gt;参与者&lt;/h3&gt;
 &lt;ul&gt;
@@ -2795,20 +1107,1427 @@ Summary: 本文介绍设计模式中的创建型模式，包括简单工厂模�
   &lt;li&gt;&lt;a href=&quot;http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf&quot;&gt;Thinking in python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Fri, 15 Mar 2013 00:00:00 +0800</pubDate>
-        <link>/2013/03/15/design-pattern-in-python-creational-ones.html</link>
-        <guid isPermaLink="true">/2013/03/15/design-pattern-in-python-creational-ones.html</guid>
+        <pubDate>Tue, 02 Apr 2013 18:02:00 +0800</pubDate>
+        <link>/java/2013/04/02/design-pattern-in-python-creational-ones.html</link>
+        <guid isPermaLink="true">/java/2013/04/02/design-pattern-in-python-creational-ones.html</guid>
       </item>
     
       <item>
-        <title>Javaee Learning Spring</title>
-        <description>&lt;p&gt;Title: JaveEE学习之Spring技术&lt;br /&gt;
-Date: 2013-02-27 17:19&lt;br /&gt;
-Category: Blog&lt;br /&gt;
-Tags: JaveEE, Java&lt;br /&gt;
-Summary: Spring框架是一种从实际开发中抽取出来的框架，提供了一种模板的设计哲学，这些模板完成了大量的通用步骤，开发者只需实现特定应用有关的步骤。Spring提供了一种一站式的解决方案，贯穿表现层，业务层和持久层等，以高度的开放性将已有的框架进行整合。&lt;/p&gt;
+        <title>设计模式：Python语言实现之行为型模式</title>
+        <description>&lt;p&gt;行为型模式对类和对象怎样交互和分配职责进行描述，不仅描述对象或类的模式，还描述它们之间的通信模式。按范围分为行为类模式和行为对象模式，其中类模式使用继承机制在类间分配职责，包括Interpreter和Template Method两种；而对象模式通过对象复合机制实现，包括包括Chain of Responsibility、Command、Iterator、Mediator、Memento、Observer、State、Strategy和Visitor模式。本文将分别介绍。&lt;/p&gt;
 
-&lt;!-- more --&gt;
+&lt;h2 id=&quot;chain-of-responsibility--&quot;&gt;Chain of Responsibility (职责链) 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，知道有一个对象处理它为止。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/chain_of_responsibility.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Handler：定义一个处理请求的接口&lt;/li&gt;
+  &lt;li&gt;ConcreteHandler：处理它负责的请求，可访问它的后继者，如果可处理该请求，就处理之；否则将请求转发给它的后继者。&lt;/li&gt;
+  &lt;li&gt;Client：向链上的具体处理者对象提交请求。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;handler.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Handler(object):
+      def set_successor(self, successor):
+          self.successor = successor
+      def handle_request(self, request):
+          pass
+
+  class ConcreteHandler1(Handler):
+      def handle_request(self, request):
+          if request &amp;gt;= 0 and request &amp;lt;= 10:
+              print &quot;Concrete Handler 1 handled the request &quot; + str(request)
+          elif self.successor is not None:
+              self.successor.handle_request(request)
+          else:
+              print &quot;no successor to handle it&quot;
+
+  class ConcreteHandler2(Handler):
+      def handle_request(self, request):
+          if request &amp;gt;= 10:
+              print &quot;Concrete Handler 2 handled the request &quot; + str(request)
+          elif self.successor is not None:
+              self.successor.handle_request(request)
+          else:
+              print &quot;no successor to handle it&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;client.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from handler import *
+
+  h1 = ConcreteHandler1()
+  h2 = ConcreteHandler2()
+  h1.set_successor(h2)
+
+  for request in range(1,20,2):
+      h1.handle_request(request)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;当有多个对象都可以处理一个请求，但哪个对象处理该请求运行时刻自动确定时，使用该模式。&lt;/li&gt;
+  &lt;li&gt;可以在不确定接收者的情况下，向多个对象中的一个提交请求&lt;/li&gt;
+  &lt;li&gt;可以修改处理请求的结构，增加了给对象指派职责的灵活性。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;command-&quot;&gt;Command（命令） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化；将请求排队或记录请求日志，以及支持可撤销的操作。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/command.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Command：声明执行操作的接口&lt;/li&gt;
+  &lt;li&gt;ConcreteCommand：将一个接收者对象绑定于一个动作，调用接收者相应的操作，以实现Execute&lt;/li&gt;
+  &lt;li&gt;Client：创建一个具体命令对象并设定它的接收者。&lt;/li&gt;
+  &lt;li&gt;Invoker：要求该命令执行这个请求&lt;/li&gt;
+  &lt;li&gt;Receiver：知道如何实施与执行一个请求相关的操作。任何类都可以作为一个接收者。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;command.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Command(object):
+      def __init__(self, receiver):
+          self.receiver = receiver    
+      def execute(self):
+          pass
+
+  class ConcreteCommand(Command):
+      def execute(self):
+          self.receiver.action()
+
+  class Invoker(object):
+      def set_command(self, command):
+          self.command = command
+
+      def execute_command(self):
+          self.command.execute()
+
+  class Receiver(object):
+      def action(self):
+          print &quot;action!&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;client.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from command import * 
+
+  r = Receiver()
+  c = ConcreteCommand(r)
+  i = Invoker()
+  i.set_command(c)
+  i.execute_command()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-9&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;当希望容易的设计一个命令队列，并容易的将命令计入日志&lt;/li&gt;
+  &lt;li&gt;希望容易实现对请求的撤销与重做。&lt;/li&gt;
+  &lt;li&gt;将请求操作的对象鱼执行操作的对象分割开。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;interpreter-&quot;&gt;Interpreter（解释器） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-10&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。是类行为型模式。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/interpreter.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-12&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;AbstractExpression：声明一个抽象的解释操作，这个接口为抽象语法树中的所有节点共享。&lt;/li&gt;
+  &lt;li&gt;TerminalExpression：终结符表达式，句子中的终结符需要该类的一个实例。&lt;/li&gt;
+  &lt;li&gt;NonterminalExpression：非终结符表达式，文法中的每一条规则都需要一个该类，对文中的非终结符实现解释操作。&lt;/li&gt;
+  &lt;li&gt;Context：包括解释器之外的一些全局信息。&lt;/li&gt;
+  &lt;li&gt;Client：构建该文法定义语言中的一个特定的句子的抽象语法树，调用解释操作。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-13&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;interpreter.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class AbstractExpression(object):
+      def interpret(self, context):
+          pass
+
+  class TerminalExpression(AbstractExpression):
+      def interpret(self, context):
+          print &quot;terminal interpret&quot;
+
+  class NonterminalExpression(AbstractExpression):
+      def interpret(self, context):
+          print &quot;nonterminal interpret&quot;
+
+  class Context(object):
+      def __init__(self, arg_string):
+          self.arg_string = arg_string
+
+  def main():
+      c = Context(&quot;context text&quot;)
+      sentence = []
+      sentence.append(NonterminalExpression())
+      sentence.append(TerminalExpression())
+      sentence.append(NonterminalExpression())   
+
+      for expression in sentence:
+          expression.interpret(c)
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-14&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;当语言需要解释执行，并且可将该语言的句子表示为抽象语法树时，可以使用。&lt;/li&gt;
+  &lt;li&gt;将复杂语法转换形式，使用简单的句法构建复杂的结构。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;iterator-&quot;&gt;Iterator（迭代器） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-15&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-16&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/command.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-17&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Iterator：迭代器定义访问和遍历元素的接口。&lt;/li&gt;
+  &lt;li&gt;ConcreteIterator：具体迭代器实现迭代器接口，对该聚合遍历时跟踪当前位置。&lt;/li&gt;
+  &lt;li&gt;Aggregate：聚合定义创建相应迭代器对象的接口。&lt;/li&gt;
+  &lt;li&gt;ConcreteAggregate：具体聚合实现创建相应迭代器的接口，返回具体迭代器的一个适当实例。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-18&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;iterator.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Iterator(object):
+      def first(self):
+          pass
+        
+      def next(self):
+          pass
+
+      def is_done(self):
+          pass
+
+      def current_itern(self):
+          pass
+
+  class ConcreteIterator(Iterator):
+      def __init__(self, aggregate):
+          self.aggregate = aggregate
+          self.current = 0
+
+      def first(self):
+          return self.aggregate.get(0)
+      def next(self):
+          self.current += 1  
+          if self.current &amp;lt; self.aggregate.count():
+              return self.aggregate.get(self.current)
+
+      def is_done(self):
+          if self.current &amp;gt;= self.aggregate.count():
+              return True
+          else:
+              return False
+
+      def current_itern(self):
+          return self.aggregate.get(self.current)
+
+  class Aggregate(object):
+      def create_iterator(self):
+          pass
+
+  class ConcreteAggregate(Aggregate):
+      def __init__(self):
+          self.list = []
+
+      def get(self, idx):
+          return self.list[idx]
+
+      def set(self, idx, value):
+          self.list.insert(idx, value)
+
+      def count(self):
+          return len(self.list)
+
+      def create_iterator(self):
+          return ConcreteIterator(self)
+
+
+  def main():
+      a = ConcreteAggregate()
+      a.set(0,&quot;no.1&quot;)
+      a.set(1,&quot;no.2&quot;)
+      a.set(2,&quot;no.3&quot;)
+
+      it = a.create_iterator()
+
+      while not it.is_done():
+          print it.current_itern() + &quot; do something&quot;
+          it.next()
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-19&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;希望访问一个聚合对象的内容而无需暴露它的内部表示&lt;/li&gt;
+  &lt;li&gt;支持对聚合对象的多种遍历&lt;/li&gt;
+  &lt;li&gt;为遍历不同的聚合结构提供一个统一的接口 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;mediator-&quot;&gt;Mediator（中介者） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-20&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;用一个中介对象来封装一系列对象的交互。中介者使各对象不需要显示的相互引用，从而使其耦合松散，而且可以独立的改变它们之间的交互。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-21&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/mediator.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-22&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mediator：中介者定义一个接口用于与各同事对象通信。&lt;/li&gt;
+  &lt;li&gt;ConcreteMediator：具体中介者通过协调各同事对象实现协作行为，了解并维护它的各个同事&lt;/li&gt;
+  &lt;li&gt;Colleague：抽象同事类&lt;/li&gt;
+  &lt;li&gt;ConcreteColleague：具体同事类，每个同事知道它的中介者对象，不知道其他同事，需要通信时与中介者通信。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-23&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;mediator.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Mediator(object):
+      def send(self, colleague, message):
+          pass
+
+  class Colleague(object):
+      def __init__(self, mediator):
+          self.mediator = mediator
+     
+  class ConcreteMediator(Mediator):
+      def set_colleague(self, colleague1, colleague2):
+          self.colleague1 = colleague1
+          self.colleague2 = colleague2
+
+      def send(self, colleague, message):
+          if self.colleague1 is colleague:
+              self.colleague2.notify(message)
+          elif self.colleague2 is colleague:
+              self.colleague1.notify(message)
+          else:
+              print &quot;no such colleague&quot;
+
+  class ConcreteColleague1(Colleague):
+      def send(self, message):
+          self.mediator.send(self, message)
+
+      def notify(self, message):
+          print &quot;concrete colleague 1 get message: &quot; + message
+
+  class ConcreteColleague2(Colleague):
+      def send(self, message):
+          self.mediator.send(self, message)
+
+      def notify(self, message):
+          print &quot;concrete colleague 2 get message: &quot; + message
+
+  def main():
+      cm = ConcreteMediator()
+      cc1 = ConcreteColleague1(cm)
+      cc2 = ConcreteColleague2(cm)
+
+      cm.set_colleague(cc1, cc2)
+
+      cc1.send(&quot;hello cc2&quot;)
+      cc2.send(&quot;what&#39;s up? cc1&quot;)
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-24&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;一组对象以定义良好但是复杂的方式进行通信，产生的依赖关系结构混乱且难以理解。&lt;/li&gt;
+  &lt;li&gt;定制一个分布在多个类中的行为，而又不希望太多的子类&lt;/li&gt;
+  &lt;li&gt;一个对象引用其他很多对象并且直接与这些对象通信，导致难以复用该对象。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;memento-&quot;&gt;Memento（备忘录） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-25&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可以将该对象恢复到原先保存的状态。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-26&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/memento.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-27&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Memento：备忘录存储Originator对象的内部状态，防止Originator以外的其他对象访问备忘录。它只有两个接口，Caretaker只能看到其窄接口，只能将备忘传给其他对象；originator看到宽接口，可以访问其内部状态以返回到保存的状态。理想情况下只允许生成备忘的原发器访问该备忘。&lt;/li&gt;
+  &lt;li&gt;Originator：原发器创建一个备忘录，用以记录当前时刻的内部状态。使用备忘录恢复内部状态。&lt;/li&gt;
+  &lt;li&gt;Caretaker：负责保存好备忘录，不能对备忘录的内容进行操作或检查。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-28&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;memento.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Originator(object):
+      def __init__(self):
+          self.state = &quot; &quot;
+
+      def change_state(self, state):
+          self.state = state
+
+      def show(self):
+          print self.state
+
+      def set_memento(self, memento):
+          self.state = memento.state
+
+      def create_memento(self):
+          return Memento(self.state)
+
+  class Memento(object):
+      def __init__(self, state):
+          self.state = state
+
+      def get_state(self):
+          return self.state
+
+
+  class Craetaker(object):
+      def set_memento(self, memento):
+          self.memento = memento
+      def get_memento(self):
+          return self.memento
+
+  def main():
+      o = Originator()
+      o.change_state(&quot;state 1&quot;)
+      o.show()
+      c = Craetaker()
+      c.set_memento(o.create_memento())
+
+      o.change_state(&quot;state 2&quot;)
+      o.show()
+
+      o.set_memento(c.get_memento())
+      o.show()
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-29&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;必须保存某一对象的某一时刻状态，以后需要时可以恢复到先前的状态。但是不希望让其他对象直接得到这些状态，不希望破坏对象的封装性。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;observer-&quot;&gt;Observer（观察者） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-30&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-31&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/observer.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-32&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Subject：目标知道它的观察者，可以有任何数量的观察者，提供注册和删除观察者对象的接口。&lt;/li&gt;
+  &lt;li&gt;Observer：为目标发生改变时需获得通知的对象定义更新接口。 &lt;/li&gt;
+  &lt;li&gt;ConcreteSubject：将有关状态存入各个ConcreteObserver对象，当它的状态发生改变时，向它的各个观察者发出通知&lt;/li&gt;
+  &lt;li&gt;ConcreteObserver：维护指向ConcreteSubject对象的引用，存储有关状态，这些状态应保持与目标的状态一致，并实现Observer的自身状态更新接口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-33&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;observer.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Subject(object):
+      def __init__(self):
+          self.observers = []
+
+      def attach(self, observer):
+          self.observers.append(observer)
+
+      def detach(self, observer):
+          self.observers.remove(observer)
+
+      def notify(self):
+          for observer in self.observers:
+              observer.update()
+
+  class Observer(object):
+      def update(self):
+          pass
+
+  class ConcreteSubject(Subject):
+      def __init__(self):
+          super(ConcreteSubject, self).__init__()
+          self.state = &quot;&quot;
+
+      def set_state(self, state):
+          self.state = state
+
+      def get_state(self):
+          return self.state
+
+  class ConcreteObserver(Observer):
+      def __init__(self, subject):
+          self.subject = subject
+          self.state = &quot;&quot;
+
+      def set_subject(self, subject):
+          self.subject = subject
+
+      def get_subject(self):
+          return self.subject
+
+      def update(self):
+          self.state = self.subject.get_state()
+          print self.state
+
+  def main():
+      s = ConcreteSubject()
+     
+      c1 = ConcreteObserver(s)
+      c2 = ConcreteObserver(s)
+      s.attach(c1)
+      s.attach(c2)
+
+      s.set_state(&quot;I&#39;m back!&quot;)
+      s.notify()
+
+      s.set_state(&quot;I&#39;m leaving!&quot;)
+      s.notify()
+
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-34&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;当一个抽象对象模型有两个方面，其中一个方面依赖于另一个方面。将这二者封装在独立的对象中以使它们可以各自独立的改变和复用。&lt;/li&gt;
+  &lt;li&gt;当一个对象的改变需要同时改变其他对象，而又不知道具体有多少对象有待改变时。或者是当对象不是紧耦合的，即不能假定其他对象是谁时。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;state-&quot;&gt;State（状态） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-35&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;允许一个对象在其内部状态改变时改变它的行为，看起来似乎修改了它的类。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-36&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/state.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-37&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Context：定义客户感兴趣的接口，维护一个ConcreteState子类的实例，这个实例定义了当前的状态。&lt;/li&gt;
+  &lt;li&gt;State：定义一个接口以封装与context的一个特定状态相关的行为。&lt;/li&gt;
+  &lt;li&gt;ConcreteState：每一个子类实现一个与Context的一个状态相关的行为。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-38&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;state.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class State(object):
+      def handle(self, context):
+          pass
+
+  class ConcreteState1(State):
+      def handle(self, context):
+          next_state = ConcreteState2()
+          context.set_state(next_state)
+
+  class ConcreteState2(State):
+      def handle(self, context):
+          next_state = ConcreteState1()
+          context.set_state(next_state)
+
+  class Context(object):
+      def __init__(self, state):
+          self.state = state
+
+      def set_state(self, state):
+          self.state = state
+          print &quot;self.state is &quot; + self.state.__class__.__name__
+
+      def get_state(self):
+          return self.state
+
+      def request(self):
+          self.state.handle(self)
+            
+  def main():
+      s1 = ConcreteState1()
+      c = Context(s1)
+      c.request()
+      c.request()
+      c.request()
+      c.request()
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-39&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;当一个对象的行为取决于它的状态，并且必须在运行时刻根据状态改变行为，希望把状态和行为分割开来。&lt;/li&gt;
+  &lt;li&gt;当一个操作中有大量的分支和条件语句时，且这些分支依赖于对象的状态。该模式将不同状态下的分支分别放入一个独立的类中，可以根据自身情况将对象的状态作为对象，而该对象不依赖于其他对象而独立变化。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;strategy-&quot;&gt;Strategy（策略） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-40&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;定义一系列的算法，把他们一个一个封装起来，并且使他们可以互相替换。使算法可独立于它的客户端而变化。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-41&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/strategy.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-42&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strategy：定义所有支持的算法的公共接口，Context使用这个接口调用某ConcreteStrategy定义的算法&lt;/li&gt;
+  &lt;li&gt;ConcreteStrategy：实现具体接口的算法类&lt;/li&gt;
+  &lt;li&gt;Context：用一个ConcreteStrategy来配置，维护一个对Strategy的引用，定义一个接口来让Strategy访问它的数据库。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-43&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;strategy.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Strategy(object):
+      def algorithm_interface(self):
+          pass
+
+  class ConcreteStrategy1(Strategy):
+      def algorithm_interface(self):
+          print &quot;algorithm 1 &quot;
+
+  class ConcreteStrategy2(Strategy):
+      def algorithm_interface(self):
+          print &quot;algorithm 2 &quot;
+
+  class ConcreteStrategy3(Strategy):
+      def algorithm_interface(self):
+          print &quot;algorithm 3 &quot;
+
+  class Context(object):
+      def __init__(self, cs):
+          self.s = Strategy()
+          self.s = cs
+
+      def context_interface(self):
+          self.s.algorithm_interface()
+
+  def main():
+      cs1 = ConcreteStrategy1()
+      c = Context(cs1)
+      c.context_interface()
+
+      cs2 = ConcreteStrategy2()
+      c = Context(cs2)
+      c.context_interface()
+
+      cs3 = ConcreteStrategy3()
+      c = Context(cs3)
+      c.context_interface()
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-44&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;但许多相关类仅仅是行为有异。&lt;/li&gt;
+  &lt;li&gt;需要使用一个算法的不同变体，或定义了多种行为，并且这些行为在这个类的操作中以多个条件语句的形式出现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;template-method-&quot;&gt;Template Method（模板方法） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-45&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;模板方法是类行为型模式。定义一个操作中的算法和骨架，而将一些步骤延迟到子类中，该模式可以不改变一个算法的结构即可重定义该算法的某些特地步骤。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-46&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/template_method.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-47&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;AbstractClass：定义抽象的原语操作（primitive operation），具体的子类将重新定义它们以实现一个算法的各步骤。实现一个模板方法，定义一个算法的骨架。&lt;/li&gt;
+  &lt;li&gt;ConcreteClass：具体实现原语操作中的特定步骤和算法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-48&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;template_method.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class AbstractClass(object):
+      def primitive_operation1(self):
+          pass
+
+      def primitive_operation1(self):
+          pass
+
+      def template_method(self):
+          self.primitive_operation1()
+          self.primitive_operation2()
+          print &quot;!!&quot;
+
+  class ConcreteClass1(AbstractClass):
+      def primitive_operation1(self):
+          print &quot;class 1 operation 1 &quot;
+      def primitive_operation2(self):
+          print &quot;class 1 operation 2 &quot;
+
+  class ConcreteClass2(AbstractClass):
+      def primitive_operation1(self):
+          print &quot;class 2 operation 1 &quot;
+      def primitive_operation2(self):
+          print &quot;class 2 operation 2 &quot;
+
+  def main():
+      c = ConcreteClass1()
+      c.template_method()
+
+      c = ConcreteClass2()
+      c.template_method()
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-49&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;将步骤等共同部分通过模板方法一次实现，避免重复。&lt;/li&gt;
+  &lt;li&gt;算法的可变部分由子类实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;visitor-&quot;&gt;Visitor（访问者） 模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-50&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;表示一个作用于某对象结构中的各元素的操作，它使你可以在不改变各元素的类型的前提下定义作用于这些元素的新操作。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-51&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/visitor.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-52&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Visitor：为给对象结构中的ConcreteElement的每一个类声明一个Visit操作，该操作的名字和特征标识了发起Visit请求给访问者的那个类，使得访问者可以确定正被访问的元素的具体的类。&lt;/li&gt;
+  &lt;li&gt;ConcreteVisitor：实现每个Visitor声明的操作。&lt;/li&gt;
+  &lt;li&gt;Element：定义一个Accept操作，以一个访问者为参数。&lt;/li&gt;
+  &lt;li&gt;ConcreteElement：实现Accept操作，以访问者为参数。&lt;/li&gt;
+  &lt;li&gt;ObjectStructure：枚举它的元素，提供高层接口以允许该访问者访问它的元素。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-53&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;visitor.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Visitor(object):
+      def visit_concrete_element_a(self, concrete_element_a):
+          pass
+      def visit_concrete_element_b(self, concrete_element_b):
+          pass
+
+  class ConcreteVisitor1(Visitor):
+      def visit_concrete_element_a(self, concrete_element_a):
+          print concrete_element_a.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
+      def visit_concrete_element_b(self, concrete_element_b):
+          print concrete_element_b.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
+
+  class ConcreteVisitor2(Visitor):
+      def visit_concrete_element_a(self, concrete_element_a):
+          print concrete_element_a.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
+      def visit_concrete_element_b(self, concrete_element_b):
+          print concrete_element_b.__class__.__name__ + &quot; is visited by &quot; + self.__class__.__name__
+
+  class Element(object):
+      def accept(self, visitor):
+          pass
+
+  class ConcreteElementA(Element):
+      def accept(self, visitor):
+          visitor.visit_concrete_element_a(self)
+      def operation(self):
+          pass
+
+  class ConcreteElementB(Element):
+      def accept(self, visitor):
+          visitor.visit_concrete_element_b(self)
+      def operation(self):
+          pass
+
+  class ObjectStructure(object):
+      def __init__(self):
+          self.elements = []
+
+      def attach(self, element):
+          self.elements.append(element)
+
+      def detach(self, element):
+          self.elements.remove(element)
+
+      def accept(self, visitor):
+          for element in self.elements:
+              element.accept(visitor)
+
+  def main():
+      o = ObjectStructure()
+      o.attach(ConcreteElementA())
+      o.attach(ConcreteElementB())
+
+      v1 = ConcreteVisitor1()
+      v2 = ConcreteVisitor2()
+
+      o.accept(v1)
+      o.accept(v2)
+
+  if __name__ == &#39;__main__&#39;:
+      main()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-54&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;需要对一个对象的结构中的对象进行很多不同的并且不相关的操作，visitor让相关操作集中到一个类中。&lt;/li&gt;
+  &lt;li&gt;需要把处理从数据结构中分离出来。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;### 参考&lt;br /&gt;
+- &lt;a href=&quot;http://book.douban.com/subject/1052241/&quot;&gt;设计模式-可复用面向对象软件的基础&lt;/a&gt; &lt;br /&gt;
+- &lt;a href=&quot;http://book.douban.com/subject/2334288/&quot;&gt;大话设计模式&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&quot;http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf&quot;&gt;Thinking in python&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 02 Apr 2013 18:02:00 +0800</pubDate>
+        <link>/java/2013/04/02/design-pattern-in-python-behavioral-ones.html</link>
+        <guid isPermaLink="true">/java/2013/04/02/design-pattern-in-python-behavioral-ones.html</guid>
+      </item>
+    
+      <item>
+        <title>设计模式：Python语言实现之结构型模式</title>
+        <description>&lt;p&gt;结构型模式涉及到如何组合类和对象以获得更大的结构。本文将给出结构型模式的定义，结构，代码实现和特点等内容。本文涉及的结构型模式包括：adapter模式，bridge模式，composite模式，decorator模式，facade模式，flyweight模式，和proxy模式。&lt;/p&gt;
+
+&lt;h2 id=&quot;adapter&quot;&gt;Adapter（适配器）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/adapter.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Target: 客户所期待的与特定领域相关的接口。&lt;/li&gt;
+  &lt;li&gt;Adaptee: 需要适配的类，是一个已存在的接口。&lt;/li&gt;
+  &lt;li&gt;Adapter：对Adaptee的接口与Target接口进行适配。&lt;/li&gt;
+  &lt;li&gt;Client：客户端，与复合Target接口的对象协同。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Target类（&lt;code&gt;target.py&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class Target(object):
+
+    def request(self):
+        print &quot;nomal request&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adaptee类（&lt;code&gt;adaptee.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Adaptee(object):
+      def specific_request(self):
+          print &quot;specific request&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adapter类（&lt;code&gt;adapter.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from target import *
+  from adaptee import *
+
+  class Adapter(Target):
+      def __init__(self):
+          self.myadaptee = Adaptee()
+
+      def request(self):
+          self.myadaptee.specific_request()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;客户端（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from adapter import *
+
+  target = Adapter()
+  target.request()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;想使用一个已经存在的类，而他的接口不符合你的要求时可以使用此模式。&lt;/li&gt;
+  &lt;li&gt;客户端代码可以统一调用同一接口，即使是对不相关或不可预见的类。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;bridge&quot;&gt;Bridge（桥接）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;将抽象部分与它的实现部分分离，使它们都可以独立的变化。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/bridge.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Abstraction: 定义抽象类的接口，维护一个指向Implementor类对象的指针。&lt;/li&gt;
+  &lt;li&gt;RefinedAbstraction：扩充Abstraction定义的接口。&lt;/li&gt;
+  &lt;li&gt;Implementor: 定义实现类的接口，该接口不一定要与Abstraction的接口一致，该类接口提供基本操作，Abstraction类定义了基于这些基本操作的较高层次的操作。&lt;/li&gt;
+  &lt;li&gt;ConcreteImplementor：具体实现Implementor的接口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Implementor 类（&lt;code&gt;Implementor.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Implementor(object):
+      def operation_imp(self):
+          pass
+
+  class ConcreteImplementorA(Implementor):
+      def operation_imp(self):
+          print &quot;ConcreteImplementorA operate&quot;
+
+  class ConcreteImplementorB(Implementor):
+      def operation_imp(self):
+          print &quot;ConcreteImplementorB operate&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Abstraction 类（&lt;code&gt;abstraction.py&lt;/code&gt;）&lt;br /&gt;
+      from implementor import *&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Abstraction(object):
+      def __init__(self):
+          self.imp = Implementor()
+
+      def set_imp(self,conc_imple):
+          self.imp = conc_imple;
+
+      def operate(self):
+          self.imp.operation_imp()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;client （&lt;code&gt;client.py&lt;/code&gt; ）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from abstraction import *
+  from implementor import *
+
+  ab = Abstraction()
+  imp = ConcreteImplementorA()
+  ab.set_imp(imp)
+  ab.operate()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-9&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不希望抽象与实现部分有一个固定的绑定，该模式可以在运行时刻配置抽象类的实现。&lt;/li&gt;
+  &lt;li&gt;希望抽象部分和实现部分都可通过子类进行扩充。该模式可以独立的对抽象与实现分别扩充。&lt;/li&gt;
+  &lt;li&gt;希望实现系统的多角度分类，减少各分类之间的耦合。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;composite&quot;&gt;Composite（组合）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-10&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;将对象组合成树形结构以表示“部分-整体”的层次结构。该模式使得用户对单个对象和组合对象的使用具有一致性。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/composite.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-12&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Component：为组合中的对象声明接口，在适当情况下实现所有类公有接口的缺省行为，声明一个用于管理Component的子组件&lt;/li&gt;
+  &lt;li&gt;Leaf：在组合中表示叶节点对象，叶节点没有子节点。&lt;/li&gt;
+  &lt;li&gt;Composite：定义有子部件的那些部件的行为，存储子部件，实现接口中与子部件有关的操作&lt;/li&gt;
+  &lt;li&gt;Client：通过Component接口操作组合部件对象。&lt;/li&gt;
+  &lt;li&gt;协作： 用户使用Component接口与组合结构中的对象进行交互，如果接受者是一个叶节点，则直接处理请求，如果接受者是Composite，它通常将请求发送给它的子部件，并执行一些辅助动作。 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-13&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;(&lt;code&gt;composite.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Component(object):
+      def operation(self,depth):
+          pass
+
+      def add(self, component):
+          pass
+
+      def remove(self, component):
+          pass
+
+  # Leaf
+  class Leaf(Component):
+      def operation(self, depth):
+          print &quot;-&quot;*depth + &quot;leaf&quot;
+
+  # Composite
+  class Composite(Component):
+      def __init__(self):
+          self.children = []
+
+      def operation(self, depth):
+          print &quot;-&quot;*depth + &quot;composite&quot;
+          for c in self.children:
+              c.operation(depth+2)
+
+      def add(self, component):
+          self.children.append(component)
+
+      def remove(self, component):
+          self.children.remove(component)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Client（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from composite import *
+
+  comp1 = Composite()
+  comp1.add(Leaf())
+  comp1.add(Leaf())
+
+  root = Composite()
+  leaf = Leaf()
+  root.add(leaf)
+  root.add(comp1)
+
+  root.operation(2)
+
+  root.remove(leaf)
+  root.operation(2)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-14&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;希望表达对象的部分-整体层次结构，且希望用户忽略组合对象与单个对象的不同并统一的使用组合结构中的所有对象时。&lt;/li&gt;
+  &lt;li&gt;使设计更加一般化，并且容易增加新的组件，客户端不需根据新组间而改变。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;decorator&quot;&gt;Decorator（装饰）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-15&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;该模式也叫Wrapper（包装器），动态的给一个对象添加一些额外的职责。就增加功能来说，该模式比生成子类更为灵活。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-16&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/decorator.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-17&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Component：定义一个对象接口，可以给这些对象动态的添加职责。&lt;/li&gt;
+  &lt;li&gt;ConcreteComponent：定义一个对象，可以给这个对象添加一些职责。&lt;/li&gt;
+  &lt;li&gt;Decorator：维持一个指向Component对象的指针，并定义一个与Component接口一致的接口。&lt;/li&gt;
+  &lt;li&gt;ConcreteDecorator：具体的装饰对象，向组件添加职责。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-18&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Component类（&lt;code&gt;component.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Component(object):
+      def operation(self):
+          pass
+
+  class ConcreteComponent(Component):
+      def operation(self):
+          print &quot;concrete component operate&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Decorator类（&lt;code&gt;decorator.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from component import *
+
+  class Decorator(Component):
+      def __init__(self):
+          self.comp = Component()
+
+      def set_component(self, component):
+          self.comp = component
+
+      def operation(self):
+          self.comp.operation()
+
+  class ConcreteDecoratorA(Decorator):
+      def __init__(self):
+          super(ConcreteDecoratorA, self).__init__()
+          self.added_state = &quot; &quot;
+
+      def operation(self):
+          super(ConcreteDecoratorA, self).operation()
+          self.added_state += &quot;new state&quot;
+          print self.added_state
+
+  class ConcreteDecoratorB(Decorator):
+      def __init__(self):
+          super(ConcreteDecoratorB, self).__init__()
+        
+      def operation(self):
+          super(ConcreteDecoratorB, self).operation()
+
+      def added_behavior(self):
+          print &quot;added behavior&quot;      
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;客户端（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from decorator import *
+
+  c = ConcreteComponent()
+  d1 = ConcreteDecoratorA()
+  d2 = ConcreteDecoratorB()
+
+  d1.set_component(c)
+  d2.set_component(d1)
+
+  d2.operation()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-19&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;希望不影响其他对象的情况下，以动态，透明的方式给单个对象添加职责，比静态继承更灵活。&lt;/li&gt;
+  &lt;li&gt;把类的核心职责和装饰功能区分开来，去除类中重复的装饰逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;facade&quot;&gt;Facade（外观）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-20&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;为子系统中的一组接口提供一个一致的界面，该模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-21&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/facade.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-22&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Facade：知道哪些子系统负责处理请求，将客户的请求代理给合适的子系统对象。&lt;/li&gt;
+  &lt;li&gt;SubSystem：实现子系统的功能，处理Facade对象指派的任务，无需Facade对象的任何信息。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-23&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SubSystem类（&lt;code&gt;subsystem.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class SubSystem1(object):
+      def method1(self):
+          print &quot;sub system 1 method 1&quot;
+
+  class SubSystem2(object):
+      def method2(self):
+          print &quot;sub system 2 method 2&quot;
+
+  class SubSystem3(object):
+      def method3(self):
+          print &quot;sub system 3 method 3&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Facade类（&lt;code&gt;facade.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from subsystem import *
+
+  class Facade(object):
+      def __init__(self):
+          self.sub1 = SubSystem1()
+          self.sub2 = SubSystem2()
+          self.sub3 = SubSystem3()
+
+      def method_a(self):
+          self.sub1.method1()
+          self.sub3.method3()
+          self.sub2.method2()
+
+      def method_b(self):
+          self.sub3.method3()
+          self.sub2.method2()
+          self.sub1.method1()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;client（&lt;code&gt;client.py&lt;/code&gt;）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from facade import *
+
+  fc = Facade()
+  fc.method_a()
+  fc.method_b()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-24&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;希望复杂的系统提供简单的接口时，从更高层次上操作组合各子系统。&lt;/li&gt;
+  &lt;li&gt;希望减少客户程序与抽象类的实现部分之间的依赖性，可以入facade层。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;flyweight&quot;&gt;Flyweight（享元）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-25&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;运用共享技术有效的支持大量的细粒度对象。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-26&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/flyweight.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-27&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Flyweight：描述一个接口，通过这个接口flyweight可以接受并作用于外部状态。&lt;/li&gt;
+  &lt;li&gt;ConcreteFlyweight：实现Flyweight接口，并为内部状态增加存储空间，其对象必须是可共享的。&lt;/li&gt;
+  &lt;li&gt;UnsharedConcreteFlyweight：Flyweight接口使共享成为可能，但是并不强制共享。该类指那些不需要被共享的子类。&lt;/li&gt;
+  &lt;li&gt;FlyweightFactory：创建并管理Flyweight对象，确保合理的共享Flyweight对象。&lt;/li&gt;
+  &lt;li&gt;client：维持一个对Flyweight的引用，计算或存储一个或多个flyweight的内部状态。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-28&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;flyweight.py&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Flyweight(object):
+      def operation(self, extrainsicstate):
+          pass
+
+  class ConcreteFlyweight(Flyweight):
+      def operation(self, extrainsicstate):
+          print &quot;concrete flyweight&quot; + str(extrainsicstate)
+
+  class UnsharedConcreteFlyweight(Flyweight):
+      def operation(self, extrainsicstate):
+          print &quot;unshared concrete flyweight&quot; + str(extrainsicstate)
+
+  class FlyweightFactory(object):
+      def __init__(self):
+          self.flyweights = {}
+
+      def get_flyweight(self, key):
+          if self.flyweights.has_key(key):
+              return self.flyweights[key]
+          else:
+              fw = ConcreteFlyweight()
+              self.flyweights[key] = fw
+              return fw
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;client.py&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from flyweight import *
+
+  extrinsicstate = 20
+  f = FlyweightFactory()
+  fx = f.get_flyweight(&quot;x&quot;)
+  fx.operation(extrinsicstate-1)
+
+  fy = f.get_flyweight(&quot;y&quot;)
+  fy.operation(extrinsicstate-1)
+
+  uf = UnsharedConcreteFlyweight()
+  uf.operation(extrinsicstate-2)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-29&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;当一个程序使用了大量的对象，造成很大的存储开销时。&lt;/li&gt;
+  &lt;li&gt;对象的大多数状态都可变为外部状态，如果删除外部对象则可使用较少的共享对象取代很多组对象。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;proxy&quot;&gt;Proxy（代理）模式&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-30&quot;&gt;定义&lt;/h3&gt;
+&lt;p&gt;为其他对象提供一种代理以控制对这个对象的访问。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-31&quot;&gt;结构&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/DPython/proxy.png&quot; alt=&quot;UML图&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-32&quot;&gt;参与者&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Proxy：保存一个引用，使得代理可以访问实体，提供与Subject相同的接口，代理就可以代替实体，控制对实体的新建、存储、删除。&lt;/li&gt;
+  &lt;li&gt;Subject：定义Proxy与RealSubject的公用接口。&lt;/li&gt;
+  &lt;li&gt;RealSubject：实体类。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-33&quot;&gt;代码实现&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;proxy.py&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  class Subject(object):
+      def operation(self):
+          pass
+
+  class RealSubject(Subject):
+      def operation(self):
+          print &quot;real subject operation&quot;
+
+  class Proxy(Subject):
+      def __init__(self):
+          self.rs = RealSubject()
+
+      def operation(self):
+          self.rs.operation()
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;client.py&lt;/code&gt; &lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;  from proxy import *
+
+  proxy = Proxy()
+  proxy.operation() 
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-34&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;远程代理：为一个在不同地址空间的对象提供局部代表。&lt;/li&gt;
+  &lt;li&gt;虚代理：需要创建开销很大的对象时，通过代理存放真实对象。&lt;/li&gt;
+  &lt;li&gt;保护代理：控制对原来对象的访问。&lt;/li&gt;
+  &lt;li&gt;智能指引：代理处理附加操作&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section-35&quot;&gt;几种结构型模式的讨论&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Adapter和Bridge模式都给另一对象提供了一定程度上的间接性，有利于系统的灵活性。二者不同在于Adapter主要解决已有接口之间的不匹配问题，而bridge模式则是对抽象接口和实现部分进行桥接。&lt;/li&gt;
+  &lt;li&gt;Composite和Decorator模式具有类似的结构图，都基于递归组合来组织可变数目的对象。但Decorator旨在不需要生成子类即可给对象添加职责；而composite则旨在构造类，重点在表示不在装饰。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;### 源码&lt;br /&gt;
+欢迎大家去github上查看&lt;a href=&quot;https://github.com/zhichenghou/DPython.git&quot;&gt;本项目&lt;/a&gt;的所有源文件。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-36&quot;&gt;参考&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/1052241/&quot;&gt;设计模式-可复用面向对象软件的基础&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://book.douban.com/subject/2334288/&quot;&gt;大话设计模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf&quot;&gt;Thinking in python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 29 Mar 2013 18:02:00 +0800</pubDate>
+        <link>/blog/python/2013/03/29/design-pattern-in-python-structual-ones.html</link>
+        <guid isPermaLink="true">/blog/python/2013/03/29/design-pattern-in-python-structual-ones.html</guid>
+      </item>
+    
+      <item>
+        <title>JaveEE学习之Spring技术</title>
+        <description>&lt;p&gt;Spring框架是一种从实际开发中抽取出来的框架，提供了一种模板的设计哲学，这些模板完成了大量的通用步骤，开发者只需实现特定应用有关的步骤。Spring提供了一种一站式的解决方案，贯穿表现层，业务层和持久层等，以高度的开放性将已有的框架进行整合。&lt;/p&gt;
 
 &lt;h2 id=&quot;spring&quot;&gt;Spring框架使用流程&lt;/h2&gt;
 
@@ -2876,9 +2595,296 @@ public class SpringTest
 &lt;h2 id=&quot;section&quot;&gt;参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/6002664/&quot;&gt;轻量级Java EE企业应用实战&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 27 Feb 2013 00:00:00 +0800</pubDate>
-        <link>/2013/02/27/javaee-learning-spring.html</link>
-        <guid isPermaLink="true">/2013/02/27/javaee-learning-spring.html</guid>
+        <pubDate>Wed, 27 Feb 2013 17:19:00 +0800</pubDate>
+        <link>/j2ee/2013/02/27/javaee-learning-spring.html</link>
+        <guid isPermaLink="true">/j2ee/2013/02/27/javaee-learning-spring.html</guid>
+      </item>
+    
+      <item>
+        <title>JaveEE学习之Hibernate技术</title>
+        <description>&lt;p&gt;由于目前主流的数据库依然是关系数据库，而Java语言是面向对象的编程语言，二者之间发展的不协调导致二者结合使用时非常麻烦。为了解决这种问题，对象/关系数据库映射（ORM）这种规范完成了面向对象语言与关系数据库之间的映射。当使用了ORM框架以后就可以使用面向对象的方法来操作持久化对象，而ORM框架将这些操作转换为底层的SQL操作。Hibernate就是这样一种ORM工具，由于其开源免费、轻量级封装、可扩展性好等特点成为流行的ORM工具。&lt;/p&gt;
+
+&lt;h2 id=&quot;hibernate&quot;&gt;Hibernate框架使用流程&lt;/h2&gt;
+
+&lt;h3 id=&quot;webhibernate&quot;&gt;0. 为web应用添加Hibernate支持&lt;/h3&gt;
+
+&lt;p&gt;将下载的hibernate-v.jar和lib路径下的required,bytecode,jpa子目录下的所有jar包添加到应用的类加载路径下，即可使用hibernate。&lt;/p&gt;
+
+&lt;h3 id=&quot;po&quot;&gt;1. 开发PO（持久化对象）&lt;/h3&gt;
+
+&lt;p&gt;持久化对象可以实现以面向对象的方式进行数据库操作,hibernate中的持久化对象由普通java类和映射文件两部分构成。一个简单的POJO类如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class News {
+    private Integer id;
+    private String title;
+    private String content;
+
+    public Integer getId() {
+	    return id;
+    }
+    public void setId(Integer id) {
+	    this.id = id;
+    }
+
+    public String getTitle() {
+	    return title;
+    }
+    public void setTitle(String title) {
+	    this.title = title;
+    }
+
+    public String getContent() {
+	    return content;
+    }
+    public void setContent(String content) {
+	    this.content = content;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;为了使这个简单的java类具有持久化操作的能力，Hinernate采用映射文件理解持久化类与数据表之间的对应关系，映射文件为xml格式，内容如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+
+&amp;lt;!DOCTYPE hibernate-mapping PUBLIC 
+    &quot;-//Hibernate/Hibernate Mapping DTD 3.0//EN&quot;
+    &quot;http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd&quot;&amp;gt;
+
+&amp;lt;hibernate-mapping&amp;gt;
+    &amp;lt;class name=&quot;News&quot; table=&quot;news_table&quot;&amp;gt;
+	    &amp;lt;id name=&quot;id&quot; type=&quot;java.lang.Integer&quot;&amp;gt;
+		    &amp;lt;column name=&quot;id&quot; /&amp;gt;
+		    &amp;lt;generator class=&quot;identity&quot; /&amp;gt;
+	    &amp;lt;/id&amp;gt;
+	    &amp;lt;property name=&quot;title&quot; type=&quot;java.lang.String&quot;&amp;gt;
+		    &amp;lt;column name=&quot;title&quot; /&amp;gt;
+	    &amp;lt;/property&amp;gt;
+	    &amp;lt;property name=&quot;content&quot; type=&quot;java.lang.String&quot;&amp;gt;
+		    &amp;lt;column name=&quot;content&quot; /&amp;gt;
+	    &amp;lt;/property&amp;gt;
+    &amp;lt;/class&amp;gt;
+&amp;lt;/hibernate-mapping&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;通过对hibernate-mapping中的class进行配置，即可完成持久化对象的开发。&lt;/p&gt;
+
+&lt;h3 id=&quot;hibernate-1&quot;&gt;2. 编写Hibernate通用配置信息&lt;/h3&gt;
+
+&lt;p&gt;对于web应用中连接数据库，以及数据库的配置信息是通用的，通过配置Hibernate的通用信息进行指定要连接的数据库，登录用户名和密码等。该配置通过xml文件完成，内容如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;
+
+&amp;lt;!DOCTYPE hibernate-configuration PUBLIC
+    &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+    &quot;http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;&amp;gt;
+&amp;lt;hibernate-configuration&amp;gt;
+    &amp;lt;session-factory&amp;gt;
+	    &amp;lt;property name=&quot;hibernate.connection.driver_class&quot;&amp;gt;com.mysql.jdbc.Driver&amp;lt;/property&amp;gt;
+	    &amp;lt;property name=&quot;hibernate.connection.password&quot;&amp;gt;32147&amp;lt;/property&amp;gt;
+	    &amp;lt;property name=&quot;hibernate.connection.url&quot;&amp;gt;jdbc:mysql://localhost:3306/hibernate&amp;lt;/property&amp;gt;
+	    &amp;lt;property name=&quot;hibernate.connection.username&quot;&amp;gt;root&amp;lt;/property&amp;gt;
+	    &amp;lt;property name=&quot;hibernate.dialect&quot;&amp;gt;org.hibernate.dialect.MySQLInnoDBDialect&amp;lt;/property&amp;gt;
+        &amp;lt;property name=&quot;hibernate.format_sql&quot;&amp;gt;true&amp;lt;/property&amp;gt;
+	    &amp;lt;property name=&quot;hibernate.hbm2ddl.auto&quot;&amp;gt;update&amp;lt;/property&amp;gt;	
+
+	    &amp;lt;mapping resource=&quot;org/crazyit/app/domain/News.hbm.xml&quot;/&amp;gt;
+				       
+    &amp;lt;/session-factory&amp;gt;
+&amp;lt;/hibernate-configuration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;3. 编写操作类代码，使用面向对象的方法操作数据库&lt;/h3&gt;
+
+&lt;p&gt;在完成Hibernate的配置后，即可使用面行对象的方法来操作数据库了，在此类的方法中实现对数据库的操作有以下几步。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;获取第二步中的通用配置信息&lt;/li&gt;
+  &lt;li&gt;创建SessionFactory&lt;/li&gt;
+  &lt;li&gt;创建Session&lt;/li&gt;
+  &lt;li&gt;开始事务，用面向对象的方法进行处理，最后提交处理&lt;/li&gt;
+  &lt;li&gt;关闭Session&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;以下代码实现往数据库添加一条信息的功能。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package hou;
+
+import News;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class NewsManager {
+
+    public static void main(String[] args)
+	    throws Exception {
+	    Configuration conf = new Configuration().configure();
+	    SessionFactory sf = conf.buildSessionFactory();
+	
+	    Session sess = sf.openSession();
+
+	    Transaction tx = sess.beginTransaction();
+
+	    News n = new News();
+
+	    n.setTitle(&quot;一条信息&quot;);
+	    n.setContent(&quot;信息内容&quot;);
+
+	    sess.save(n);
+	    tx.commit();
+	    sess.close();
+	    sf.close();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/6002664/&quot;&gt;轻量级Java EE企业应用实战&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Feb 2013 16:05:00 +0800</pubDate>
+        <link>/j2ee/2013/02/27/javaee-learning-hibernate.html</link>
+        <guid isPermaLink="true">/j2ee/2013/02/27/javaee-learning-hibernate.html</guid>
+      </item>
+    
+      <item>
+        <title>JaveEE学习之Struts2技术</title>
+        <description>&lt;p&gt;Struts2是一款优秀的MVC框架，具有一系列的优点使其具有巨大的吸引力。这些优点包括：允许使用普通java对象作为Action，并且降低了与Servlet API的耦合，更容易测试;支持更多的视图技术;提供良好的可扩展性，更强大的输入校验功能;整合Ajax支持等。本文介绍简单的Struts2应用，来对其进行了解。&lt;/p&gt;
+
+&lt;h2 id=&quot;struts2&quot;&gt;Struts2开发应用流程&lt;/h2&gt;
+
+&lt;p&gt;这里用一个Struts2开发简单登录处理的web应用来介绍Struts2的开发应用流程&lt;/p&gt;
+
+&lt;h3 id=&quot;webstruts2&quot;&gt;0. 为web应用添加Struts2支持&lt;/h3&gt;
+
+&lt;p&gt;将下载的Struts2中lib文件夹下的 &lt;code&gt;commons-fileupload-v.jar, commons-io-v.jar, freemaker-v.jar, javassit-v.jar, ognl-v.jar, struts2-core-v.jar, xwork-core-v.jar&lt;/code&gt;等必须的支持文件（其中&lt;code&gt;-v&lt;/code&gt;表示版本号，根据下载不同会有所不同）复制到web应用的&lt;code&gt;WEB-INF\lib&lt;/code&gt;路径下，如需其他Struts2的支持，复制相应jar文件即可。&lt;/p&gt;
+
+&lt;h3 id=&quot;webwebxmlstruts2filter&quot;&gt;1. 编辑web应用的web.xml配置文件，配置Struts2的核心filter，并使其拦截相关请求。&lt;/h3&gt;
+
+&lt;p&gt;在web.xml配置文件中增加以下内容：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;filter&amp;gt;
+	&amp;lt;filter-name&amp;gt;struts2&amp;lt;/filter-name&amp;gt;
+	&amp;lt;filter-class&amp;gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&amp;lt;/filter-class&amp;gt;
+&amp;lt;/filter&amp;gt;
+
+&amp;lt;filter-mapping&amp;gt;
+	&amp;lt;filter-name&amp;gt;struts2&amp;lt;/filter-name&amp;gt;
+	&amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;
+&amp;lt;/filter-mapping&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;jsppostget&quot;&gt;2. 编写处理表单请求的JSP页面来发送POST方式请求，如果是GET方式请求，则此步不进行处理。&lt;/h3&gt;
+
+&lt;p&gt;在本登录应用中，需要处理表单请求，编写login.jsp如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot; pageEncoding=&quot;utf-8&quot;%&amp;gt;
+&amp;lt;%@taglib prefix=&quot;s&quot; uri=&quot;/struts-tags&quot;%&amp;gt;
+&amp;lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=GBK&quot;&amp;gt;
+&amp;lt;title&amp;gt;&amp;lt;s:text name=&quot;loginPage&quot;/&amp;gt;&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;s:form action=&quot;login&quot;&amp;gt;
+    &amp;lt;s:textfield name=&quot;username&quot; key=&quot;user&quot;/&amp;gt;
+    &amp;lt;s:textfield name=&quot;password&quot; key=&quot;pass&quot;/&amp;gt;
+    &amp;lt;s:submit key=&quot;login&quot;/&amp;gt;
+&amp;lt;/s:form&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在本jsp的编写中声明使用了struts2的标签库，并使用该标签库来编写表单请求代码。&lt;/p&gt;
+
+&lt;h3 id=&quot;action&quot;&gt;3. 定义处理用户请求的Action类&lt;/h3&gt;
+
+&lt;p&gt;在上述的jsp页面中指定了表单的action为login，因此需要实现一个java类来处理该请求动作。该类通常继承与ActionSupport基类，其代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport
+{
+    private String username;
+    private String password;
+
+    public String getUsername()
+    {
+	    return username;
+    }
+    public void setUsername(String username)
+    {
+	    this.username = username;
+    }
+
+    public String getPassword()
+    {
+	    return password;
+    }
+    public void setPassword(String password)
+    {
+	    this.password = password;
+    }
+
+    public String execute() throws Exception
+    {
+	    if (getUsername().equals(&quot;zhichenghou.github.com&quot;)
+		    &amp;amp;&amp;amp; getPassword().equals(&quot;zhichenghou&quot;) )
+	    {
+		    ActionContext.getContext().getSession()
+			    .put(&quot;user&quot; , getUsername());
+	    return SUCCESS;
+	    }
+	    else
+	    {
+		    return ERROR;
+	    }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;该类实现对登录的判断，如果用户名为&lt;code&gt;zhichenghou.github.com&lt;/code&gt;，密码为&lt;code&gt;zhichenghou&lt;/code&gt;则登录成功，否则失败。&lt;/p&gt;
+
+&lt;h3 id=&quot;action-1&quot;&gt;4. 配置Action以及处理结果和物理视图资源之间的对应关系&lt;/h3&gt;
+
+&lt;p&gt;在定义了请求并实现了处理请求action的类之后，需要将请求与action对应起来，用来实现MVC模型。建立struts.xml放置在&lt;code&gt;WEB-INF\classes&lt;/code&gt;路径下，使用该文件实现web应用的配置。该文件代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;GBK&quot;?&amp;gt;
+&amp;lt;!DOCTYPE struts PUBLIC 	&quot;-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN&quot;
+    &quot;http://struts.apache.org/dtds/struts-2.1.7.dtd&quot;&amp;gt;
+&amp;lt;struts&amp;gt;
+    &amp;lt;package name=&quot;hou&quot; extends=&quot;struts-default&quot;&amp;gt;
+	    &amp;lt;action name=&quot;login&quot; class=&quot;LoginAction&quot;&amp;gt;	
+		    &amp;lt;result name=&quot;input&quot;&amp;gt;/login.jsp&amp;lt;/result&amp;gt;
+		    &amp;lt;result name=&quot;error&quot;&amp;gt;/error.jsp&amp;lt;/result&amp;gt;
+		    &amp;lt;result name=&quot;success&quot;&amp;gt;/welcome.jsp&amp;lt;/result&amp;gt;
+	    &amp;lt;/action&amp;gt;
+    &amp;lt;/package&amp;gt;
+&amp;lt;/struts&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其中，将action的login请求使用LoginAction类来进行处理，并可以配置返回结果与物理视图资源之间的对应，如登录成功则进入welcome.jsp页面。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;5. 实现物理视图资源&lt;/h3&gt;
+
+&lt;p&gt;使用Struts2开发的最后一步就是实现需要的视图资源，例如welcome.jsp, error.jsp等页面。至此则完成了使用Struts2开发web应用的全部流程，也实现了一次完整的请求响应流程。&lt;/p&gt;
+
+&lt;h2 id=&quot;struts2-&quot;&gt;Struts2 请求响应流程&lt;/h2&gt;
+
+&lt;p&gt;Struts2的开发流程实际是根据请求响应流程而来的，一次请求响应流程如下。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/a74ecc4cjw1e26usgyzmaj.jpg&quot; alt=&quot;Struts2 请求响应流程&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;其中StrutsPrepareAndExecuteFilter称为核心控制器，xxxAction称为业务控制器。通过两级控制器实现解耦，实现xxxAction只处理返回结果，不与物理视图相连，方便代码更改。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/6002664/&quot;&gt;轻量级Java EE企业应用实战&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Feb 2013 15:39:00 +0800</pubDate>
+        <link>/j2ee/2013/02/26/javaee-learning-struts.html</link>
+        <guid isPermaLink="true">/j2ee/2013/02/26/javaee-learning-struts.html</guid>
       </item>
     
   </channel>

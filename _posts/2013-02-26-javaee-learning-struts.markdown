@@ -1,8 +1,11 @@
-Title: JaveEE学习之Struts2技术
-Date: 2013-02-26 15:39
-Category: Blog
-Tags: JaveEE, Java
-Summary: Struts2是一款优秀的MVC框架，具有一系列的优点使其具有巨大的吸引力。这些优点包括：允许使用普通java对象作为Action，并且降低了与Servlet API的耦合，更容易测试;支持更多的视图技术;提供良好的可扩展性，更强大的输入校验功能;整合Ajax支持等。本文介绍简单的Struts2应用，来对其进行了解。
+---
+layout: post
+title:  "JaveEE学习之Struts2技术"
+date:   2013-02-26 15:39
+categories: J2EE
+---
+
+Struts2是一款优秀的MVC框架，具有一系列的优点使其具有巨大的吸引力。这些优点包括：允许使用普通java对象作为Action，并且降低了与Servlet API的耦合，更容易测试;支持更多的视图技术;提供良好的可扩展性，更强大的输入校验功能;整合Ajax支持等。本文介绍简单的Struts2应用，来对其进行了解。
 
 
 ## Struts2开发应用流程
