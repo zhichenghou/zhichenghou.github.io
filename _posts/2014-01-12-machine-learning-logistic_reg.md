@@ -30,9 +30,7 @@ $$ g(z) = \frac{1}{1+e^{-z}}$$
 
 $$ h(x) = g(\theta^T x ) =  \frac{1}{1+e^{-\theta^T x }}$$
 
-对于该假设模型的解释为：对于输入$x$，$h(x)$ 为在$\theta$条件下，分类输出为1的概率，数学表示如下
-
-$$ h(x) = P(y=1 | x; \theta) $$
+对于该假设模型的解释为：对于输入$x$，$h(x)$ 为在$\theta$条件下，分类输出为1的概率，数学表示如下: $$ h(x) = P(y=1 | x; \theta) $$
 
 ### 优化目标
 logistic回归的优化目标是使cost function最小，其中cost function 用 $J(\theta)$ 表示， 为
