@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hou Zhicheng&#39;s Blog</title>
-    <description></description>
+    <description>Tech blog, interest in big data</description>
     <link></link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
@@ -32,12 +32,10 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt; h(x) = g(\theta^T x ) =  \frac{1}{1+e^{-\theta^T x }}&lt;/script&gt;
 
-&lt;p&gt;对于该假设模型的解释为：对于输入$x$，$h(x)$ 为在$\theta$条件下，分类输出为1的概率，数学表示如下&lt;/p&gt;
-
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;$$ h(x) = P(y=1&lt;/td&gt;
+      &lt;td&gt;对于该假设模型的解释为：对于输入$x$，$h(x)$ 为在$\theta$条件下，分类输出为1的概率，数学表示如下: $$ h(x) = P(y=1&lt;/td&gt;
       &lt;td&gt;x; \theta) $$&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -396,7 +394,7 @@ if __name__ == &#39;__main__&#39;:
   &lt;li&gt;
     &lt;p&gt;特征归一化&lt;/p&gt;
 
-    &lt;p&gt;当线性回归模型中有多个特征时，如果其中某个特征的取值范围相比其它特征的取值范围大很多，那么这个特征对最后的假设模型中容易产生比较大的影响，为了获得较好的学习效果，需要使各特征的取值范围相似，这个过程称为归一化。其中最直接的一种方法是平均标准化（mean normalization）：&lt;/p&gt;
+    &lt;p&gt;当线性回归模型中有多个特征时，如果其中某个特征的取值范围相比其它特征的取值范围大很多，那么这个特征对最后的假设模型中容易产生比较大的影响，为了获得较好的学习效果，需要使各特征的取值范围相似，这个过程称为归一化。其中最直接的一种方法是平均标准化（mean normalization）:&lt;/p&gt;
 
     &lt;script type=&quot;math/tex; mode=display&quot;&gt; x_j = \frac{x_j - \mu_j}{s_j}&lt;/script&gt;
 

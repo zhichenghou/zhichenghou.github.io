@@ -1,8 +1,8 @@
 # Site settings
 name: Hou Zhicheng's Blog
-title: 
+title: Hou Zhicheng's Blog
 email: zhichenghou@gmail.com
-description: ""
+description: "Tech blog, interest in big data"
 baseurl: 
 url: "http://houzhicheng.com"
 username: zhichenghou
@@ -12,3 +12,4 @@ markdown: kramdown
 kramdown:
   input: GFM
 permalinks: pretty
+highlighter: pygments
