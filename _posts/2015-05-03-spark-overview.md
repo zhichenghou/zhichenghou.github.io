@@ -51,4 +51,4 @@ categories: blog Spark
 ## 参考
 [Spark code](https://github.com/apache/spark)
 
-[Spark code](https://github.com/JerryLead/SparkInternals)
+[Spark internal](https://github.com/JerryLead/SparkInternals)
