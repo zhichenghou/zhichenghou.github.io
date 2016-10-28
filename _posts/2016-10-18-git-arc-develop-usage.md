@@ -1,4 +1,9 @@
-# Git 使用规范以及与 arc 结合使用
+---
+layout: post
+title:  "Git 使用规范以及与 arc 结合使用"
+date:   2016-10-11 10:20
+categories: Git
+---
 
 ## 1. Git 使用规范
 
@@ -27,7 +32,7 @@
 
 1 基于 develop 分支创建一个 feature 分支
 
-```shell
+```
 git checkout develop
 git pull
 git checkout -b <branch-name>
@@ -35,21 +40,21 @@ git checkout -b <branch-name>
 
 2 开发和提交代码
 
-```shell
+```
 git add .
 git commit
 ```
 
 3 经常执行 rebase 来追踪上游 develop 的更改，使用 -i 参数将多个本地提交合并
 
-```shell
+```
 git fetch origin
 git rebase -i origin/develop
 ```
 
 4 发起 code review
 
-```shell
+```
 arc diff --base git:origin/develop --reviewers <reviewers-name>
 ```
 
@@ -57,7 +62,7 @@ arc diff --base git:origin/develop --reviewers <reviewers-name>
 
 5 代码被接受后，将代码合并到 develop 分支
 
-```shell
+```
 arc land --onto develop
 ```
 
@@ -67,7 +72,7 @@ arc land --onto develop
 
 - 首先，更新 develop 代码
 
-```shell
+```
 git checkout develop
 git pull
 git fetch origin
@@ -76,19 +81,19 @@ git rebase -i origin/master
 
 - 将 develop 代码与线上 master 代码的 diff 创建 code review, 来进行上线前的检查
 
-```shell
+```
 arc diff --base git:origin/master --reviewers <reviewers-name>
 ```
 
 - 代码检查通过后，将 develop 分支合并到 master，可以部署上线
 
-```shell
+```
 arc land --onto master
 ```
 
 - 此时本地 develop 分支应该已经被删除，需要切出新的 develop 分支，并保持远端一致
 
-```shell
+```
 git checkout master
 git pull
 git checkout -b develop
@@ -101,7 +106,7 @@ git push origin develop:develop
 
 1 基于 master 创建 hotfix 分支
 
-```shell
+```
 git checkout master
 git pull
 git checkout -b <branch-name>
@@ -109,14 +114,14 @@ git checkout -b <branch-name>
 
 2 开发和提交代码
 
-```shell
+```
 git add .
 git commit
 ```
 
 3 发起 code review
 
-```shell
+```
 arc diff --base git:origin/master --reviewers <reviewers-name>
 ```
 
@@ -124,13 +129,13 @@ arc diff --base git:origin/master --reviewers <reviewers-name>
 
 4 代码被接受后，将代码合并到 master 分支，部署上线
 
-```shell
+```
 arc land --onto master
 ```
 
 5 注意，此时远端的 develop 已经落后于 master 分支，因此需要进行更新
 
-```shell
+```
 git checkout develop
 git fetch
 git rebase -i origin/develop
