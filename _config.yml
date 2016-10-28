@@ -12,4 +12,4 @@ markdown: kramdown
 kramdown:
   input: GFM
 permalinks: pretty
-highlighter: pygments
+highlighter: rouge
