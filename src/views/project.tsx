@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import ProjectLogo from '../assets/projects.avif';
+import ProjectLogo from '../assets/projects.jpg';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import BlogLogo from '../assets/blog.avif';
+import BlogLogo from '../assets/blog.jpg';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 
