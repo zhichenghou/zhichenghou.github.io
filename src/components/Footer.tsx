@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer>
       <hr />
       <section>
-        <small>Made by Hou Zhicheng &copy; 2022</small>
+        <small>Made by Zhicheng Hou &copy; 2022</small>
       </section>
     </footer>
   );

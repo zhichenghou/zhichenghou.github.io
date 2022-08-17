@@ -16,9 +16,6 @@ const Blog: React.FC = () => {
       <main>
         <hr />
         <section>
-          <header>
-            <h2>Blog Posts</h2>
-          </header>
           <div>
             <span>2022-08-17 </span>
             <Link to='/blog/how-to-build-this-site'>

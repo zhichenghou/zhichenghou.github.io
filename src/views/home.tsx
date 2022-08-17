@@ -29,8 +29,8 @@ const Home: React.FC = () => {
       </header>
       <main>
         {/* guitar */}
-        <hr />
         <section>
+          <hr />
           <header>
             <h2>"贷款买琴，贵就是好"</h2>
           </header>
