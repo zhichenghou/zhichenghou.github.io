@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.99062974.css",
-    "main.js": "/static/js/main.7966c352.js",
+    "main.js": "/static/js/main.c45b71aa.js",
     "static/media/yuzhou.jpeg": "/static/media/yuzhou.cad92e1868882cd39dfc.jpeg",
     "static/media/blog.jpg": "/static/media/blog.6b1eac0504c142088136.jpg",
     "static/media/me.png": "/static/media/me.9659c1090143d631b1dd.png",
     "static/media/projects.jpg": "/static/media/projects.a267bef36871a6bdfbec.jpg",
+    "static/media/mental-model.jpeg": "/static/media/mental-model.cedf19596a9639f1d067.jpeg",
     "static/media/南货店.jpeg": "/static/media/南货店.3bfa48c72a8ae89b496f.jpeg",
+    "static/media/acquiring-wisdom.jpeg": "/static/media/acquiring-wisdom.4dee6fd9408e739ea8a4.jpeg",
     "static/media/book.jpeg": "/static/media/book.762903d11941f21ee8d0.jpeg",
+    "static/media/logo.jpg": "/static/media/logo.49a2c2f906f5427b855b.jpg",
     "static/media/ritan.jpeg": "/static/media/ritan.ac0e478db5663177514c.jpeg",
     "static/media/sg61.jpg": "/static/media/sg61.53d6e799fd91b9a2c698.jpg",
     "static/media/哲学家.jpg": "/static/media/哲学家.07c0a6abe9bcda89fff8.jpg",
@@ -22,10 +25,10 @@
     "static/media/wuliaozhai.jpeg": "/static/media/wuliaozhai.675ed60026962d6c15ee.jpeg",
     "index.html": "/index.html",
     "main.99062974.css.map": "/static/css/main.99062974.css.map",
-    "main.7966c352.js.map": "/static/js/main.7966c352.js.map"
+    "main.c45b71aa.js.map": "/static/js/main.c45b71aa.js.map"
   },
   "entrypoints": [
     "static/css/main.99062974.css",
-    "static/js/main.7966c352.js"
+    "static/js/main.c45b71aa.js"
   ]
 }
