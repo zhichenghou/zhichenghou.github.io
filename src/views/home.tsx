@@ -1,10 +1,4 @@
 import React, { Fragment } from 'react';
-import CoverZhexue from '../assets/books/中国哲学简史.jpeg';
-import CoverNanhuodian from '../assets/books/南货店.jpeg';
-import CoverZhexuejia from '../assets/books/哲学家.jpg';
-import CoverZhigeng from '../assets/books/杀死一只知更鸟.jpeg';
-import CoverQiangpao from '../assets/books/枪炮.jpeg';
-import CoverZhishengshinei from '../assets/books/置身事内.jpeg';
 import GT11 from '../assets/guitar/gt11.webp';
 import SG61 from '../assets/guitar/sg61.jpg';
 import Tele from '../assets/guitar/tele.jpg';
@@ -17,6 +11,7 @@ import CoverXiexing from '../assets/podcast/xiexingliaotianhui.jpeg';
 import CoverYuzhou from '../assets/podcast/yuzhou.jpeg';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import BookByYear from './data/books';
 
 const Home: React.FC = () => {
   return (
@@ -28,6 +23,49 @@ const Home: React.FC = () => {
         <Nav />
       </header>
       <main>
+        {/* Blogs */}
+        <hr />
+        <section>
+          <header>
+            <h2>"好记性不如烂笔头"</h2>
+          </header>
+          <aside>
+            <a href='#/blog/how-to-build-this-site'>
+              <h3>这个网站是如何构建的</h3>
+            </a>
+            <p>2022-08-17</p>
+          </aside>
+          {/* 
+          <section>
+            <a href='#/book'>
+              <i>看看更多 ...</i>
+            </a>
+          </section> */}
+        </section>
+
+        {/* books */}
+        <hr />
+        <section>
+          <header>
+            <h2>"书籍是人类进步的阶梯"</h2>
+          </header>
+
+          {BookByYear[0].books.slice(0, 3).map((book) => (
+            <aside>
+              <section>
+                <img alt={book.title} src={book.cover} height='150' />
+              </section>
+              <h3>{book.title}</h3>
+              <p>{book.desc}</p>
+            </aside>
+          ))}
+          <section>
+            <a href='#/book'>
+              <i>看看更多 ...</i>
+            </a>
+          </section>
+        </section>
+
         {/* guitar */}
         <section>
           <hr />
@@ -54,56 +92,6 @@ const Home: React.FC = () => {
             </section>
             <h3>Gibson SG Standard '61</h3>
             <p>Vintage Cherry</p>
-          </aside>
-        </section>
-
-        {/* books */}
-        <hr />
-        <section>
-          <header>
-            <h2>"书籍是人类进步的阶梯"</h2>
-          </header>
-          <aside>
-            <section>
-              <img alt='哲学家们' src={CoverZhexuejia} height='150' />
-            </section>
-            <h3>《哲学家们都干了些什么》</h3>
-            <p>对那些原以为是确定的东西产生怀疑，实用才是准则</p>
-          </aside>
-          <aside>
-            <section>
-              <img alt='置身事内' src={CoverZhishengshinei} height='150' />
-            </section>
-            <h3>《置身事内：中国政府与经济发展》</h3>
-            <p>要读懂中国经济，必先读懂中国政府</p>
-          </aside>
-          <aside>
-            <section>
-              <img alt='南货店' src={CoverNanhuodian} height='150' />
-            </section>
-            <h3>《南货店》</h3>
-            <p>致敬平凡的人间烟火</p>
-          </aside>
-          <aside>
-            <section>
-              <img alt='哲学简史' src={CoverZhexue} height='150' />
-            </section>
-            <h3>《中国哲学简史》</h3>
-            <p>哲学，就是对于人生有系统的反思的思想</p>
-          </aside>
-          <aside>
-            <section>
-              <img alt='杀死一只知更鸟' src={CoverZhigeng} height='150' />
-            </section>
-            <h3>《杀死一只知更鸟》</h3>
-            <p>你永远也不可能真正了解一个人，除非你站在他的角度考虑问题……除非你钻进他的皮肤里，像他一样走来走去</p>
-          </aside>
-          <aside>
-            <section>
-              <img alt='枪炮、病菌与钢铁' src={CoverQiangpao} height='150' />
-            </section>
-            <h3>《枪炮、病菌与钢铁》</h3>
-            <p>关注社会与文明发展的大议题</p>
           </aside>
         </section>
 

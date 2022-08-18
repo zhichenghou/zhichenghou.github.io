@@ -10,6 +10,9 @@ const Nav: React.FC = () => {
             <Link to='/home'>Home</Link>
           </li>
           <li>
+            <Link to='/book'>Book</Link>
+          </li>
+          <li>
             <Link to='/blog'>Blog</Link>
           </li>
           <li>

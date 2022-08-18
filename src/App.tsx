@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Blog from './views/blog';
+import Book from './views/book';
 import Home from './views/home';
 import HowToBuildThisSite from './views/posts/howToBuildThis';
 import Project from './views/project';
@@ -12,6 +13,7 @@ const App: React.FC = () => {
         <Route path='/' element={<Home />} />
         <Route path='home' element={<Home />} />
         <Route path='blog' element={<Blog />} />
+        <Route path='book' element={<Book />} />
         <Route path='project' element={<Project />} />
 
         <Route path='blog/how-to-build-this-site' element={<HowToBuildThisSite />} />
