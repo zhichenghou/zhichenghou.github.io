@@ -4,6 +4,7 @@ import Blog from './views/blog';
 import Book from './views/book';
 import Home from './views/home';
 import HowToBuildThisSite from './views/posts/howToBuildThis';
+import MentalModels from './views/posts/mentalModels';
 import Project from './views/project';
 
 const App: React.FC = () => {
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Route path='project' element={<Project />} />
 
         <Route path='blog/how-to-build-this-site' element={<HowToBuildThisSite />} />
+        <Route path='blog/mental-models' element={<MentalModels />} />
       </Routes>
     </Router>
   );

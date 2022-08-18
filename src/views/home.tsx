@@ -12,6 +12,7 @@ import CoverYuzhou from '../assets/podcast/yuzhou.jpeg';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import BookByYear from './data/books';
+import PostByYear from './data/posts';
 
 const Home: React.FC = () => {
   return (
@@ -29,18 +30,21 @@ const Home: React.FC = () => {
           <header>
             <h2>"好记性不如烂笔头"</h2>
           </header>
-          <aside>
-            <a href='#/blog/how-to-build-this-site'>
-              <h3>这个网站是如何构建的</h3>
-            </a>
-            <p>2022-08-17</p>
-          </aside>
-          {/* 
-          <section>
-            <a href='#/book'>
-              <i>看看更多 ...</i>
-            </a>
-          </section> */}
+          {PostByYear[0].posts.slice(0, 3).map((post) => (
+            <aside>
+              <a href={post.key}>
+                <h3>{post.title}</h3>
+              </a>
+              <p>{post.date}</p>
+            </aside>
+          ))}
+          {PostByYear[0].posts.length >= 3 && (
+            <section>
+              <a href='#/blog'>
+                <i>看看更多 ...</i>
+              </a>
+            </section>
+          )}
         </section>
 
         {/* books */}

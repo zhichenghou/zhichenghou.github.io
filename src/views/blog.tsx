@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import BlogLogo from '../assets/blog.jpg';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import PostByYear from './data/posts';
 
 const Blog: React.FC = () => {
   return (
@@ -14,15 +14,31 @@ const Blog: React.FC = () => {
         <Nav />
       </header>
       <main>
-        <hr />
-        <section>
-          <div>
-            <span>2022-08-17 </span>
-            <Link to='/blog/how-to-build-this-site'>
-              <span>这个网站是如何构建的</span>
-            </Link>
-          </div>
-        </section>
+        {PostByYear.map((yearPost) => (
+          <Fragment>
+            <hr />
+            <section>
+              <header>
+                <h2>{yearPost.year}</h2>
+
+                <table>
+                  <tbody>
+                    {yearPost.posts.map((post) => (
+                      <tr>
+                        <td>
+                          <a href={post.key}>{post.title}</a>
+                        </td>
+                        <td>
+                          <small>{post.date} </small>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </header>
+            </section>
+          </Fragment>
+        ))}
       </main>
       <Footer />
     </Fragment>
