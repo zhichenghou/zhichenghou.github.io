@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.99062974.css",
-    "main.js": "/static/js/main.e6e14c10.js",
+    "main.js": "/static/js/main.7966c352.js",
     "static/media/yuzhou.jpeg": "/static/media/yuzhou.cad92e1868882cd39dfc.jpeg",
     "static/media/blog.jpg": "/static/media/blog.6b1eac0504c142088136.jpg",
     "static/media/me.png": "/static/media/me.9659c1090143d631b1dd.png",
     "static/media/projects.jpg": "/static/media/projects.a267bef36871a6bdfbec.jpg",
     "static/media/南货店.jpeg": "/static/media/南货店.3bfa48c72a8ae89b496f.jpeg",
+    "static/media/book.jpeg": "/static/media/book.762903d11941f21ee8d0.jpeg",
     "static/media/ritan.jpeg": "/static/media/ritan.ac0e478db5663177514c.jpeg",
     "static/media/sg61.jpg": "/static/media/sg61.53d6e799fd91b9a2c698.jpg",
     "static/media/哲学家.jpg": "/static/media/哲学家.07c0a6abe9bcda89fff8.jpg",
@@ -15,16 +16,16 @@
     "static/media/tele.jpg": "/static/media/tele.5f5b073f5b59bdb0b325.jpg",
     "static/media/杀死一只知更鸟.jpeg": "/static/media/杀死一只知更鸟.0313893bbb92491a86fd.jpeg",
     "static/media/xiexingliaotianhui.jpeg": "/static/media/xiexingliaotianhui.cc41d18fb2af3a82544b.jpeg",
-    "static/media/中国哲学简史.jpeg": "/static/media/中国哲学简史.7c006e99160911ecac58.jpeg",
     "static/media/wenhuayouxian.jpeg": "/static/media/wenhuayouxian.6dadb1e8dc94a4f6c97b.jpeg",
+    "static/media/中国哲学简史.jpeg": "/static/media/中国哲学简史.b162a92213694739bc02.jpeg",
     "static/media/gt11.webp": "/static/media/gt11.28ae2dc5dba3fb9984eb.webp",
     "static/media/wuliaozhai.jpeg": "/static/media/wuliaozhai.675ed60026962d6c15ee.jpeg",
     "index.html": "/index.html",
     "main.99062974.css.map": "/static/css/main.99062974.css.map",
-    "main.e6e14c10.js.map": "/static/js/main.e6e14c10.js.map"
+    "main.7966c352.js.map": "/static/js/main.7966c352.js.map"
   },
   "entrypoints": [
     "static/css/main.99062974.css",
-    "static/js/main.e6e14c10.js"
+    "static/js/main.7966c352.js"
   ]
 }
